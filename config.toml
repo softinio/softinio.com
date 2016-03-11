@@ -1,0 +1,37 @@
+baseurl = "http://www.softinio.com/"
+languageCode = "en-us"
+title = "Salar Rahmanian"
+disqusShortname = "gadgetplayboy"
+MetaDataFormat = "toml"
+theme = "hyde-x"
+paginate = 10
+
+[author]
+    name = "Salar Rahmanian"
+
+[permalinks]
+    post = "/post/:slug"
+    page = "/page/:slug"
+
+[taxonomies]
+    category = "categories"
+    tag = "tags"
+    series = "series"
+
+[params]
+    truncate = true
+    defaultDescription = "Salar Rahmanian"
+    defaultKeywords = "Salar, Rahmanian, Blog, python, golang, go, scala"
+    theme = "theme-base-08"
+    highlight = "tomorrow-night-bright"
+    home = "Blog"
+    googleAuthorship = "+SalarRahmanian"
+    googleAnalytics = "UA-47014432-1"
+    gravatarHash = "b64b5fa27cef80b3b647482b0949d207"
+    myphoto = "LeilaSalar.jpg"
+    github = "https://github.com/softinio"
+    stackOverflow = "http://stackoverflow.com/users/1930869/softinio"
+    linkedin = "https://www.linkedin.com/in/salarrahmanian/"
+    googleplus = "https://plus.google.com/+SalarRahmanian"
+    twitter = "https://twitter.com/SalarRahmanian"
+    rss = true
