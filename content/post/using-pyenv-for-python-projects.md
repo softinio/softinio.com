@@ -23,7 +23,7 @@ Here some simple notes on how I setup and use [pyenv][3] :
 $ brew install pyenv pyenv-virtualenv
 ```
 
-*****Update your shell profile (.bashrc or .zshrc) adding the following to it (and restart your terminal)**
+**Update your shell profile (.bashrc or .zshrc) adding the following to it (and restart your terminal)**
 
 ```
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
