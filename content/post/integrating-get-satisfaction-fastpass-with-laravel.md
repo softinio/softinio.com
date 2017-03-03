@@ -19,19 +19,19 @@ Here is an overview of what is involved in getting your Laravel 4 apps authentic
 
 ## Install the Fastpass PHP SDK
 
-** Create a folder to install the library in **
+*****Create a folder to install the library in**
 ```
 $ mkdir app/lib
 $ mkdir app/lib/getsatisfaction
 ```
-** Download & untar/unzip the Fastpass PHP SDK**
+**Download & untar/unzip the Fastpass PHP SDK**
 ```
 cd app/lib/getsatisfaction
 wget "https://getsatisfaction.com/fastpass/php.tar.gz"
 tar -zxvf php.tar.gz .
 ```
 
-** Update ** *composer.json* ** adding the location of the library **
+**Update** *composer.json* **adding the location of the library**
 
 In the *autoload* section add the path *app/lib/getsatisfaction*
 ```
@@ -48,13 +48,13 @@ In the *autoload* section add the path *app/lib/getsatisfaction*
     },
 ```
 
-** In the console run **
+**In the console run**
 ```
 $ composer update
 $ php artisan dump-autoload
 ```
 
-** Create a configuration file (e.g. app/config/getsatisfaction.php ) to hold your API tokens for the Fastpass service **
+**Create a configuration file (e.g. app/config/getsatisfaction.php ) to hold your API tokens for the Fastpass service**
 
 ```php
 <?php
@@ -72,7 +72,7 @@ The above information can be found in the admin section once you log in as admin
 
 We now need to create a login form to be used by the Fastpass service to use our authentication service provided by sentry to log users into Get Satisfaction.
 
-** First we create a new controller** *app/controllers/SatisfactionController.php*
+**First we create a new controller** *app/controllers/SatisfactionController.php*
 
 ```php
 <?php
@@ -150,7 +150,7 @@ class SatisfactionController extends BaseController
 ```
 Now we need to create the two views used by this controller, one with a login form and one view which logs the user into the get satisfaction service.
 
-** For the login form we create the view ** *app/views/satisfaction/login.blade.php*
+**For the login form we create the view ** *app/views/satisfaction/login.blade.php*
 
 This can be a copy of the login form you currently use within your Laravel app but with the form action changed to use the new *SatisfactionController*.
 
@@ -194,7 +194,7 @@ Sign In -
 @stop
 ```
 
-** We create the view that logs user into Get Satisfaction ** *app/views/satisfaction/index.blade.php*
+**We create the view that logs user into Get Satisfaction** *app/views/satisfaction/index.blade.php*
 
 This is in effect a blank html document which calls the php class from the Fastpass library to log the current user into the Get Satisfaction service.
 
