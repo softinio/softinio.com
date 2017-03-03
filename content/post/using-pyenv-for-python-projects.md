@@ -23,7 +23,7 @@ Here some simple notes on how I setup and use [pyenv][3] :
 $ brew install pyenv pyenv-virtualenv
 ```
 
-** Update your shell profile (.bashrc or .zshrc) adding the following to it (and restart your terminal) **
+*****Update your shell profile (.bashrc or .zshrc) adding the following to it (and restart your terminal)**
 
 ```
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
@@ -33,14 +33,14 @@ if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -
 
 ## Installing on Linux CentOS 7 ##
 
-** Checkout from github **
+**Checkout from github**
 
 ```
 $ git clone https://github.com/yyuu/pyenv.git ~/.pyenv
 $ git clone https://github.com/yyuu/pyenv-virtualenv.git ~/.pyenv/plugins/pyenv-virtualenv
 ```
 
-** Update your shell profile (.bashrc or .zshrc) adding the following to it (and restart your terminal) **
+**Update your shell profile (.bashrc or .zshrc) adding the following to it (and restart your terminal)**
 
 ```
 $ echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bash_profile
@@ -51,26 +51,26 @@ $ echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.bash_profile
 
 ## Using pyenv ##
 
-** To install a new version of [Python][6] **
+**To install a new version of [Python][6]**
 
 ```
 $ pyenv install <version>
 $ pyenv rehash
 ```
 
-** To get a list of [Python][6] versions available **
+**To get a list of [Python][6] versions available**
 
 ```
 $ pyenv install -l
 ```
 
-** To create a new virtual environment **
+**To create a new virtual environment**
 
 ```
 $ pyenv virtualenv [pyenv-version] [virtualenv-name]
 ```
 
-** To use your new virtual environment within your project **
+**To use your new virtual environment within your project**
 
 1. Change to your projects root directory
 1. Run:
