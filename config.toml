@@ -1,13 +1,16 @@
 baseurl = "http://www.softinio.com/"
-languageCode = "en-us"
 title = "Salar Rahmanian"
+languageCode = "en-us"
 disqusShortname = "gadgetplayboy"
+copyright = "Copyright (c) 2010 - 2017, Salar Rahmanian; all rights reserved."
 MetaDataFormat = "toml"
-theme = "hyde-x"
-paginate = 10
 
 [author]
     name = "Salar Rahmanian"
+
+[indexes]
+    tag = "tags"
+    topic = "topics"
 
 [permalinks]
     post = "/post/:slug"
@@ -22,8 +25,6 @@ paginate = 10
     truncate = true
     defaultDescription = "Salar Rahmanian"
     defaultKeywords = "Salar, Rahmanian, Blog, python, golang, go, scala"
-    theme = "theme-base-08"
-    highlight = "tomorrow-night-bright"
     home = "Blog"
     googleAuthorship = "+SalarRahmanian"
     googleAnalytics = "UA-47014432-1"
