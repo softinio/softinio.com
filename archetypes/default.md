@@ -1,8 +1,10 @@
 +++
 title = ""
-slug = ""
 description = ""
-tags = []
-keywords = []
-categories = []
+tags = [
+    "development",
+]
+topics = [
+    "Development",
+]
 +++
