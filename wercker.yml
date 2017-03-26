@@ -3,7 +3,6 @@ build:
   steps:
     - arjen/hugo-build:
         version: "0.19"
-        theme: hyde-x
         config: config.toml
         flags: --disableSitemap=false
 deploy:
