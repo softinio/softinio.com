@@ -1,12 +1,11 @@
 +++
-categories = ["development"]
+Topics = ["development"]
 date = "2014-01-09T08:54:57-05:00"
-description = "Overview of what is involved in getting your Laravel 4 apps authentication system to integrate with Get Satisfaction Fastpass for single sign on."
-keywords = ["laravel", "php", "fastpass"]
-tags = ["laravel", "php", "fastpass"]
-slug = "integrating-get-satisfaction-fastpass-with-laravel"
-title = "Integrating Get Satisfaction Fastpass with Laravel"
-
+Description = "Overview of what is involved in getting your Laravel 4 apps authentication system to integrate with Get Satisfaction Fastpass for single sign on."
+Keywords = ["laravel", "php", "fastpass"]
+Tags = ["laravel", "php", "fastpass"]
+Slug = "integrating-get-satisfaction-fastpass-with-laravel"
+Title = "Integrating Get Satisfaction Fastpass with Laravel"
 +++
 
 Here is an overview of what is involved in getting your Laravel 4 apps authentication system to integrate with Get Satisfaction Fastpass for single sign on.
