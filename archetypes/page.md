@@ -1,10 +1,10 @@
 +++
-title = ""
-slug = ""
-description = ""
+Title = ""
+Slug = ""
+Description = ""
 menu = "main"
-keywords = [""]
-categories = [""]
-tags = [""]
+Keywords = [""]
+Topics = [""]
+Tags = [""]
 +++
 

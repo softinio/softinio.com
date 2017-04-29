@@ -1,13 +1,10 @@
 +++
-categories = [""]
 date = "2015-11-26T09:16:07-05:00"
-description = "About Salar Rahmanian"
-keywords = ["Salar", "Rahmanian", "Salar Rahmanian"]
+Description = "About Salar Rahmanian"
+Keywords = ["Salar", "Rahmanian", "Salar Rahmanian"]
 menu = "main"
-slug = "salar-rahmanian"
-tags = [""]
-title = "Salar Rahmanian"
-
+Slug = "salar-rahmanian"
+Title = "Salar Rahmanian"
 +++
 
 ![Rahmanian Family](/static/img/rahmanian.png)
