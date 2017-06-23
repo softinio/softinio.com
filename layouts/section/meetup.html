@@ -1,0 +1,25 @@
+{{ partial "header.html" . }}
+<body lang="en">
+{{ partial "subheader.html" . }}
+
+<section id="main">
+  <div>
+   <h1 id="title">{{ .Title }}</h1>
+        <ul id="list">
+            {{ range .Data.Pages }}
+                {{ .Render "summary"}}
+            {{ end }}
+        </ul>
+  </div>
+</section>
+
+<aside id="meta"> 
+    <h4>Organizer for the following meetups</h4>
+<ul>
+    <li><a href="https://www.meetup.com/AngularJS-DC/">AngularJS DC</a></li>
+    <li><a href="https://www.meetup.com/dc-scala/">Scala DC</a></li>
+    <li><a href="https://www.meetup.com/Washington-DC-Elastic-Fantastics/">Elastic Washington DC</a></li>
+    <li><a href="https://www.meetup.com/Tech_Fusion/">Tech Fusion</a></li>
+</ul>
+</aside>
+{{ partial "footer.html" . }}
