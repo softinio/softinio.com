@@ -1,0 +1,25 @@
+{{ $baseurl := .Site.BaseURL }}
+    <div>
+        <section id="datecount">
+          <h4 id="date"> {{ .Date.Format "Mon Jan 2, 2006" }} </h4>
+          <h5 id="wc"> {{ .FuzzyWordCount }} Words </h5>
+          <h5 id="readtime"> Read in about {{ .ReadingTime }} Min </h5>
+          <h5><a href={{ $.Params.meetup_url }}>Link: Scala DC June 2017 Meetup</a></h5>
+        </section>
+        <ul id="tags">
+          {{ range .Params.tags }}
+            <li> <a href="{{ $baseurl }}/tags/{{ . | urlize }}">{{ . }}</a> </li>
+          {{ end }}
+        </ul>
+    </div>
+
+    <div>
+        <h4>I run the following meetups</h4>
+        <ul>
+            <li><a href="https://www.meetup.com/AngularJS-DC/">Angular DC</a><li>
+            <li><a href="https://www.meetup.com/dc-scala/">Scala DC</a><li>
+            <li><a href="https://www.meetup.com/Washington-DC-Elastic-Fantastics/">ELastic Washington, User group</a><li>
+            <li><a href="https://www.meetup.com/Tech_Fusion/">Tech Fusion</a><li>
+
+        </ul>
+    </div>

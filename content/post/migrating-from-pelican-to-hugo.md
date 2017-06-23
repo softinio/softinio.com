@@ -1,12 +1,11 @@
 +++
-categories = ["python", "golang"]
+Topics = ["development"]
 date = "2015-11-29T07:16:53-05:00"
-description = "In this post I will discuss the steps I took to migrate my blog from Pelican to Hugo."
-keywords = ["pelican",  "hugo",  "golang", "go", "python", "blog"]
-slug = "migrating-from-pelican-to-hugo"
-tags = ["pelican",  "hugo",  "golang", "go", "python", "blog"]
-title = "Migrating from Pelican to Hugo"
-
+Description = "In this post I will discuss the steps I took to migrate my blog from Pelican to Hugo."
+Keywords = ["pelican",  "hugo",  "golang", "go", "python", "blog"]
+Slug = "migrating-from-pelican-to-hugo"
+Tags = ["pelican",  "hugo",  "golang", "go", "python", "blog"]
+Title = "Migrating from Pelican to Hugo"
 +++
 
 In this post I will discuss the steps I took to migrate my blog from [Pelican](http://blog.getpelican.com/) to [Hugo](http://gohugo.io/).
