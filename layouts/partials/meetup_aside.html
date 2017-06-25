@@ -1,8 +1,10 @@
 {{ $baseurl := .Site.BaseURL }}
 
-<div>
-{{ partial "meetup_details.html" . }}
-</div>
+<aside id="meta">
+    <div>
+        {{ partial "meetup_details.html" . }}
+    </div>
+</aside>
 
 <meta itemprop="wordCount" content="{{ .WordCount }}">
 <meta itemprop="datePublished" content="{{ .Date.Format "2006-01-02" }}">
