@@ -1,10 +1,10 @@
 +++
 date = "2015-11-26T09:16:07-05:00"
 Description = "About Salar Rahmanian"
-Keywords = ["Salar", "Rahmanian", "Salar Rahmanian"]
+keywords = ["Salar", "Rahmanian", "Salar Rahmanian"]
 menu = "main"
-Slug = "salar-rahmanian"
-Title = "Salar Rahmanian"
+slug = "salar-rahmanian"
+title = "Salar Rahmanian"
 +++
 
 ![Rahmanian Family](/static/img/rahmanian.png)

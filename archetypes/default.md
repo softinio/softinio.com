@@ -1,10 +1,11 @@
 +++
-Title = ""
-Description = ""
-Tags = [
+title = ""
+description = ""
+date = {{ .Date }}
+tags = [
     "development",
 ]
-Topics = [
+topics = [
     "Development",
 ]
 +++

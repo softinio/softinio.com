@@ -1,10 +1,11 @@
 +++
-Title = ""
-Slug = ""
-Description = ""
+title = ""
+date = {{ .Date }}
+slug = ""
+description = ""
 menu = "main"
-Keywords = [""]
-Topics = [""]
-Tags = [""]
+keywords = [""]
+topics = [""]
+tags = [""]
 +++
 
