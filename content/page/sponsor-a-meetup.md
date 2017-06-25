@@ -37,7 +37,7 @@ Please fill in this form: [I want to sponsor a meetup](https://docs.google.com/a
 
 - For food Pizza is the standard but feel free to order anything else you want 
     just please make sure there is a vegetarian option. 
-    Even better if there is carbs free and/or gluten free option 
+    Even better if there is low carb and/or gluten free option 
 - For drinks the standard is beer and some variety of soda
 - To know how much food and drinks to order please look at the meetup page for
     the event the day before and make sure there is enough for around 50% to
