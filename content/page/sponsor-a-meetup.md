@@ -19,15 +19,15 @@ the meetup.
 
 # Meetup Agenda #
 
-5.30pm - Set up venue, Speakers arrive and get setup
-5.45pm - Food Arrives
-6.00pm - Event starts - open networking
-6.30pm - Event host will introduce the event and announcements
-6.40pm - Food and Drink Sponsor Talk
-6.50pm - Venue Sponsor Talk
-7.00pm - Main Presentation / Talk
-8.30pm - More networking
-9.00pm - Event ends.
+- 5.30pm - Set up venue, Speakers arrive and get setup
+- 5.45pm - Food Arrives
+- 6.00pm - Event starts - open networking
+- 6.30pm - Event host will introduce the event and announcements
+- 6.40pm - Food and Drink Sponsor Talk
+- 6.50pm - Venue Sponsor Talk
+- 7.00pm - Main Presentation / Talk
+- 8.30pm - More networking
+- 9.00pm - Event ends.
 
 # Do you want to sponsor an event #
 
