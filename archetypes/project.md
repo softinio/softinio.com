@@ -1,9 +1,9 @@
 +++
-Title = "Projectname : title"
-Date = "2017-03-26"
-Description = ""
-Tags = ["Development"]
-Topics = ["Development"]
+title = "Projectname : title"
+date = {{ .Date }}
+description = ""
+tags = ["Development"]
+topics = ["Development"]
 download_url = "http://github.com/softinio/PROJECTNAME"
 project_description = "DESC"
 project_name = "PROJECTNAME"
