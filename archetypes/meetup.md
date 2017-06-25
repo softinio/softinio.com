@@ -1,11 +1,11 @@
 +++
 Title = ""
-date = "2014-01-09T08:54:57-05:00"
-Slug = ""
-Description = ""
+date = {{ .Date }}
+slug = ""
+description = ""
 menu = "main"
 keywords = ["meetup"]
-Tags = ["meetup"]
+tags = ["meetup"]
 meetup_url = ""
 speaker_url = ""
 slides_url = ""
