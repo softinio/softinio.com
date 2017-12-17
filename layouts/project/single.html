@@ -1,5 +1,5 @@
 {{ partial "header.html" . }}
-<body lang="en" itemscope itemtype="http://schema.org/Article">
+<body lang="en" itemscope itemtype="https://schema.org/Article">
 {{ partial "subheader.html" . }}
 {{ $baseurl := .Site.BaseURL }}
 
@@ -13,7 +13,7 @@
 </section>
 
 <aside id="meta">
-    <div itemscope itemtype="http://schema.org/SoftwareApplication" id="projectmeta">
+    <div itemscope itemtype="https://schema.org/SoftwareApplication" id="projectmeta">
         {{ with .Params.project_name }}
             <h2 itemprop="name"> {{ . }} </h2>
         {{ end }}
@@ -21,7 +21,7 @@
         {{ with .Params.project_description }}
         <em itemprop="name"> {{.}} </em><br>
         {{ end }}
-        <span class="smaller" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span class="smaller" itemprop="author" itemscope itemtype="https://schema.org/Person">
             by <span itemprop="name">Salar Rahmanian.</span></span><br>
         {{ with .Params.official_url }} <a href="{{.}}">{{.}}</a> {{end}}<br>
         {{if isset .Params "download_url" }} <a id="download_link" class="pure-button" href="{{ index .Params "download_url" }}">
