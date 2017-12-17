@@ -1,7 +1,6 @@
 # .gitlab-ci.yml
 image: publysher/hugo
 
-
 production:
   type: deploy
   before_script:
@@ -11,6 +10,7 @@ production:
   script:
   - hugo
   - aws s3 sync public/ s3://$AWS_BUCKET
+  - aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION_ID --paths "/*"
   artifacts:
     paths:
     - public
