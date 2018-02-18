@@ -27,7 +27,6 @@ paginate = 10
     home = "Blog"
     googleAuthorship = "+SalarRahmanian"
     googleAnalytics = "UA-47014432-1"
-    myphoto = "SalarRahmanian.jpg"
     github = "https://github.com/softinio"
     stackOverflow = "http://stackoverflow.com/users/1930869/softinio"
     linkedin = "https://www.linkedin.com/in/salarrahmanian/"
