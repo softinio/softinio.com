@@ -2,15 +2,12 @@ baseurl = "https://www.softinio.com/"
 title = "Salar Rahmanian"
 languageCode = "en-us"
 disqusShortname = "gadgetplayboy"
-copyright = "Copyright (c) 2010 - 2017, Salar Rahmanian; all rights reserved."
 MetaDataFormat = "toml"
+theme = "hyde-x"
+paginate = 10
 
 [author]
     name = "Salar Rahmanian"
-
-[indexes]
-    tag = "tags"
-    topic = "topics"
 
 [permalinks]
     post = "/post/:slug"
@@ -25,7 +22,15 @@ MetaDataFormat = "toml"
     truncate = true
     defaultDescription = "Salar Rahmanian"
     defaultKeywords = "Salar, Rahmanian, Blog, python, golang, go, scala"
+    theme = "theme-base-08"
+    highlight = "tomorrow-night-bright"
     home = "Blog"
     googleAuthorship = "+SalarRahmanian"
     googleAnalytics = "UA-47014432-1"
-    gravatarHash = "b64b5fa27cef80b3b647482b0949d207"
+    myphoto = "SalarRahmanian.jpg"
+    github = "https://github.com/softinio"
+    stackOverflow = "http://stackoverflow.com/users/1930869/softinio"
+    linkedin = "https://www.linkedin.com/in/salarrahmanian/"
+    googleplus = "https://plus.google.com/+SalarRahmanian"
+    twitter = "https://twitter.com/SalarRahmanian"
+    rss = false
