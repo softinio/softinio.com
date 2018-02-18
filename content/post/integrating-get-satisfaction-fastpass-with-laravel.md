@@ -18,7 +18,7 @@ Here is an overview of what is involved in getting your Laravel 4 apps authentic
 
 ## Install the Fastpass PHP SDK
 
-*****Create a folder to install the library in**
+**Create a folder to install the library in**
 ```
 $ mkdir app/lib
 $ mkdir app/lib/getsatisfaction
@@ -149,7 +149,7 @@ class SatisfactionController extends BaseController
 ```
 Now we need to create the two views used by this controller, one with a login form and one view which logs the user into the get satisfaction service.
 
-**For the login form we create the view ** *app/views/satisfaction/login.blade.php*
+For the login form we create the view *app/views/satisfaction/login.blade.php*
 
 This can be a copy of the login form you currently use within your Laravel app but with the form action changed to use the new *SatisfactionController*.
 
