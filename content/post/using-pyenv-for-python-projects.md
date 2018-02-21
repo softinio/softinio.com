@@ -16,7 +16,7 @@ Here some simple notes on how I setup and use [pyenv][3] :
 
 ## Installing on Mac OS X ##
 
-*Install Using [homebrew][5]*
+**Install using [homebrew][5]**
 
 ```
 $ brew install pyenv pyenv-virtualenv
