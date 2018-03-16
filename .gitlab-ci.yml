@@ -1,5 +1,5 @@
 # .gitlab-ci.yml
-image: felicianotech/docker-hugo:0.37
+image: registry.gitlab.com/softinio/hugo-docker
 
 production:
   type: deploy
