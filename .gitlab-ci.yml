@@ -1,5 +1,5 @@
 # .gitlab-ci.yml
-image: publysher/hugo
+image: felicianotech/docker-hugo:0.37
 
 production:
   type: deploy
