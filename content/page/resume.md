@@ -32,7 +32,7 @@ Enhanced Trackmaven’s competitive intelligence platform by creating new servic
 ### Senior Software Developer, Accenture Federal Services — 2014-2015 ###
 I worked on the modernization of the Dept of Veteran Affairs eHmp health care system. I was the technical lead of a team of 10 responsible for the development of the platforms sync system. This was a distributed system used to sync patient records across all hospitals. The main stack I used for development was Java, Spring, Dropwizard and Node.js.
 
-### Chief Technology Office, Healthy Choices At Work — 2012-2014 ###
+### Chief Technology Officer, Healthy Choices At Work — 2012-2014 ###
 I was a hands on CTO and Engineer at this startup. I architected and developed a custom CRM system for the business. This provided a full end to end solution which allowed customers to sign up for the service and manage their own accounts. On the business side it provided the means to run the business by providing the delivery scheduling of the orders and the billing and invoicing management of customers.
 
 The stack used for this was Python, Django, Postgresql and Elasticsearch. For payments our system integrated with Stripe APIs. 
