@@ -49,6 +49,11 @@ copyright = ""
   identifier = "categories"
   url = "/categories/"
 
+[[menu.main]]
+  name = "Family Blog"
+  url = "https://www.rahmanian.xyz/"
+  weight = 50
+
 [params]
   debug = false             # If true, load `eruda.min.js`. See https://github.com/liriliri/eruda
 
