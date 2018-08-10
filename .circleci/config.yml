@@ -1,0 +1,22 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: softinio/hugo-docker:latest
+    working_directory: ~/hugo
+    environment:
+      HUGO_BUILD_DIR: ~/hugo/public
+    steps:
+      - checkout
+      - run: git submodule sync && git submodule update --init
+      - run: hugo -v -d $HUGO_BUILD_DIR
+      - deploy:
+          name: deploy to AWS
+          command: |
+            if [ "${CIRCLE_BRANCH}" = "master" ]; then
+              aws s3 sync $HUGO_BUILD_DIR s3://$AWS_BUCKET --delete
+              aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION_ID --paths "/*"
+            else
+              echo "Not master branch, dry run only"
+            fi
+
