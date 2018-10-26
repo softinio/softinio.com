@@ -77,7 +77,7 @@ In his keynote we were given an overview of all the different testing tools avai
 
 ## Asyncio: What's next (Yuri Selivanov)
 
-The next talk on day 2 that stood out for me was [Yuri Selivanov](https://www.linkedin.com/in/yselivanov/) the Python core developer behind asyncio and the uvloop library which enables us to develop high performance Python applications. I enjoyed listening to his update on where we are with asyncio and whats coming next. I also drew comparisons to the new [Trio Async Libray](https://github.com/python-trio/trio) by our very own [Nathaniel J Smith](https://vorpus.org/). I am super excited about the direction and options we have here and look forward to using them in my projects. 
+The next talk on day 2 that stood out for me was [Yuri Selivanov](https://www.linkedin.com/in/yselivanov/) the Python core developer behind asyncio and the uvloop library which enables us to develop high performance Python applications. I enjoyed listening to his update on where we are with asyncio and whats coming next. Yuri also drew comparisons to the new [Trio Async Libray](https://github.com/python-trio/trio) by our very own [Nathaniel J Smith](https://vorpus.org/). I am super excited about the direction and options we have here and look forward to using them in my projects. 
 
 ![Yuri Selivanov at PyBay 2018](https://via.softinio.com/Yuri_Selivanov_PyBay_2018.jpg)
 
