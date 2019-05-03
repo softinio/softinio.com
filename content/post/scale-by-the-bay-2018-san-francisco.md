@@ -9,22 +9,22 @@ categories = ["scala", "conference", "functional programming"]
 lastmod = 2019-05-02T18:30:40-07:00
 +++
 
-One of the highlights of 2018 was attending and being part of the Scale By the bay 2018 conference here in San Francisco. By far this was the best conference I have ever attended. 
+One of the highlights of 2018 was attending and being part of the Scale By the bay 2018 conference in San Francisco. This by far was the best conference I have ever attended. 
 
 ![Scale By the Bay 2018](https://via.softinio.com/scalebythebay_2018_header.jpg)
 
 from left: [Dick Wall](https://twitter.com/dickwall), [Salar Rahmanian](https://twitter.com/SalarRahmanian), [Martin Odersky](https://twitter.com/odersky), [Alexy Khrabrov](https://twitter.com/ChiefScientist), [Jakob Odersky ](https://twitter.com/jodersky)
 
-The conference had 3 tracks covering the functional programming, reactive programming and data science topics. All the talks were of super high quality made even better by super intelligent audience made up of the most talented stars of our industry.
+The conference had 3 tracks covering the functional programming, reactive programming and data science topics. All the talks were of high quality made even better by highly intelligent audience made up of the most talented stars of our industry.
 
 ## Keynotes
 ![Scale By the Bay 2018 Keynotes](https://via.softinio.com/scalebythebay_2018_keynotes.jpg)
 
 ### New Functional Constructs in Scala 3 by Martin Odersky (Creator of Scala)
 
-The first keynote was by the creator of Scala Programming language. He took us through some of the new constructs we are likely to see in the upcoming major release of Scala3. Overall the audience where very excited about the new constructs and whats coming up but a few people whom I chatted to at the conference had concerns that we are heading for another python2 -> python3 situation causing a split in the community and some hesitation in desire to upgrade as there will be some breaking changes.
+The first keynote was by the creator of Scala Programming language. He took us through some of the new constructs we are likely to see in the upcoming major release of Scala3. Overall the audience was very excited about the new constructs and whats coming up but a few people whom I chatted to at the conference had concerns that we are heading for another python2 -> python3 situation causing a split in the community and some hesitation in desire to upgrade as there will be some breaking changes.
 
-I personally am super excited about the new features coming out and am optimistic about the success of the new version. In additional to some new tooling the scala center is working on that will help with migrating to the new version lets not forget Scala is strongly typed which will help a lot with the migration unlike languages like Python.
+I personally am excited about the new features coming out and am optimistic about the success of the new version. In additional there will be new tooling the scala center is working on that will help with migrating to the new version lets not forget Scala is strongly typed which will help a lot with the migration unlike languages like Python.
 
 {{< youtube 6P06YHc8faw >}}
 
@@ -44,11 +44,11 @@ Jakob Odesky talk summarized the concurrency options available to you  within Sc
 
 {{< youtube EuNEZW8ljeY >}}
 
-Michael Pilquist gave us a nice update on `cats-effect` took us through and overview of some of the features it has to solve concurrency problems. There was lot of content in his talk for me to summarize in this post so I urge you to watch the video of his talk.
+Michael Pilquist gave us a nice update on `cats-effect` took us through an overview of some of the features it has to solve concurrency problems. There was lot of content in his talk for me to summarize in this post so I urge you to watch the video of his talk.
 
 {{< youtube Gig-f_HXvLI >}}
 
- My favorite talk of the conference was a talk by Sergei Winitzki on Declarative distributed concurrency in Scala where he talk about his open source project  [Chymyst](https://github.com/Chymyst/chymyst-core) which implements the chemical machine (based on joint calculus. The philosophy and end goal  of the chemical machine is to be able to process what ever problem you are trying to solve in 15 lines or less of code. Containers holding values are known as `molecules`. Molecules  float around the site until they combine to form a chemical reaction the output of which can be used again. In his implementation partial functions where used  to implement the reactions. I loved the analogy to chemistry and Sergei's presentation really explained the concept well to spark my interest in this. Since his talk I have researched the topic of chemical machines and I could only find research papers on the topic and none of them do as good a job in explaining what it is as the talk did so I urge you to watch the video. 
+My favorite talk of the conference was a talk by Sergei Winitzki on Declarative distributed concurrency in Scala where he talk about his open source project  [Chymyst](https://github.com/Chymyst/chymyst-core) which implements the chemical machine (based on joint calculus). The philosophy and end goal  of the chemical machine is to be able to process what ever problem you are trying to solve in 15 lines or less of code. Containers holding values are known as `molecules`. Molecules  float around the site until they combine to form a chemical reaction the output of which can be used again. In his implementation partial functions where used  to implement the reactions. I loved the analogy to chemistry and Sergei's presentation really explained the concept well to spark my interest in this. Since his talk I have researched the topic of chemical machines and I could only find research papers on the topic and none of them do as good a job in explaining what it is as the talk did so I urge you to watch the video. 
 
 {{< youtube 23O32DMm69E >}}
 
