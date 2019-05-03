@@ -13,7 +13,7 @@ One of the highlights of 2018 was attending and being part of the Scale By the b
 
 ![Scale By the Bay 2018](https://via.softinio.com/scalebythebay_2018_header.jpg)
 
-from left: [Dick Wall](https://twitter.com/dickwall), [Salar Rahmanian](https://twitter.com/SalarRahmanian), [Martin Odersky](https://twitter.com/odersky), [Alexy Khrabrov](https://twitter.com/ChiefScientist), [Jakob Odersky ](https://twitter.com/jodersky)
+from left: [Dick Wall](https://twitter.com/dickwall), [Salar Rahmanian](https://twitter.com/SalarRahmanian), [Martin Odersky (Creator of Scala)](https://twitter.com/odersky), [Alexy Khrabrov](https://twitter.com/ChiefScientist), [Jakob Odersky ](https://twitter.com/jodersky)
 
 The conference had 3 tracks covering the functional programming, reactive programming and data science topics. All the talks were of high quality made even better by highly intelligent audience made up of the most talented stars of our industry.
 
