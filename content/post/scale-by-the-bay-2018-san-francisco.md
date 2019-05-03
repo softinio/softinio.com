@@ -22,16 +22,16 @@ The conference had 3 tracks covering the functional programming, reactive progra
 
 ### New Functional Constructs in Scala 3 by Martin Odersky (Creator of Scala)
 
-The first keynote was by the creator of Scala Programming language. He took us through some of the new constructs we are likely to see in the upcoming major release of Scala3. Overall the audience was very excited about the new constructs and whats coming up but a few people whom I chatted to at the conference had concerns that we are heading for another python2 -> python3 situation causing a split in the community and some hesitation in desire to upgrade as there will be some breaking changes.
+The first keynote was by the creator of Scala Programming language. He took us through some of the new constructs we are likely to see in the upcoming major release of Scala3. Overall the audience was very excited about the new constructs and what is coming up. There were a few people I had talked to at the conference who had concerns that we are heading for another python2 -> python3 situation causing a split in the community and some hesitation in desire to upgrade as there will be some breaking changes.
 
-I personally am excited about the new features coming out and am optimistic about the success of the new version. In additional there will be new tooling the scala center is working on that will help with migrating to the new version lets not forget Scala is strongly typed which will help a lot with the migration unlike languages like Python.
+I personally am excited about the new features coming out and am optimistic about the success of the new version. In addition there will be new tooling the scala center is working on that will help with migrating to the new version. Let's not forget Scala is strongly typed which will help a lot with the migration unlike languages like Python.
 
 {{< youtube 6P06YHc8faw >}}
 
 ### Kafka and the Rise of the event driven Microservices by Neha Narkhede (Co-creator of Apache Kafka)
 This keynote started off by asking the audience who uses Kafka in Production today. It was fascinating to see that 95% of the audience were which is a huge endorsement of Kafka.
 
-One of the initial and primary use cases for using Kafka has been to build data pipelines, this keynote focussed on the next evolution of Kafka where it is used to build event driven applications and microservices. The standard mindset has been to design and implement your apps based around static data, Kafka helps us design apps based around continuely streaming data.
+One of the initial and primary use cases for using Kafka has been to build data pipelines, this keynote focused on the next evolution of Kafka where it is used to build event driven applications and microservices. The standard mindset has been to design and implement your apps based around static data, Kafka helps us design apps based around continuely streaming data.
 
 This new paradigm will allow us to take data from your applications and data from your data systems like databases and do stream processing on them to produce.
 
@@ -73,7 +73,7 @@ Top: [John De Goes (Creator of ZIO) ](https://twitter.com/jdegoes) & [Itamar Rav
 Bottom:  [Jon Pretty (Scala Center Advisory board chair)](https://twitter.com/propensive/)
 
 ## Thank you
-I am humbled that I got a chance to meet so many great people at this conference, for the first time in person and hope to keep in touch going forward. 
+I am humbled that I got a chance to meet so many great people at this conference, for the first time in person, and hope to keep in touch going forward. 
 
 I want to thank all speakers and attendees at this event, especially I want to thank [Alexy Khrabrov](https://twitter.com/ChiefScientist) for putting together such a great event, welcoming me to the bay area and helping me be part of the great community we have in the bay area and this conference.
 
