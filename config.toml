@@ -12,9 +12,15 @@ defaultContentLanguage = "en"
 hasCJKLanguage = false 
 paginate = 5
 rssLimit = 20
-disqusShortname = "gadgetplayboy"
 googleAnalytics = "UA-47014432-1"
 copyright = ""
+
+# Highlight options.
+# See https://gohugo.io/content-management/syntax-highlighting/
+PygmentsCodeFences = true # Enable syntax highlighting with GitHub flavoured code fences
+PygmentsUseClasses = true # Use CSS classes to format highlighted code
+PygmentsCodefencesGuessSyntax = true
+PygmentsOptions = "linenos=table"
 
 [author]
   name = "Salar Rahmanian"
@@ -64,7 +70,7 @@ copyright = ""
   # site info (optional)                                  # 站点信息（可选，不需要的可以直接注释掉）
   logoTitle = "Salar Rahmanian"
   description = "Salar Rahmanian"
-  keywords = ["Salar, Rahmanian, Blog, python, golang, go, scala"]
+  keywords = ["Salar, Rahmanian, Blog, python, scala, haskell, swiftlang, nix, NixOS"]
 
   # paginate of archives, tags and categories             # 归档、标签、分类每页显示的文章数目，建议修改为一个较大的值
   archive-paginate = 3
@@ -104,6 +110,11 @@ copyright = ""
     gitmentJS = '<script src="https://cdn.jsdelivr.net/npm/gitment@0.0.3/dist/gitment.browser.min.js" crossorigin="anonymous"></script>'
     gitmentCSS = '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitment@0.0.3/style/default.min.css" crossorigin="anonymous">'
 
+  [params.utteranc]         # utteranc is a comment system based on GitHub issues. see https://utteranc.es
+    enable = true
+    repo = "softinio/softinio.com"    # The repo to store comments
+    issueTerm = "url"
+
   [params.gitment]          # Gitment is a comment system based on GitHub issues. see https://github.com/imsun/gitment
     owner = ""              # Your GitHub ID
     repo = ""               # The repo to store comments
@@ -124,4 +135,14 @@ copyright = ""
     g-github = "https://github.com/softinio"
     n-gitlab = "https://gitlab.com/softinio"
     # o-goodreads = "http://en.xianmin.org/hugo-theme-jane/"
+
+[outputs]
+  home = ["html", "jsonfeed","rss"]
+  page = ["html"]
+
+[outputFormats]
+  [outputFormats.jsonfeed]
+    mediaType = "application/json"
+    baseName = "feed"
+    isPlainText = true
 
