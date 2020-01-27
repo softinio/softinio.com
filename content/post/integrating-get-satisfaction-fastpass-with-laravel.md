@@ -33,7 +33,8 @@ tar -zxvf php.tar.gz .
 **Update** *composer.json* **adding the location of the library**
 
 In the *autoload* section add the path *app/lib/getsatisfaction*
-```
+
+```json
 "autoload": {
         "classmap": [
             "app/commands",
