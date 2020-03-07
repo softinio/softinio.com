@@ -1,5 +1,6 @@
 +++
 date = "2018-04-16T09:16:07-05:00"
+lastmod = "2018-05-23"
 Description = "Salar Rahmanian Resume"
 keywords = ["Salar", "Rahmanian", "Salar Rahmanian", "Resume", "CV"]
 menu = "main"
@@ -11,7 +12,7 @@ title = "Resume"
 San Francisco Bay Area, California
 
 ## Profile ##
-I have been developing software since the age of eleven. My current passion is to develop and architect distributed systems using Scala, AKKA and Kafka. For everything else I love coding in Python. I do consider myself a polyglot and have ability to pick up new languages and technology very fast.
+I have been developing software since the age of eleven. My current passion is to develop and architect distributed systems using Scala, AKKA and Kafka. I do consider myself a polyglot and have ability to pick up new languages and technology very fast.
 
 ## Domain Experience ##
 - Building data ingestion pipelines
@@ -21,10 +22,13 @@ I have been developing software since the age of eleven. My current passion is t
 - Full Stack web application development
 
 ## Experience ##
-### Senior Principal Engineer, Snag — 2016-present ###
-I built a new data ingestion pipeline to ingest high volume of job postings received from multiple sources and partners. I built this using Scala, akka, akka-http, Play Framework, Kafka and Apache Nifi. I also setup a Kubernetes cluster running on AWS which was used for this new ingestion pipeline. I was responsible for introducing all these wonderful technologies to Snag.
+### Staff Software Engineer, Mya Systems - 2018 - present ###
+Building an AI recruiter assistant
 
-Other projects I was involved in at Snag involved me creating micro services and REST api’s using Python, Flask.
+### Senior Principal Engineer, Snagajob — 2016-2018 ###
+I built a new data ingestion pipeline to ingest high volume of job postings received from multiple sources and partners. I built this using Scala, akka, akka-http, Play Framework, Kafka and Apache Nifi. I also setup a Kubernetes cluster running on AWS which was used for this new ingestion pipeline. I was responsible for introducing all these wonderful technologies to Snagajob.
+
+Other projects I was involved in at Snagajob involved me creating micro services and REST api’s using Python, Flask, Celery.
 
 ### Senior Full Stack Software Developer, Trackmaven — 2015-2016 ###
 Enhanced Trackmaven’s competitive intelligence platform by creating new services using Python, Flask, Django, Elasticsearch and PostgreSQL. Created a new UI Dashboard used by customers to track marketing campaign performance versus their competitor using Angular.
@@ -50,8 +54,32 @@ The companies I worked for included: O2, IBM, Oracle, National Car Rental.
 ### Education ###
 King’s College, University of London — BEng(Hons) in Electronic and Electrical Engineering, Graduated in 1992
 
+### Projects ###
+
+I contribute to various Scala open source projects. Most notabiliy to Scala [ZIO](https://zio.dev/) library and group of projects. My main focus and contribution is working on and leading the [ZIO-Actors](https://zio.github.io/zio-actors/) library. A high performance, purely-functional library for building and supervising typed actors backed by ZIO. A Fresh approach to implementing the actor model.
+
+I am also working on and leading [ZIO-Zmx](https://github.com/zio/zio-zmx) a new project that is a work in progress providing monitoring and metrics of ZIO fibers.
+
+### Other Accomplishments ###
+
+I have a passion to learn and network with like minded people with similar interests in technology. Hence over the last few years I have been an active meetup organizer.
+
+#### San Francisco Scala Meetup ####
+
+Organizer from June 2018 to present: <http://sfscala.org/>
+
+#### Elastic San Francisco User group ####
+
+Organizer from November 2017 to present: <https://www.meetup.com/Elasticsearch-San-Francisco/>
+
+#### Bay area AI meetup ####
+
+Organizer from January 2020 to present: <https://www.meetup.com/bay-area-ai/>
+
+#### Scala DC Meetup ####
+
+Organizer from October 2016 to February 2018: <https://www.meetup.com/dc-scala/>
+
 ### References ###
 Available on request
 
-### Download my resume ###
-[Click Here to download my resume](/media/Salar-Rahmanian-Resume.pdf)
