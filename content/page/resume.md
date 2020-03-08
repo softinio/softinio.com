@@ -43,16 +43,21 @@ The stack used for this was Python, Django, Postgresql and Elasticsearch. For pa
 
 ### Principal Software Developer, Incito Networks LLC — 2009-2013 ###
 Worked as a freelance software developer developing custom apps for local small businesses and entrepreneurs. Worked on several software development projects which included me using: 
+
 - Java, Spring
 - Python, Django
 - I developed two IOS apps for clients using Objective C 
 
 ### Principal Software Developer, Powermax Computing Ltd — 1998-2009 ###
-If you have worked in the UK as an experienced software developer, you realize that the best jobs from all angles are contract / consultant positions. So during this period whilst living in London UK i worked for many well known companies on the biggest projects as a Principal Software Developer. In the early years my work solely involved coding using  C Programming on a Unix Platform (such as Solaris and AIX) with an Oracle Database backend (included Pro*C and PL/SQL). In the more later years my coding was mostly done using Java, Spring, Hibernate and Oracle again as the database backend.
-The companies I worked for included: O2, IBM, Oracle, National Car Rental. 
+If you have worked in the UK as an experienced software developer, you realize that the best jobs from all angles are contract / consultant positions. So during this period whilst living in London UK i worked for many well known companies on the biggest projects as a Principal Software Developer. In the early years my work solely involved coding using  C Programming on a Unix Platform (such as Solaris and AIX) with an Oracle Database backend (included Pro*C and PL/SQL). 
+
+In the more later years my coding was mostly done using Java, Spring, Hibernate and Oracle again as the database backend.
+
+The companies I worked for included: O2, IBM, Oracle, National Car Rental.
 
 ### Education ###
-King’s College, University of London — BEng(Hons) in Electronic and Electrical Engineering, Graduated in 1992
+- King’s College, University of London — BEng(Hons) in Electronic and Electrical Engineering, Graduated in 1992
+- École Polytechnique Fédérale de Lausanne on Coursera — [Functional Programming Principles in Scala](https://www.coursera.org/account/accomplishments/verify/H5W964KAJ73Y)
 
 ### Projects ###
 
@@ -79,7 +84,4 @@ Organizer from January 2020 to present: <https://www.meetup.com/bay-area-ai/>
 #### Scala DC Meetup ####
 
 Organizer from October 2016 to February 2018: <https://www.meetup.com/dc-scala/>
-
-### References ###
-Available on request
 
