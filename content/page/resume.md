@@ -1,6 +1,6 @@
 +++
 date = "2018-04-16T09:16:07-05:00"
-lastmod = "2018-05-23"
+lastmod = "2020-07-27"
 Description = "Salar Rahmanian Resume"
 keywords = ["Salar", "Rahmanian", "Salar Rahmanian", "Resume", "CV"]
 menu = "main"
@@ -12,7 +12,14 @@ title = "Resume"
 San Francisco Bay Area, California
 
 ## Profile ##
-I have been developing software since the age of eleven. My current passion is to develop and architect distributed systems using Scala, AKKA and Kafka. I do consider myself a polyglot and have ability to pick up new languages and technology very fast.
+I have been developing software since the age of eleven. 
+
+I have extensive experience:
+
+- Programming in: Java, Scala and Python
+- Databases: Oracle, Postgresql, MySQL, DB2
+- Frameworks: Spring and Hibernate (Java), Akka / Akka-http (Scala), Play Framework (Java & Scala), Django (Python), Flask (Python)
+- Other: Redis, Kafka, RabbitMQ
 
 ## Domain Experience ##
 - Building data ingestion pipelines
@@ -22,18 +29,26 @@ I have been developing software since the age of eleven. My current passion is t
 - Full Stack web application development
 
 ## Experience ##
-### Staff Software Engineer, Mya Systems - 2018 - present ###
-Building an AI recruiter assistant
+### Senior Software Engineer II, Collective Health - 2020 - present ###
+
+### Staff Software Engineer, Mya Systems - 2018 - 2020 ###
+Worked on Building an AI recruiter assistant. 
+
+My accomplishments at Mya:
+
+- Scaled our platforms conversations with our AI assistant to be asynchronous and queue/streaming driven
+- Integration of Mya's platform with several external ATS's most notably this included Workday, Bullhorn, Paychex/MyStaffing Pro and Textkernel.
+- Building new microservices and adding features to Mya existing platform using Python, Django, Flask, Celery, Redis (Including Redis Streams) and Postgresql. This included building REST Services. 
 
 ### Senior Principal Engineer, Snagajob — 2016-2018 ###
 I built a new data ingestion pipeline to ingest high volume of job postings received from multiple sources and partners. I built this using Scala, akka, akka-http, Play Framework, Kafka and Apache Nifi. I also setup a Kubernetes cluster running on AWS which was used for this new ingestion pipeline. I was responsible for introducing all these wonderful technologies to Snagajob.
 
 Other projects I was involved in at Snagajob involved me creating micro services and REST api’s using Python, Flask, Celery.
 
-### Senior Full Stack Software Developer, Trackmaven — 2015-2016 ###
+### Senior Full Stack Software Engineer, Trackmaven — 2015-2016 ###
 Enhanced Trackmaven’s competitive intelligence platform by creating new services using Python, Flask, Django, Elasticsearch and PostgreSQL. Created a new UI Dashboard used by customers to track marketing campaign performance versus their competitor using Angular.
 
-### Senior Software Developer, Accenture Federal Services — 2014-2015 ###
+### Senior Software Engineer, Accenture Federal Services — 2014-2015 ###
 I worked on the modernization of the Dept of Veteran Affairs eHmp health care system. I was the technical lead of a team of 10 responsible for the development of the platforms sync system. This was a distributed system used to sync patient records across all hospitals. The main stack I used for development was Java, Spring, Dropwizard and Node.js.
 
 ### Chief Technology Officer, Healthy Choices At Work — 2012-2014 ###
@@ -41,15 +56,15 @@ I was a hands on CTO and Engineer at this startup. I architected and developed a
 
 The stack used for this was Python, Django, Postgresql and Elasticsearch. For payments our system integrated with Stripe APIs. 
 
-### Principal Software Developer, Incito Networks LLC — 2009-2013 ###
+### Principal Software Engineer, Incito Networks LLC — 2009-2013 ###
 Worked as a freelance software developer developing custom apps for local small businesses and entrepreneurs. Worked on several software development projects which included me using: 
 
 - Java, Spring
 - Python, Django
 - I developed two IOS apps for clients using Objective C 
 
-### Principal Software Developer, Powermax Computing Ltd — 1998-2009 ###
-If you have worked in the UK as an experienced software developer, you realize that the best jobs from all angles are contract / consultant positions. So during this period whilst living in London UK i worked for many well known companies on the biggest projects as a Principal Software Developer. In the early years my work solely involved coding using  C Programming on a Unix Platform (such as Solaris and AIX) with an Oracle Database backend (included Pro*C and PL/SQL). 
+### Principal Software Engineer, Powermax Computing Ltd — 1998-2009 ###
+If you have worked in the UK as an experienced software developer, you realize that the best jobs from all angles are contract / consultant positions. So during this period whilst living in London UK i worked for many well known companies on the biggest projects as a Principal Software Engineer. In the early years my work solely involved coding using  C Programming on a Unix Platform (such as Solaris and AIX) with an Oracle Database backend (included Pro*C and PL/SQL). 
 
 In the more later years my coding was mostly done using Java, Spring, Hibernate and Oracle again as the database backend.
 
@@ -69,6 +84,10 @@ I am also working on and leading [ZIO-Zmx](https://github.com/zio/zio-zmx) a new
 
 I have a passion to learn and network with like minded people with similar interests in technology. Hence over the last few years I have been an active meetup organizer.
 
+#### San Francisco Java User Group Meetup ####
+
+Organizer from June 2020 to present: <http://sfjava.org/>
+
 #### San Francisco Scala Meetup ####
 
 Organizer from June 2018 to present: <http://sfscala.org/>
@@ -80,6 +99,10 @@ Organizer from November 2017 to present: <https://www.meetup.com/Elasticsearch-S
 #### Bay area AI meetup ####
 
 Organizer from January 2020 to present: <https://www.meetup.com/bay-area-ai/>
+
+#### GraphQL By the Bay meetup ####
+
+Organizer from April 2019 to present: <https://www.meetup.com/graphql-by-the-bay>
 
 #### Scala DC Meetup ####
 
