@@ -152,7 +152,7 @@ order = [".png$", ".jpg$", ".gif$", ".svg$"]
 [[deployment.targets]]
 name = "softinio-deploy"
 URL = "s3://www.softinio.com?region=us-east-1"
-cloudFrontDistributionID = E1CMSLHG2WR51C
+cloudFrontDistributionID = "E1CMSLHG2WR51C"
 
 [[deployment.matchers]]
 #  Cache static assets for 1 year.
