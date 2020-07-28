@@ -17,9 +17,9 @@ I have been developing software since the age of eleven.
 I have extensive experience:
 
 - Programming in: Java, Scala and Python
-- Databases: Oracle, Postgresql, MySQL, DB2
+- Databases: Oracle, Postgresql, MySQL, IBM DB2
 - Frameworks: Spring and Hibernate (Java), Akka / Akka-http (Scala), Play Framework (Java & Scala), Django (Python), Flask (Python)
-- Other: Redis, Kafka, RabbitMQ
+- Other: Redis, Kafka, RabbitMQ, Apache Nifi
 
 ## Domain Experience ##
 - Building data ingestion pipelines
@@ -32,7 +32,7 @@ I have extensive experience:
 ### Senior Software Engineer II, Collective Health - 2020 - present ###
 
 ### Staff Software Engineer, Mya Systems - 2018 - 2020 ###
-Worked on Building an AI recruiter assistant. 
+Worked on Building an AI recruiter assistant.
 
 My accomplishments at Mya:
 
