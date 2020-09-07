@@ -1,11 +1,8 @@
 +++
-date = "2018-04-16T09:16:07-05:00"
-lastmod = "2020-07-27"
-Description = "Salar Rahmanian Resume"
-keywords = ["Salar", "Rahmanian", "Salar Rahmanian", "Resume", "CV"]
-menu = "main"
-slug = "salar-rahmanian-resume"
 title = "Resume"
+date = "2018-04-16T09:16:07-05:00"
+description = "Salar Rahmanian Resume"
+keywords = ["Salar", "Rahmanian", "Salar Rahmanian", "Resume", "CV"]
 +++
 # Salar Rahmanian #
 ## My Location ##

@@ -1,12 +1,11 @@
 +++
 title = "PyBay 2018 San Francisco"
 date = 2018-10-25T18:30:40-07:00
+description = "Highlights of PyBay 2018 conference a Python event based in the San Francisco Bay Area California"
 draft = false
 keywords = ["python", "pybay", "sfpython", "pycon", "san francisco", "bay area", "california", "conference"]
-description = "Highlights of PyBay 2018 conference a Python event based in the San Francisco Bay Area California"
 tags = ["python", "conference"]
 categories = ["python", "conference"]
-lastmod = 2018-10-25T18:30:40-07:00
 +++
 As you read in my [last blog](https://www.softinio.com/post/life-changes-and-announcing-sfbayareatech/)
 I was lucky enough to finally move to the bay area. If you know me you will

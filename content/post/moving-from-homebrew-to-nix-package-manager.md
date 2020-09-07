@@ -1,12 +1,13 @@
 +++
 title = "Moving from Homebrew to Nix Package Manager"
 date = 2019-02-16T18:30:40-07:00
-draft = false
-keywords = ["nix", "nixos", "macos", "macbook", "package manager", "functional programming"]
 description = "Moving from Homebrew to Nix Package manager on my macbook pro"
+featured = true
+draft = false
+toc = true
+keywords = ["nix", "nixos", "macos", "macbook", "package manager", "functional programming"]
 tags = ["nix", "nixos", "macos", "functional programming"]
-categories = ["nix", "nixos", "macos", "macbook"]
-lastmod = 2019-02-16T18:30:40-07:00
+categories = ["nix", "nixos", "macos"]
 +++
 
 ![Nix](https://via.softinio.com/Screen-Shot-2019-02-17-13-04-16.png)
