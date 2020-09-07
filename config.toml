@@ -1,140 +1,58 @@
 baseurl = "https://www.softinio.com/"
 title = "Salar Rahmanian"
+author = "Salar Rahmanian"
 enableRobotsTXT = true
 enableEmoji = true
-theme = "jane"
+theme = "hugo-clarity"
+paginate = 10
 
-# language support # en / zh-cn / other...
-defaultContentLanguage = "en"
-[Languages.en]
-  languageCode = "en"
+[markup]
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = true
+    hl_Lines = "--"
+    lineNoStart = 1
+    lineNos = true # always set to true # else line numbers won't show at all! even when you toggle them on in the UI
+    lineNumbersInTable = false # toggling this on (i.e to true) or deleting this line will break the code blocks functionality. Will
+    noClasses = false
+    # style = "monokai"
+    tabWidth = 2
+  [markup.goldmark.renderer]
+    hardWraps = false
+    unsafe = false # change to true to enable inclusion of rawHTML and math functions
+    xhtml = false
 
-hasCJKLanguage = false 
-paginate = 5
-rssLimit = 20
-googleAnalytics = "UA-47014432-1"
-copyright = ""
+[params]
+author = "Salar Rahmanian"
+twitter = "@SalarRahmanian"
+largeTwitterCard = false
+introDescription = "Software Engineer based in San Francisco Bay Area with interests in Scala, Java"
+ga_analytics = "UA-47014432-1"
+numberOfTagsShown = 14
+fallBackOgImage = "salar.jpg"
+codeMaxLines = 10
+codeLineNumbers = false
+mainSections = ["post"]
+centerLogo = false
+# logo = "salar.jpg"
+figurePositionShow = false
+figurePositionLabel = "Figure"
+mobileNavigation = "left"
 
-# Highlight options.
-# See https://gohugo.io/content-management/syntax-highlighting/
-PygmentsCodeFences = true # Enable syntax highlighting with GitHub flavoured code fences
-PygmentsUseClasses = true # Use CSS classes to format highlighted code
-PygmentsCodefencesGuessSyntax = true
-PygmentsOptions = "linenos=table"
+description = "Salar Rahmanian"
+keywords = ["Salar", "Rahmanian", "Salar Rahmanian", "Blog", "python", "scala", "haskell", "nix", "NixOS"]
 
-[author]
-  name = "Salar Rahmanian"
-
-[permalinks]
-    post = "/post/:slug"
-    page = "/page/:slug"
+[params.utteranc]
+  enable = true
+  repo = "softinio/softinio.com"
+  issueTerm = "url"
 
 [sitemap]
   changefreq = "weekly"
   priority = 0.5
   filename = "sitemap.xml"
 
-[[menu.main]]             # config your menu              # 配置目录
-  name = "Home"
-  weight = 10
-  identifier = "home"
-  url = "/"
-[[menu.main]]
-  name = "Archives"
-  weight = 20
-  identifier = "archives"
-  url = "/post/"
-[[menu.main]]
-  name = "Tags"
-  weight = 30
-  identifier = "tags"
-  url = "/tags/"
-[[menu.main]]
-  name = "Categories"
-  weight = 40
-  identifier = "categories"
-  url = "/categories/"
 
-[[menu.main]]
-  name = "Family Blog"
-  url = "https://www.rahmanian.xyz/"
-  weight = 50
-
-[params]
-  debug = false             # If true, load `eruda.min.js`. See https://github.com/liriliri/eruda
-
-  since = "2012"            # Site creation time          # 站点建立时间
-  homeFullContent = false   # if false, show post summaries on home page. Othewise show full content.
-  rssFullContent = true     # if false, Rss feed instead of the summary
-
-  # site info (optional)                                  # 站点信息（可选，不需要的可以直接注释掉）
-  logoTitle = "Salar Rahmanian"
-  description = "Salar Rahmanian"
-  keywords = ["Salar, Rahmanian, Blog, python, scala, haskell, swiftlang, nix, NixOS"]
-
-  # paginate of archives, tags and categories             # 归档、标签、分类每页显示的文章数目，建议修改为一个较大的值
-  archive-paginate = 3
-
-  # paginate style, default use numbered pagination links
-  # if true, use original "Previous" and "Next" links.
-  # paginateOriginalStyle = true
-
-  # The date format to use; for a list of valid formats, see https://gohugo.io/functions/format/
-  dateFormatToUse = "2006-01-02"
-
-  # show word count and read time ?                       # 是否显示字数统计与阅读时间
-  moreMeta = true
-
-  # 一些全局开关，你也可以在每一篇内容的 front matter 中针对单篇内容关闭或开启某些功能，在 archetypes/default.md 查看更多信息。
-  # Some global options, you can also close or open something in front matter for a single post, see more information from `archetypes/default.md`.
-  toc = true                                                                            # 是否开启目录
-  autoCollapseToc = false   # Auto expand and collapse toc                              # 目录自动展开/折叠
-  fancybox = true           # see https://github.com/fancyapps/fancybox                 # 是否启用fancybox（图片可点击）
-  bootcdn = false           # In china. @Deprecated: use [params.publicCDN]             # 是否使用bootcdn(@Deprecated: 请使用[params.publicCDN])
-  mathjax = false           # see https://www.mathjax.org/                              # 是否使用mathjax（数学公式）
-  contentCopyright = '<a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a>'
-
-  google_verification = ""  # Google_Verification         # 谷歌
-
-  # Link custom CSS and JS assets
-  #   (relative to /static/css and /static/js respectively)
-  customCSS = []            # if ['custom.css'], load '/static/css/custom.css' file
-  customJS = []             # if ['custom.js'], load '/static/js/custom.js' file
-
-  [params.publicCDN]        # load these files from public cdn                          # 启用公共CDN，需自行定义
-    enable = false
-    jquery = '<script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>'
-    slideout = '<script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>'
-    fancyboxJs = '<script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>'
-    fancyboxCss = '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">'
-    gitmentJS = '<script src="https://cdn.jsdelivr.net/npm/gitment@0.0.3/dist/gitment.browser.min.js" crossorigin="anonymous"></script>'
-    gitmentCSS = '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitment@0.0.3/style/default.min.css" crossorigin="anonymous">'
-
-  [params.utteranc]         # utteranc is a comment system based on GitHub issues. see https://utteranc.es
-    enable = true
-    repo = "softinio/softinio.com"    # The repo to store comments
-    issueTerm = "url"
-
-  [params.gitment]          # Gitment is a comment system based on GitHub issues. see https://github.com/imsun/gitment
-    owner = ""              # Your GitHub ID
-    repo = ""               # The repo to store comments
-    clientId = ""           # Your client ID
-    clientSecret = ""       # Your client secret
-
-
-  [params.reward]                                         # 文章打赏
-    enable = false
-    wechat = "/path/to/your/wechat-qr-code.png"           # 微信二维码
-    alipay = "/path/to/your/alipay-qr-code.png"           # 支付宝二维码
-
-  [params.social]                                         # 社交链接
-    # a-email = "mailto:your@email.com"
-    b-stack-overflow = "http://stackoverflow.com/users/1930869/softinio"
-    c-twitter = "https://twitter.com/SalarRahmanian"
-    e-linkedin = "https://www.linkedin.com/in/salarrahmanian/"
-    g-github = "https://github.com/softinio"
-    n-gitlab = "https://gitlab.com/softinio"
-    # o-goodreads = "http://en.xianmin.org/hugo-theme-jane/"
 
 [outputs]
   home = ["html", "jsonfeed","rss"]

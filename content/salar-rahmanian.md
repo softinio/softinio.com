@@ -1,10 +1,8 @@
 +++
+title = "Salar Rahmanian"
 date = "2015-11-26T09:16:07-05:00"
-Description = "About Salar Rahmanian"
+description = "About Salar Rahmanian"
 keywords = ["Salar", "Rahmanian", "Salar Rahmanian"]
-menu = "main"
-slug = "salar-rahmanian"
-title = "About Me"
 +++
 
 I , [Salar Rahmanian](https://www.softinio.com), am a software developer based in San Francisco Bay area, California.
