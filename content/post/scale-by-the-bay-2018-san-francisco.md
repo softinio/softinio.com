@@ -9,9 +9,9 @@ tags = ["scala", "conference", "functional programming"]
 categories = ["scala", "conference", "functional programming"]
 +++
 
-One of the highlights of 2018 was attending and being part of the Scale By the bay 2018 conference in San Francisco. This by far was the best conference I have ever attended. 
-
 from left: [Dick Wall](https://twitter.com/dickwall), [Salar Rahmanian](https://twitter.com/SalarRahmanian), [Martin Odersky (Creator of Scala)](https://twitter.com/odersky), [Alexy Khrabrov](https://twitter.com/ChiefScientist), [Jakob Odersky ](https://twitter.com/jodersky)
+
+One of the highlights of 2018 was attending and being part of the Scale By the bay 2018 conference in San Francisco. This by far was the best conference I have ever attended. 
 
 The conference had 3 tracks covering the functional programming, reactive programming and data science topics. All the talks were of high quality made even better by highly intelligent audience made up of the most talented stars of our industry.
 
