@@ -1,11 +1,12 @@
 +++
-Topics = ["development"]
+title = "Using pyenv for Python projects"
 date = "2015-04-13T09:06:03-05:00"
-Description = "Using pyenv to manage your virtual environments makes working on multiple projects, each using a different version of python a breeze."
-Slug = "using-pyenv-for-python-projects"
-Tags = ["python", "pyenv", "centos"]
-Keywords = ["python", "pyenv", "centos"]
-Title = "Using pyenv for Python projects"
+draft = false
+toc = true
+description = "Using pyenv to manage your virtual environments makes working on multiple projects, each using a different version of python a breeze."
+keywords = ["python", "pyenv", "centos", "macos"]
+tags = ["python", "pyenv", "centos", "macos"]
+categories = ["development"]
 +++
 
 Using [pyenv][3] to manage your virtual environments makes working on multiple projects, each using a different version of python a breeze.

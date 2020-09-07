@@ -1,40 +1,10 @@
-<div class="icon-links">
-  {{ partial "social_links.html" . }} 
-</div>
-
-<div class="copyright">
-  <span class="power-by">
-    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
-  </span>
-  <span class="copyright-year">
-    {{- $current := now.Format "2006" }}
-    &copy;
-    {{ if ne .Site.Params.since $current }}
-      {{ .Site.Params.since }} -
-    {{ end }}
-    {{- $current }}
-    <span class="heart">
-      {{/* icon heart */}}
-      <i class="iconfont">
-        {{ partial "svg/heart.svg" }}
-      </i>
-    </span>
-    {{- if or .Site.Copyright .Site.Author.name -}}
-      <span class="author">
-        {{if .Site.Copyright }}{{ .Site.Copyright | safeHTML }}
-        {{ else }}{{ .Site.Author.name | safeHTML }}
-        {{ end }}
-      </span>
-    <span>
+<footer class = 'footer'>
+  <div class = 'footer_inner wrap pale'>
+    <img src = '{{ absURL "softinio.jpg" }}' class = 'icon icon_2 transparent'>
+    <p>Copyright &copy;&nbsp;<span class = 'year'></span>&nbsp;{{ .Site.Title | upper }}. <span>
         <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a><br />This work by <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Salar Rahmanian</span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
     Please attribute properly and link back. <br/>
-    </span>
-    {{- end -}}
-  </span>
-
-  {{ if .Site.Params.customFooter }}
-    <span>
-      {{ .Site.Params.customFooter | safeHTML }}
-    </span>
-  {{ end }}
-</div>
+    </span></p>
+    {{- partial "top" .}}
+  </div>
+</footer>
