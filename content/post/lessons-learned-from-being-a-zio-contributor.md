@@ -1,12 +1,13 @@
 +++
 title = "Lessons Learned From Being a ZIO Contributor"
 date = 2020-09-05T12:43:34-07:00
-draft = false
-keywords = ["functional programming", "scala", "zio", "open source", "lambdaconf", "contributor"]
 description = "Contributing to your first open source project can be daunting but is a rewarding experience. In this post I will discuss what it is like to contribute to the ZIO Scala library, what lessons were learned from this experience, and discuss how you can get started contributing to your first open source project."
+draft = false
+toc = true
+featuredImage = "https://github.com/zio/zio/blob/master/ZIO.png?raw=true"
+keywords = ["functional programming", "scala", "zio", "open source", "lambdaconf", "contributor"]
 tags = ["functional programming", "scala", "zio", "open source"]
-categories = ["functional programming", "scala", "zio", "open source"]
-lastmod = 2020-09-05T12:43:34-07:00
+categories = ["functional programming", "scala", "zio", "open source", "conference", "talks"]
 +++
 
 
