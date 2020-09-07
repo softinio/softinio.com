@@ -3,6 +3,7 @@ title = "PyBay 2018 San Francisco"
 date = 2018-10-25T18:30:40-07:00
 description = "Highlights of PyBay 2018 conference a Python event based in the San Francisco Bay Area California"
 draft = false
+featureImage = "https://via.softinio.com/PyBay_2018_Start.png"
 keywords = ["python", "pybay", "sfpython", "pycon", "san francisco", "bay area", "california", "conference"]
 tags = ["python", "conference"]
 categories = ["python", "conference"]
@@ -14,8 +15,6 @@ two language and functional programming I can rule the world. So it goes
 without saying that as soon as I arrived one of the first things I did was to
 become an active member of the San Francisco Python community and attended my very
 first PyBay 2018.
-
-![Welcome to PyBay 2018](https://via.softinio.com/PyBay_2018_Start.png)
 
 # Day one of PyBay 2018 #
 PyBay 2018 was held at the [Mission Bay Conference Center at the UCSF](http://www.acc-missionbayconferencecenter.com/) I arrived after work in time for the opening keynote by [Rachel Thomas](https://www.linkedin.com/in/rachel-thomas-942a7923/) of [fast.ai](http://course.fast.ai/index.html)
