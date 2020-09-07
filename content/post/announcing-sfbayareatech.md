@@ -1,13 +1,14 @@
 +++
 title = "Life changes and announcing SFBayAreaTech"
 date = 2018-08-10T07:29:10-07:00
+description = "Me and family moved, I changed jobs and announcing SFBayAreaTech a slack community for anyone working in tech who are based in the San Francisco Bay Area California"
 draft = false
 keywords = ["sfbayareatech", "slack", "community", "san francisco", "bay area", "california"]
-description = "Me and family moved, I changed jobs and announcing SFBayAreaTech a slack community for anyone working in tech who are based in the San Francisco Bay Area California"
-tags = ["general", "sfbayareatech"]
+tags = ["sfbayareatechies"]
 categories = ["general"]
-lastmod = 2018-08-10T07:29:10-07:00
 +++
+
+#### Update: Since writing this blog, I have changed jobs and SFBayAreaTech has changed to <https://www.sfbayareatechies.com> ####
 
 2018 has been a fabulous year so far. Me and [family moved to the San Francisco bay area](https://www.rahmanian.xyz/post/goodbye-virginia-and-hello-san-fransisco-bay-area/) realizing my life long dream and our family goals. 
 
