@@ -3,14 +3,13 @@ title = "Scale By The Bay 2018 San Francisco"
 date = 2019-05-02T18:30:40-07:00
 description = "Highlights of Scale By The Bay 2018 San Francisco conference an event based in the San Francisco Bay Area California with major focus on Functional Programming, Reactive programming and Data Science"
 draft = false
+featuredImage = "https://via.softinio.com/scalebythebay_2018_header.jpg"
 keywords = ["scala", "bythebay", "sfscala", "functional programming", "san francisco", "bay area", "california", "conference"]
 tags = ["scala", "conference", "functional programming"]
 categories = ["scala", "conference", "functional programming"]
 +++
 
 One of the highlights of 2018 was attending and being part of the Scale By the bay 2018 conference in San Francisco. This by far was the best conference I have ever attended. 
-
-![Scale By the Bay 2018](https://via.softinio.com/scalebythebay_2018_header.jpg)
 
 from left: [Dick Wall](https://twitter.com/dickwall), [Salar Rahmanian](https://twitter.com/SalarRahmanian), [Martin Odersky (Creator of Scala)](https://twitter.com/odersky), [Alexy Khrabrov](https://twitter.com/ChiefScientist), [Jakob Odersky ](https://twitter.com/jodersky)
 
