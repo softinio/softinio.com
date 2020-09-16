@@ -1,17 +1,21 @@
 +++
 title = "Lessons Learned From Being a ZIO Contributor"
-date = 2020-09-05T12:43:34-07:00
+date = 2020-09-15T12:43:34-07:00
 description = "Contributing to your first open source project can be daunting but is a rewarding experience. In this post I will discuss what it is like to contribute to the ZIO Scala library, what lessons were learned from this experience, and discuss how you can get started contributing to your first open source project."
 draft = false
 toc = true
+featured = false
 featuredImage = "https://github.com/zio/zio/blob/master/ZIO.png?raw=true"
 keywords = ["functional programming", "scala", "zio", "open source", "lambdaconf", "contributor"]
 tags = ["functional programming", "scala", "zio", "open source"]
 categories = ["functional programming", "scala", "zio", "open source", "conference", "talks"]
 +++
 
+# Talk at LambdaConf 2020 #
 
-This blog post is a companion to the [Lambdaconf 2020 Talk](https://lambdaconf.zohobackstage.com/LambdaConf2020#/tickets) I did on this topic. Video of my talk and slides will be added to this post once it is available.
+This blog post is a companion to the [Lambdaconf 2020 Talk](https://lambdaconf.zohobackstage.com/LambdaConf2020#/tickets) I did on this topic. Video of my talk will be added to this post once it is available.
+
+[Slides of my talk at LambdaConf 2020](https://github.com/softinio/talks/blob/master/lambdaconf2020/lessons_learnt_from_being_a_zio_contributor.pdf)
 
 ## My Journey to being an Open source contributor ##
 
@@ -94,7 +98,7 @@ All other projects use GitHub pages and have a GitHub pages project URL as oppos
 
 ## Contribution Etiquette and Collaboration ##
 
-The environment to contribute to an open source project is very different than how you collaborate with colleagues at work. The biggest points to realize is everyone is in effect a volunteer giving up their time to help. They maybe in a different timezone and only have second pockets of time around their busy lives to take part.
+The environment to contribute to an open source project is very different than how you collaborate with colleagues at work. The biggest points to realize is everyone is in effect a volunteer giving up their time to help. They maybe in a different timezone and only have certain pockets of time around their busy lives to take part.
 
 As such working in harmony, being patient and greatful for all the help is very important. What I would like to summaries a few do's and don't that we should follow as an etiquette in order to maintain a happy and welcoming environment for all.
 
@@ -147,7 +151,7 @@ ZIO Code of conduct linked above does include details of the current steering co
 
 - ZIO community is very welcoming to everyone especially if you are junior in Scala. A lot of passionnate people who have a common goal to push Scala to the top.
 
-- Everyone in the ZIO community makes you feel welcome and supported
+- Everyone in the ZIO community makes you feel supported
 - You will learn a lot by just trying to answer other peoples question on discord
 - Contributing to open source is the best way to learn and gain experience. Better than any course.
 - Quality of feedback and help is very high enabling you to learn a lot
