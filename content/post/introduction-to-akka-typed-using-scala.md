@@ -8,10 +8,10 @@ toc = true
 featureImage = "/img/akka_logo.svg"
 thumbnail = ""
 shareImage = ""
-codeMaxLines = 10
+codeMaxLines = 30
 codeLineNumbers = false
 figurePositionShow = false
-keywords = ["concurrent", "concurrency", "actor model", "actor", "actors", "threads", "petri net", "coroutines", "distributed", "akka", "erlang", "elixir", "akka.net", "microsoft orleans", "orleans", "zio", "zio-actors"]
+keywords = ["concurrent", "concurrency", "actor model", "actor", "actors", "threads", "petri net", "coroutines", "distributed", "akka", "erlang", "elixir", "akka.net", "microsoft orleans", "orleans", "zio", "zio-actors", "swift language actors"]
 tags = ["actor model", "concurrency", "distributed systems", "scala", "akka"]
 categories = ["concurrency", "distributed systems", "scala"]
 +++
@@ -118,6 +118,35 @@ object Datastore {
 The `Message` received contains a `Command`, the behavior defined for this actor is to use pattern matching to determine and `Add` to the datastore, `Remove` from the datastore or to `Get` from the datastore. The appropriate message is sent to the actor that will carry out the action as illustrated in my diagram and code snippet above.
 
 The resulting behavior for this actor is also `Behaviors.same` as it is not changing in any way and its behavior will be the same all the time.
+
+## Creating the Actor System ##
+
+```scala
+object ActorsMain {
+  def apply(): Behavior[Customer] =
+    Behaviors.setup { context =>
+      val subscriber = context.spawn(Subscriber(), "subscriber")
+      val db = context.spawn(Datastore(), "db")
+
+      Behaviors.receiveMessage { message =>
+      	val replyTo = context.spawn(Reply(), "reply")
+        subscriber ! Message(message.firstName,message.lastName,message.emailAddress,Add,db,replyTo)
+        Behaviors.same
+      }
+    }
+}
+
+object Pat extends App {
+  val actorsMain: ActorSystem[Customer] = ActorSystem(ActorsMain(), "PatSystem")
+  actorsMain ! Customer("Salar", "Rahmanian", "code@softinio.com")
+}
+```
+
+The root actor spawns all the new actors and as a result has the `ActorRef` for all the actors.
+
+Looking at the above code snippet you can see that we are creating a `Behavior` of type `Customer`, which is the type of the message we are going to receive. As this is the outer most actor in our actor hierachy, `Behaviors.setup` is used to spawn all the actors we have. When a new message is received, a message is sent to the subscriber actor (which is our validate email address actor).
+
+In the applications `main` (i.e. `Pat` object), we create the `ActorSystem` and start sending `Customer` messages.
 
 ## Summary ##
 
