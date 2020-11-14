@@ -11,7 +11,7 @@ shareImage = ""
 codeMaxLines = 10
 codeLineNumbers = false
 figurePositionShow = false
-keywords = ["concurrent", "concurrency", "actor model", "actor", "actors", "threads", "petri net", "coroutines", "distributed", "akka", "erlang", "elixir", "akka.net", "microsoft orleans", "orleans", "zio", "zio-actors"]
+keywords = ["concurrent", "concurrency", "actor model", "actor", "actors", "threads", "petri net", "coroutines", "distributed", "akka", "erlang", "elixir", "akka.net", "microsoft orleans", "orleans", "zio", "zio-actors", "swift language actors"]
 tags = ["actor model", "concurrency", "distributed systems"]
 categories = ["concurrency", "distributed systems"]
 +++
