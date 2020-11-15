@@ -30,3 +30,4 @@
   {{ $length := len .Site.Params.keywords | add -1 -}}
   <meta name="keywords" content="{{ range $index, $element := .Site.Params.keywords }}{{ $element | safeHTML }}{{if ne $index $length }}, {{ end }}{{ end }}" />
 {{- end }}
+<a rel="me" href="https://fosstodon.org/@softinio">Mastodon</a>
