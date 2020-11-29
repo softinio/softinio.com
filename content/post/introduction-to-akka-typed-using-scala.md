@@ -2,7 +2,7 @@
 title = "Introduction to Akka Typed Using Scala"
 date = 2020-10-24T20:32:41-07:00
 description = "An Introduction to AKKA Typed using Scala with an example"
-featured = true
+featured = false
 draft = false
 toc = true
 featureImage = "/img/akka_logo.svg"
@@ -11,7 +11,7 @@ shareImage = ""
 codeMaxLines = 30
 codeLineNumbers = false
 figurePositionShow = false
-keywords = ["concurrent", "concurrency", "actor model", "actor", "actors", "threads", "petri net", "coroutines", "distributed", "akka", "erlang", "elixir", "akka.net", "microsoft orleans", "orleans", "zio", "zio-actors", "swift language actors"]
+keywords = ["concurrent", "concurrency", "actor model", "actor", "actors", "threads", "petri net", "coroutines", "distributed", "akka", "erlang", "elixir", "akka.net", "microsoft orleans", "orleans", "zio", "zio-actors", "ZIO Actors","swift language actors"]
 tags = ["actor model", "concurrency", "distributed systems", "scala", "akka"]
 categories = ["concurrency", "distributed systems", "scala"]
 +++
