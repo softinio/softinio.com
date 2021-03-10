@@ -13,7 +13,7 @@ I am particularly enthusiastic about the Scala Programming language and NixOS an
 
 I try to make open source contributions when I can. I have contributed to the [ZIO](https://zio.dev) ecosystem, most notably leading and creating the [ZIO-Actors](https://zio.github.io/zio-actors/) and [ZIO-zmx](https://zio.github.io/zio-zmx/) projects.
 
-I am also organizer for a few meetup groups and arrange technical talk events. To find out more about them and join our community visit [SF Bay Area Techies](https://wwww.sfbayareatechies.com).
+I am also organizer for a few meetup groups and arrange technical talk events. To find out more about them and join our community visit [SF Bay Area Techies](https://www.sfbayareatechies.com).
 
 [Subscribe to my newsletter](https://softinio.substack.com/)
 
