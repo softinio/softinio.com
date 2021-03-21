@@ -7,5 +7,10 @@ Personal Blog of Salar Rahmanian, https://www.softinio.com
 
 https://gohugo.io/
 
+# Notes
 
+To run this repo locally after you have cloned it, to get the theme you must run:
 
+```
+git submodule update --init --recursive
+```
