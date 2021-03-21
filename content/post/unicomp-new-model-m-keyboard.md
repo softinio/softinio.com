@@ -62,7 +62,7 @@ Please do not be put off by this and don't judge them because of their dated loo
 
 ## Conclusion
 
-I am back again reunited with my old friend a Model M. I am enjoying using it so much after a gap of not having one that I am looking for excuses to use it more and more. So expect more [blogs](https://www.softinio.com) and [newsletters](https://softinio.substack.com) from me going forward, as this keyboard is a joy to use. 
+I am back again reunited with my old friend a Model M. I am enjoying using it so much after a gap of not having one that I am looking for excuses to use it more and more. So expect more [blogs](https://www.softinio.com) and [newsletters](http://newsletter.softinio.com) from me going forward, as this keyboard is a joy to use. 
 
 ## References
 
