@@ -25,9 +25,9 @@ In November 2020 I had the great privilege to do a [Talk at Scale By The Bay Con
 
 ### I also wrote three blogs posts as a companion to my talk
 
-[Introduction to the Actor Model](http://localhost:1313/post/introduction-to-the-actor-model/)
+[Introduction to the Actor Model](https://www.softinio.com/post/introduction-to-the-actor-model/)
 
-[Introduction to Akka Typed Using Scala](http://localhost:1313/post/introduction-to-akka-typed-using-scala/)
+[Introduction to Akka Typed Using Scala](https://www.softinio.com/post/introduction-to-akka-typed-using-scala/)
 
-[Introduction to Zio Actors](http://localhost:1313/post/introduction-to-zio-actors/)
+[Introduction to Zio Actors](https://www.softinio.com/post/introduction-to-zio-actors/)
 
