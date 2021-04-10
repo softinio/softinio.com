@@ -2,7 +2,7 @@
 title = "Introduction to Zio Actors"
 date = 2020-11-01T14:14:21-08:00
 description = "Introduction to ZIO Actors"
-featured = true
+featured = false
 draft = false
 toc = true
 featureImage = "/img/ZIO.png"
