@@ -36,3 +36,7 @@ In the interest of transparency can I just confirm that I am doing this so we ca
 
 I do need everyones help though please join and spread the word to everyone you know. I look forward to speaking with you all on Slack soon.
 
+### Import Update 
+
+[Important announcement April 2021](/post/all-good-things-come-to-an-end/)
+
