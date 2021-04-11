@@ -1,6 +1,6 @@
 +++
 title = "All Good Things Come to an End"
-date = 2021-04-11T12:03:44-07:00
+date = 2021-04-14T12:03:44-07:00
 description = "After having spent the last seven years organizing technical talks at several meetups I have decided to step down and move on."
 featured = false
 draft = false
@@ -18,7 +18,7 @@ categories = ["meetup", "conference", "technical talks"]
 
 {{< youtube 1CU5UPi7STk >}}
 
-After having spent the last seven years organizing technical talks at several meetups I have decided to step down and move on.
+After having spent the last seven years organizing technical talks at several meetups I have decided to step down and move on. It is an end of an era for me, but I am excited about what's next.
 
 I want to take this opportunity to thank all of my co-organizers, all of the speakers I hosted and all the attendees for supporting my efforts to help all of us learn from each other and be a community.
 
@@ -36,9 +36,9 @@ Of course the above meetup groups will continue with my co-organizers moving it 
 
 ### What will happen to [SF Bay Area techies](https://www.youtube.com/channel/UCx317LNd-AlbTcE_0FkdJcg)
 
-- The [San Francisco Bay Area Techies YouTube Channel](https://www.youtube.com/channel/UCx317LNd-AlbTcE_0FkdJcg) will live for over, hosting recordings of some of the technical talks I had organized.
+- The [San Francisco Bay Area Techies YouTube Channel](https://www.youtube.com/channel/UCx317LNd-AlbTcE_0FkdJcg) will live forever, hosting recordings of some of the technical talks I had organized.
 - The sfbayareatechies.com website will be shutdown.
-- The sfbayareatechies slack, discord and clubhouse club will be shutdown.
+- The sfbayareatechies twitter, slack, discord and clubhouse club will be shutdown.
 
 ### What is next for me
 
@@ -46,7 +46,7 @@ I have a passion to learn, share my knowledge and to code, so I will be spending
 
 - Writing more blogs here
 - Recording screencasts for my new [YouTube Channel](https://www.youtube.com/channel/UCMjtB4EHujxHO2DB3FQ_obQ) <--- PLEASE SUBSCRIBE 🙏 !!!
-- Doing talks at Conferences
+- Doing more talks at Conferences
 
 ### Keep in touch
 
