@@ -31,6 +31,7 @@ I want to take this opportunity to thank all of my co-organizers, all of the spe
 - SF Spark and Friends
 - Bay Area Ai
 - GraphQL By the Bay
+- Vancouver Scala
 
 Of course the above meetup groups will continue with my co-organizers moving it forward without me.
 
