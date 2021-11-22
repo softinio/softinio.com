@@ -7,7 +7,7 @@
   gtag('config', '{{ . }}');
 </script>
 {{- end -}}
-{{- with .Site.Params.enableMatomo }}
+{{- with .Site.Params.matomo_site_id }}
 <script>
   var _paq = window._paq = window._paq || [];
   _paq.push(['trackPageView']);
@@ -15,7 +15,7 @@
   (function() {
     var u="//softinio.dev/matomo/";
     _paq.push(['setTrackerUrl', u+'matomo.php']);
-    _paq.push(['setSiteId', '1']);
+  _paq.push(['setSiteId', {{.}}]);
     var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
     g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
   })();
