@@ -25,7 +25,7 @@ paginate = 10
 [params]
 author = "Salar Rahmanian"
 twitter = "@SalarRahmanian"
-largeTwitterCard = false
+largeTwitterCard = true
 introDescription = "Software Engineer based in San Francisco Bay Area."
 # ga_analytics = "UA-47014432-1"
 ga_analytics = "G-XZR9K3MDHX"
