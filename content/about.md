@@ -11,9 +11,13 @@ I have been developing software since the age of eleven. My current passion is f
 
 I am particularly enthusiastic about the Scala Programming language and NixOS and technologies such as Kafka, Spark and Akka. 
 
-I try to make open source contributions when I can. I have contributed to the [ZIO](https://zio.dev) ecosystem, most notably leading and creating the [ZIO-Actors](https://zio.github.io/zio-actors/) and [ZIO-zmx](https://zio.github.io/zio-zmx/) projects.
+I contribute to open source projects when time allows. 
+
+As a long term Vim user and Neovim fan I also have started contributing plugins written in Lua for Neovim.
 
 [Subscribe to my newsletter](http://newsletter.softinio.com/)
+
+[Watch my talks](https://watch.softinio.com)
 
 ![Salar Rahmanian's Family](/img/SalarRahmanianFamily.jpg)
 
