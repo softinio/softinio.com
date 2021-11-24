@@ -15,18 +15,19 @@ I have extensive experience:
 
 - Programming in: Java, Scala and Python
 - Databases: Oracle, Postgresql, MySQL, IBM DB2
-- Frameworks: Spring and Hibernate (Java), Akka / Akka-http (Scala), Play Framework (Java & Scala), Django (Python), Flask (Python)
-- Other: Redis, Kafka, RabbitMQ, Apache Nifi
+- Frameworks: Spring and Hibernate (Java), Akka / Akka-http (Scala), Django (Python), Flask (Python)
+- OS: NixOS, Linux, Unix (Solaris, Aix)
+- Other: Apache Spark (Databricks), Redis, Kafka, RabbitMQ, Apache Nifi
 
 ## Domain Experience ##
+- Healthcare
 - Building data ingestion pipelines
 - Building High Volume Billing platforms (In particular interconnect billing for cell phone providers)
 - Extensive domain knowledge of the job posting and matching and shift scheduling
-- Building CMS and CRM systems
-- Full Stack web application development
 
 ## Experience ##
-### Senior Software Engineer II, Collective Health: 2020-present ###
+### Engineering Manager / Technical Lead, Collective Health: 2021-present ###
+### Senior Software Engineer II, Collective Health: 2020-2021 ###
 This is where I am working right now. Really enjoying working in the healthcare domain.
 
 So far:
