@@ -13,28 +13,31 @@ I have been developing software since the age of eleven.
 
 I have extensive experience:
 
-- Programming in: Java, Scala and Python
-- Databases: Oracle, Postgresql, MySQL, IBM DB2
-- Frameworks: Spring and Hibernate (Java), Akka / Akka-http (Scala), Django (Python), Flask (Python)
-- OS: NixOS, Linux, Unix (Solaris, Aix)
-- Other: Apache Spark (Databricks), Redis, Kafka, RabbitMQ, Apache Nifi
+- *Programming in:* Java, Scala and Python
+- *Databases:* Oracle, Postgresql, MySQL, IBM DB2
+- *Frameworks:* Spring and Hibernate (Java), Akka / Akka-http (Scala), Django (Python), Flask (Python)
+- *OS:* NixOS, Linux, Unix (Solaris, Aix)
+- *Other:* Apache Spark (Databricks), Redis, Kafka, RabbitMQ, Apache Nifi
 
 ## Domain Experience ##
 - Healthcare
-- Building data ingestion pipelines
+- Building data pipelines
 - Building High Volume Billing platforms (In particular interconnect billing for cell phone providers)
 - Extensive domain knowledge of the job posting and matching and shift scheduling
 
 ## Experience ##
-### Engineering Manager / Technical Lead, Collective Health: 2021-present ###
+### Senior Engineering Manager / Technical Lead, Collective Health: 2022-present ###
+### Engineering Manager / Technical Lead, Collective Health: 2021-2022 ###
 ### Senior Software Engineer II, Collective Health: 2020-2021 ###
-This is where I am working right now. Really enjoying working in the healthcare domain.
+I started at Collective Health as an individual contributor but later on moved to be my teams technical lead and manager with 5 direct reports. I am part of the compass team which provides our clients an analytics and metrics portal to help them manage the health plans they provide their employees. 
 
-So far:
+So far my work has involved:
 
 - Building Data pipelines using Databricks, Apache Spark, Airflow and Python
-- Microservices using Java, Spring, Dropwizard, Go Lang
-- Kubernetes, AWS, Elastic Stack (Elasticsearch, Kibana)
+- Microservices using Java, Spring, Dropwizard
+- Kubernetes, AWS, PostgreSQL
+- Hiring, onboarding new team members and mentoring other engineers.
+- And yes, I am very hands on and still code :-) 
 
 ### Staff Software Engineer, Mya Systems: 2018-2020 ###
 Worked on Building an AI recruiter assistant.
@@ -85,31 +88,45 @@ I contribute to various Scala open source projects. Most notabiliy to Scala [ZIO
 
 I am also working on and leading [ZIO-Zmx](https://github.com/zio/zio-zmx) a new project that is a work in progress providing monitoring and metrics of ZIO fibers.
 
+You can find more of my projects on my [GitHub](https://github.com/softinio?tab=repositories) and my personal [git forge](https://git.softinio.com).
+
 ### Other Accomplishments ###
 
-I have a passion to learn and network with like minded people with similar interests in technology. Hence I used to be an active meetup organizer.
+I have a passion to learn and network with like minded people with similar interests in technology. Hence I am very active in the conference, meetup and open source communities:
 
-#### San Francisco Java User Group Meetup ####
+#### Current Meetups ####
+
+##### Swift Language User Group (San Francisco) #####
+
+Organizer since *2022*: <https://www.sfswift.com>
+
+##### Bay Area Haskell & Functional Programming User Group #####
+
+Organizer since *2021*: <https://www.sfhaskell.com>
+
+#### Past Meetups ####
+
+##### San Francisco Java User Group Meetup #####
 
 Organizer from *June 2020* to *April 2021*: <http://sfjava.org/>
 
-#### San Francisco Scala Meetup ####
+##### San Francisco Scala Meetup #####
 
 Organizer from *June 2018* to *April 2021*: <http://sfscala.org/>
 
-#### Elastic San Francisco User group ####
+##### Elastic San Francisco User group #####
 
 Organizer from *November 2017* to *April 2021*: <https://www.meetup.com/Elasticsearch-San-Francisco/>
 
-#### Bay area AI meetup ####
+##### Bay area AI meetup #####
 
 Organizer from *January 2020* to *April 2021*: <https://www.meetup.com/bay-area-ai/>
 
-#### GraphQL By the Bay meetup ####
+##### GraphQL By the Bay meetup #####
 
 Organizer from *April 2019* to *April 2021*: <https://www.meetup.com/graphql-by-the-bay>
 
-#### Scala DC Meetup ####
+##### Scala DC Meetup #####
 
 Organizer from *October 2016* to *February 2018*: <https://www.meetup.com/dc-scala/>
 
