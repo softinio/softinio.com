@@ -1,3 +1,5 @@
+- item: "gitea"
+  url: "https://git.softinio.com/softinio"
 - item: "github"
   url: "https://github.com/softinio"
 - item: "twitter"
