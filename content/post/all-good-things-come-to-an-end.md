@@ -16,6 +16,8 @@ tags = ["meetup", "conference", "technical talks"]
 categories = ["meetup", "conference", "technical talks"]
 +++
 
+**Update:** Since writing this blog I have re-started arranging some meetups again. **For details visit: [Current Meetups I am organizer for]({{< ref "resume.md#current-meetups" >}})**
+
 {{< youtube 1CU5UPi7STk >}}
 
 After having spent the last seven years organizing technical talks at several meetups I have decided to step down and move on. It is an end of an era for me, but I am excited about what's next.
