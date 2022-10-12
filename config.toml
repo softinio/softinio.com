@@ -3,7 +3,6 @@ title = "Salar Rahmanian"
 author = "Salar Rahmanian"
 enableRobotsTXT = true
 enableEmoji = true
-# theme = "hugo-clarity"
 paginate = 10
 
 [markup]
