@@ -43,11 +43,8 @@ mobileNavigation = "left"
 description = "Salar Rahmanian"
 keywords = ["Salar", "Rahmanian", "Salar Rahmanian", "Blog", "python", "scala", "haskell", "nix", "NixOS"]
 
-[params.utteranc]
+[params.giscus]
   enable = true
-  repo = "softinio/softinio.com"
-  issueTerm = "url"
-  # theme = "preferred-color-scheme"
 
 [sitemap]
   changefreq = "weekly"
