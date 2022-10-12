@@ -19,5 +19,5 @@ As a long term Vim user and Neovim fan I also have started contributing plugins 
 
 [Watch my talks](https://watch.softinio.com)
 
-![Salar Rahmanian's Family](/img/SalarRahmanianFamily.jpg)
+![Salar Rahmanian Family](/img/SalarRahmanianFamily.jpg)
 

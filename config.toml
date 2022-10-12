@@ -3,7 +3,7 @@ title = "Salar Rahmanian"
 author = "Salar Rahmanian"
 enableRobotsTXT = true
 enableEmoji = true
-theme = "hugo-clarity"
+# theme = "hugo-clarity"
 paginate = 10
 
 [markup]
@@ -89,3 +89,6 @@ gzip = false
 [[deployment.matchers]]
 pattern = "^.+\\.(html|xml|json)$"
 gzip = true
+
+[[module.imports]]
+path = "github.com/softinio/hugo-clarity"
