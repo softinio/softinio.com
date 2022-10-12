@@ -1,12 +1,21 @@
-<!-- utteranc -->
-{{ if .Site.Params.utteranc.enable }}
+<!-- giscus -->
+{{ if .Site.Params.giscus.enable }}
   <div class="post bg-white">
-    <script src="https://utteranc.es/client.js"
-          repo= "{{ .Site.Params.utteranc.repo }}"
-          issue-term="{{ .Site.Params.utteranc.issueTerm }}"
-          theme="{{ default "github-light" .Site.Params.utteranc.theme }}"
-          crossorigin="anonymous"
-          async>
+    <script src="https://giscus.app/client.js"
+            data-repo="softinio/softinio.com"
+            data-repo-id="MDEwOlJlcG9zaXRvcnkxNDQyMjczODU="
+            data-category="Blog Comments"
+            data-category-id="DIC_kwDOCJi8Oc4CR7nj"
+            data-mapping="url"
+            data-strict="1"
+            data-reactions-enabled="1"
+            data-emit-metadata="0"
+            data-input-position="bottom"
+            data-theme="preferred_color_scheme"
+            data-lang="en"
+            crossorigin="anonymous"
+            async>
     </script>
   </div>
 {{ end }}
+
