@@ -1,0 +1,89 @@
+[[main]]
+  name = "Salar Rahmanian"
+  url = ""
+  weight = -110
+
+[[main]]
+  name = "About"
+  url = "about/"
+  weight = -109
+
+[[main]]
+  name = "Resume"
+  url = "resume/"
+  weight = -108
+
+[[main]]
+  name = "Newsletter"
+  url = "http://newsletter.softinio.com"
+  weight = -107
+
+[[main]]
+  name = "Watch"
+  url = "https://watch.softinio.com/c/softinio/videos"
+  weight = -106
+
+# Submenus are done this way: parent -> identifier
+# [[main]]
+#   name = "Links"
+#   identifier = "Links"
+#   weight = -108
+# [[main]]
+#   parent = "Links"
+#   name = "LinkedIn"
+#   url = "https://www.linkedin.com/"
+# [[main]]
+#   parent = "Links"
+#   name = "Twitter"
+#   url = "https://twitter.com/"
+
+# [[main]]
+#   name = "About"
+#   url = "about/"
+#   weight = -107
+
+# social menu links
+
+[[social]]
+  name = "gitea"
+  weight = 1
+  url = "https://git.softinio.com/softinio"
+[[social]]
+  name = "github"
+  type = "social"
+  weight = 2
+  url = "https://github.com/softinio"
+[[social]]
+  name = "twitter"
+  weight = 3
+  url = "https://twitter.com/SalarRahmanian"
+[[social]]
+  name = "linkedin"
+  weight = 4
+  url = "https://www.linkedin.com/in/salarrahmanian"
+[[social]]
+  name = "youtube"
+  weight = 5
+  url = "https://softin.io/youtube"
+[[social]]
+  name = "mastedon"
+  weight = 6
+  url = "https://fosstodon.org/@softinio"
+[[social]]
+  name = "rss"
+  weight = 7
+  url = "index.xml"
+
+# other supported social links
+# name = "youtube"
+# url = "https://www.youtube.com/#"
+# name = "facebook"
+# url = "https://facebook.com/#"
+# name = "instagram"
+# url = "https://instagram.com/#"
+# name = "stackoverflow"
+# url = "https://stackoverflow.com/#"
+# name = "gitlab"
+# url = "https://gitlab.com/#"
+# name = "discord"
+# url = "https://discord.gg/#"
