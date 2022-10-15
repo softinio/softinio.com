@@ -1,7 +1,7 @@
 [goldmark]
   [goldmark.renderer]
     hardWraps = false
-    unsafe = true # change to false to disable inclusion of rawHTML and math functions
+    unsafe = false # change to false to disable inclusion of rawHTML and math functions
     xhtml = false
   [goldmark.extensions]
     typographer = false
