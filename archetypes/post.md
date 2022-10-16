@@ -14,5 +14,8 @@ figurePositionShow = false
 keywords = []
 tags = []
 categories = []
+showReadTime = true
+showShare = true
+showRelatedInArticle = false
 +++
 
