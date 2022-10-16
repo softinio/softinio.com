@@ -6,6 +6,7 @@ showReadTime = false
 showDate = false
 showShare = false
 comments = false
+sitemap_exclude = true
 +++
 
 Thank you for contacting me. I have received your submitted form for booking a consultation. I will be in touch shortly. 
