@@ -1,0 +1,58 @@
+baseurl = "https://www.softinio.com/"
+title = "Salar Rahmanian"
+author = "Salar Rahmanian"
+enableRobotsTXT = true
+enableEmoji = true
+paginate = 10
+
+# title = "Clarity"  # Edit directly from config/_default/languages.toml # alternatively, uncomment this and remove `title` entry from the aforemention file.
+# copyright = "Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved."
+# canonifyurls = true
+theme = ["github.com/softinio/hugo-clarity"]
+# disqusShortname = ""
+
+DefaultContentLanguage = "en"
+# [languages]
+# config/_default/languages.toml
+
+# [menus]
+# config/_default/menus/menu.xx.toml
+
+[taxonomies]
+category = "categories"
+tag = "tags"
+series = "series"
+
+[outputs]
+home = ["HTML", "RSS", "JSON"]
+page = ["html"]
+
+[sitemap]
+changefreq = "weekly"
+priority = 0.5
+filename = "sitemap.xml"
+
+[deployment]
+order = [".png$", ".jpg$", ".gif$", ".svg$"]
+
+[[deployment.targets]]
+name = "softinio-deploy"
+URL = "s3://www.softinio.com?region=us-east-1"
+cloudFrontDistributionID = "E1CMSLHG2WR51C"
+
+[[deployment.matchers]]
+#  Cache static assets for 1 year.
+pattern = "^.+\\.(js|css|svg|ttf)$"
+cacheControl = "max-age=31536000, no-transform, public"
+gzip = true
+
+[[deployment.matchers]]
+pattern = "^.+\\.(png|jpg)$"
+cacheControl = "max-age=31536000, no-transform, public"
+gzip = false
+
+[[deployment.matchers]]
+pattern = "^.+\\.(html|xml|json)$"
+gzip = true
+
+
