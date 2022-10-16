@@ -6,11 +6,16 @@
 [[main]]
   name = "About"
   url = "about/"
-  weight = -109
+  weight = -110
 
 [[main]]
   name = "Resume"
   url = "resume/"
+  weight = -109
+
+[[main]]
+  name = "Consulting"
+  url = "consulting/"
   weight = -108
 
 [[main]]
