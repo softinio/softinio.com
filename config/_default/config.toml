@@ -18,19 +18,14 @@ DefaultContentLanguage = "en"
 # [menus]
 # config/_default/menus/menu.xx.toml
 
-# [outputs]
-# home = ["HTML", "RSS", "JSON"]
-# page = ["html"]
+[taxonomies]
+category = "categories"
+tag = "tags"
+series = "series"
 
 [outputs]
-  home = ["html", "jsonfeed","rss"]
-  page = ["html"]
-
-[outputFormats]
-  [outputFormats.jsonfeed]
-    mediaType = "application/json"
-    baseName = "feed"
-    isPlainText = true
+home = ["HTML", "RSS", "JSON"]
+page = ["html"]
 
 [sitemap]
 changefreq = "weekly"
