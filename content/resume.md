@@ -3,6 +3,9 @@ title = "Resume"
 date = "2018-04-16T09:16:07-05:00"
 description = "Salar Rahmanian Resume"
 keywords = ["Salar", "Rahmanian", "Salar Rahmanian", "Resume", "CV"]
+showReadTime = false
+showDate = false
+comments = false
 +++
 # Salar Rahmanian #
 ## My Location ##
