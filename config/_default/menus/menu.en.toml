@@ -1,7 +1,7 @@
-[[main]]
-  name = "Salar Rahmanian"
-  url = ""
-  weight = -110
+# [[main]]
+#   name = "Home"
+#   url = ""
+#   weight = -110
 
 [[main]]
   name = "About"
@@ -66,12 +66,16 @@
   weight = 5
   url = "https://softin.io/youtube"
 [[social]]
-  name = "mastedon"
+  name = "matrix"
   weight = 6
+  url = "https://matrix.to/#/@softinio:matrix.org"
+[[social]]
+  name = "mastedon"
+  weight = 7
   url = "https://fosstodon.org/@softinio"
 [[social]]
   name = "rss"
-  weight = 7
+  weight = 8
   url = "index.xml"
 
 # other supported social links
