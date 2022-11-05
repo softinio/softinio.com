@@ -57,5 +57,5 @@ Keep in touch all, lets get together sometime for a happy hour (be it virtual or
 
 Thank you 🙏🍷 All !
 
-### [Subscribe to my newsletter](http://newsletter.softinio.com)
+### [Subscribe to my newsletter](https://notes.softinio.com)
 
