@@ -18,7 +18,7 @@ I contribute to open source projects when time allows.
 
 As a long term Vim user and Neovim fan I also have started contributing plugins written in Lua for Neovim.
 
-[Subscribe to my newsletter](http://newsletter.softinio.com/)
+[Subscribe to my newsletter](https://notes.softinio.com/)
 
 [Watch my talks](https://watch.softinio.com)
 

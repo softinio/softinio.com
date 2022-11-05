@@ -20,7 +20,7 @@
 
 [[main]]
   name = "Newsletter"
-  url = "http://newsletter.softinio.com"
+  url = "https://notes.softinio.com"
   weight = -107
 
 [[main]]
