@@ -29,18 +29,14 @@ I have extensive experience:
 - Extensive domain knowledge of the job posting and matching and shift scheduling
 
 ## Experience ##
-### Senior Engineering Manager / Technical Lead, Collective Health: 2022-present ###
-### Engineering Manager / Technical Lead, Collective Health: 2021-2022 ###
-### Senior Software Engineer II, Collective Health: 2020-2021 ###
-I started at Collective Health as an individual contributor but later on moved to be my teams technical lead and manager with 5 direct reports. I am part of the compass team which provides our clients an analytics and metrics portal to help them manage the health plans they provide their employees. 
+### Staff Software Engineer, Collective Health: 2020-present ###
 
 So far my work has involved:
 
 - Building Data pipelines using Databricks, Apache Spark, Airflow and Python
-- Microservices using Java, Spring, Dropwizard
+- Building Microservices and REST API's using Java, Spring, Dropwizard
 - Kubernetes, AWS, PostgreSQL
-- Hiring, onboarding new team members and mentoring other engineers.
-- And yes, I am very hands on and still code :-) 
+- Design and Architecture of new features
 
 ### Staff Software Engineer, Mya Systems: 2018-2020 ###
 Worked on Building an AI recruiter assistant.
