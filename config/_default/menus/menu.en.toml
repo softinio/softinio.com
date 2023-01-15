@@ -28,6 +28,11 @@
   url = "https://watch.softinio.com/c/softinio/videos"
   weight = -106
 
+[[main]]
+  name = "TIL"
+  url = "https://til.softinio.com"
+  weight = -105
+
 # Submenus are done this way: parent -> identifier
 # [[main]]
 #   name = "Links"
