@@ -87,7 +87,7 @@ I contribute to various Scala open source projects. Most notabiliy to Scala [ZIO
 
 I am also working on and leading [ZIO-Zmx](https://github.com/zio/zio-zmx) a new project that is a work in progress providing monitoring and metrics of ZIO fibers.
 
-You can find more of my projects on my [GitHub](https://github.com/softinio?tab=repositories) and my personal [git forge](https://git.softinio.com).
+You can find more of my projects on my [GitHub](https://github.com/softinio?tab=repositories) and my personal [git forge](http://git.softinio.com).
 
 ### Other Accomplishments ###
 
