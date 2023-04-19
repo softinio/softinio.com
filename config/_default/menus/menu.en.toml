@@ -55,9 +55,9 @@
 # social menu links
 
 [[social]]
-  name = "gitea"
+  name = "cgit"
   weight = 1
-  url = "https://git.softinio.com/softinio"
+  url = "http://git.softinio.com"
 [[social]]
   name = "github"
   type = "social"
