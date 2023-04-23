@@ -20,7 +20,7 @@ At Mya we are building an A.I. recruiting assistant. I am pretty excited about t
 
 On to my goal of meeting everyone in tech and making some friends I have been going to a lot of tech meetups and conferences since arriving in San Francisco and I'm loving the learnings and networking. I even am co-organizer for two meetups already in the bay area [SF Scala](https://www.meetup.com/SF-Scala/) and [Elasticsearch San Francisco](https://www.meetup.com/Elasticsearch-San-Francisco/). I have met some great people including key contributors to many open source projects and tech celebrities that I have followed for years that I finally got the chance to meet in person (see if you recognize any of them in the pictures below):
 
-![Tech celebrities](/img/Screen-Shot-2018-08-10-08-56-19.png)
+![Tech celebrities](/img/via/Screen-Shot-2018-08-10-08-56-19.png)
 
 One thing I noticed though, was that it was difficult to stay in touch with everyone. I mean we are all busy aren't we after all. I thought how can I improve this. I realized I keep in touch with people at work really well by using Slack. So I thought, wouldn't be nice to have a slack for everyone else in Tech who have any kind of affiliation to San Franscisco Bay Area? Thinking more about this I thought this would make things easier as we already have slack on our laptops and phones for work so adding another slack workspace is easy. 
 

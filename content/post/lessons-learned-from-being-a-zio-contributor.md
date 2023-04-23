@@ -43,7 +43,7 @@ First thing to do is to decide on a project you want to contribute too.
 
 To get started visit [ZIO list of repositories on GitHub](https://github.com/zio) anhave a browse of the different projects. 
 
-![ZIO Projects](/img/Screen-Recording-2020-09-05-20-02-47.gif)
+![ZIO Projects](/img/via/Screen-Recording-2020-09-05-20-02-47.gif)
 
 Every project will have something different to offer you that will help you decide on what project is a good fit for you. Some projects have only recently started so if you are looking for something with less code to get familiar at the expense of fast changing. There are also projects that are short of contributors to consider. 
 
