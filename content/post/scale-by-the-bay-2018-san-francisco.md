@@ -10,14 +10,14 @@ categories = ["scala", "conference", "functional programming"]
 
 One of the highlights of 2018 was attending and being part of the Scale By the bay 2018 conference in San Francisco. This by far was the best conference I have ever attended. 
 
-![Scale By the Bay 2018](https://via.softinio.com/scalebythebay_2018_header.jpg)
+![Scale By the Bay 2018](/img/scalebythebay_2018_header.jpg)
 
 from left: [Dick Wall](https://twitter.com/dickwall), [Salar Rahmanian](https://twitter.com/SalarRahmanian), [Martin Odersky (Creator of Scala)](https://twitter.com/odersky), [Alexy Khrabrov](https://twitter.com/ChiefScientist), [Jakob Odersky ](https://twitter.com/jodersky)
 
 The conference had 3 tracks covering the functional programming, reactive programming and data science topics. All the talks were of high quality made even better by highly intelligent audience made up of the most talented stars of our industry.
 
 ## Keynotes
-![Scale By the Bay 2018 Keynotes](https://via.softinio.com/scalebythebay_2018_keynotes.jpg)
+![Scale By the Bay 2018 Keynotes](/img/scalebythebay_2018_keynotes.jpg)
 
 ### New Functional Constructs in Scala 3 by Martin Odersky (Creator of Scala)
 
@@ -56,18 +56,18 @@ Over the years in my career I have followed many of the people I met at this yea
 
 Here  are some pictures of the tech heroes I got to meet at this conference:
 
-![Scale By the Bay 2018 ](https://via.softinio.com/scale_by_the_bay_2018_1.JPG)
+![Scale By the Bay 2018 ](/img/scale_by_the_bay_2018_1.JPG)
 Top left: [Rob Norris (creator of Doobie)](https://twitter.com/tpolecat), Top right: [Ross Baker (creator of http4s)](https://twitter.com/rossabaker),
 Bottom left: [Michael Pilquist (Creator of FS2)](https://twitter.com/mpilquist), Bottom right:  [Jon Pretty (Scala Center Advisory board chair)](https://twitter.com/propensive/)
 
-![Scale By the Bay 2018](https://via.softinio.com/scale_by_the_bay_2018_2.JPG)
+![Scale By the Bay 2018](/img/scale_by_the_bay_2018_2.JPG)
 [Runar Bjarnason ](https://twitter.com/runarorama) & [Paul Chiusano](https://twitter.com/pchiusano) authors of the book [Functional Programming in Scala](https://www.manning.com/books/functional-programming-in-scala)
 
-![Scale By the Bay 2018](https://via.softinio.com/scale_by_the_bay_2018_4.JPG)
+![Scale By the Bay 2018](/img/scale_by_the_bay_2018_4.JPG)
 Top left: [Eugene Yokota (Scala/SBT Team)](https://twitter.com/eed3si9n) , Top right:  [Justin Kaeser (Jetbrains)](https://twitter.com/ebenwert),
 Bottom left: [Cliff Click](https://twitter.com/cliff_click),  Bottom right:  [Julien Le Dem (Apache Parquet & Arrow)](https://twitter.com/J_)
 
-![Scale By the Bay 2018](https://via.softinio.com/scale_by_the_bay_2018_3.JPG)
+![Scale By the Bay 2018](/img/scale_by_the_bay_2018_3.JPG)
 Top: [John De Goes (Creator of ZIO) ](https://twitter.com/jdegoes) & [Itamar Ravid (Core contributor to ZIO)](https://twitter.com/itrvd),
 Bottom:  [Jon Pretty (Scala Center Advisory board chair)](https://twitter.com/propensive/)
 
