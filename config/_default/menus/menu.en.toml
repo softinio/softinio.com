@@ -57,7 +57,7 @@
 [[social]]
   name = "cgit"
   weight = 1
-  url = "http://git.softinio.com"
+  url = "https://git.softinio.com"
 [[social]]
   name = "github"
   type = "social"
