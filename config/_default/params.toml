@@ -131,17 +131,16 @@ name = "Salar Rahmanian"
 photo = "salar.jpg"
 
 [plausible_analytics]
-enable = false # to enable plausible analytics set to true.
-websiteDomain = "example.com" # domain name of your website, most cases same as your base url
-# plausibleDomain = "plausible.io" # default is set to plausible.io, only required if plausible is selfhosted
+enable = true # to enable plausible analytics set to true.
+websiteDomain = "www.softinio.com" # domain name of your website, most cases same as your base url
+plausibleDomain = "analytics.softinio.net" # default is set to plausible.io, only required if plausible is selfhosted
 # scritpName = "plausible" # default is set to plausible, only required if using a custome name for script
 
 [matomo_analytics]
-enable = true # To enable matomo analytics change to `true`.
-websiteDomain = "www.softinio.com" # Set the domain name of your website, in most cases same as your base URL this is required.
-matomoDomain = "softinio.dev/matomo/" # Set to Matomo domain
-
-matomoSiteID = "2" # Default is set to 1, change this to the siteid being tracked
+enable = false # To enable matomo analytics change to `true`.
+# websiteDomain = "www.softinio.com" # Set the domain name of your website, in most cases same as your base URL this is required.
+# matomoDomain = "softinio.dev/matomo/" # Set to Matomo domain
+# matomoSiteID = "2" # Default is set to 1, change this to the siteid being tracked
 
 [giscus]
 enable = true
