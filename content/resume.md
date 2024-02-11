@@ -1,11 +1,11 @@
 +++
 title = "Resume"
-date = "2018-04-16T09:16:07-05:00"
 description = "Salar Rahmanian Resume"
+date = "2018-04-16T09:16:07-05:00"
+
+[extra]
+isso = false
 keywords = ["Salar", "Rahmanian", "Salar Rahmanian", "Resume", "CV"]
-showReadTime = false
-showDate = false
-comments = false
 +++
 # Salar Rahmanian #
 ## My Location ##
@@ -93,17 +93,19 @@ You can find more of my projects on my [GitHub](https://github.com/softinio?tab=
 
 I have a passion to learn and network with like minded people with similar interests in technology. Hence I am very active in the conference, meetup and open source communities:
 
-#### Current Meetups ####
+#### Past Meetups ####
+
+##### Silicon Valley Nix / NixOS User Group #####
+
+Organizer from *2022* to *2023*: <https://www.meetup.com/silicon-valley-nix-nixos-user-group/>
 
 ##### Swift Language User Group (San Francisco) #####
 
-Organizer since *2022*: <https://www.sfswift.com>
+Organizer from *2022* to *2023*: <https://www.meetup.com/swift-language/>
 
 ##### Bay Area Haskell & Functional Programming User Group #####
 
-Organizer since *2021*: <https://www.sfhaskell.com>
-
-#### Past Meetups ####
+Organizer from *2021* to *2023*: <https://www.meetup.com/bay-area-haskell-user-group/>
 
 ##### San Francisco Java User Group Meetup #####
 

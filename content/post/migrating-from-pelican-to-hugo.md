@@ -1,11 +1,15 @@
 +++
 title = "Migrating from Pelican to Hugo"
-date = "2015-11-29T07:16:53-05:00"
 description = "In this post I will discuss the steps I took to migrate my blog from Pelican to Hugo."
+date = "2015-11-29T07:16:53-05:00"
+
+[taxonomies]
+tags = ["blog"]
+categories = ["Blogging"]
+
+[extra]
 toc = true
 keywords = ["pelican",  "hugo",  "golang", "go", "python", "blog"]
-tags = ["hugo",  "golang", "blog"]
-categories = ["development"]
 +++
 
 In this post I will discuss the steps I took to migrate my blog from [Pelican](http://blog.getpelican.com/) to [Hugo](http://gohugo.io/).
