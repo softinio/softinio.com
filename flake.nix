@@ -31,7 +31,7 @@
               ln -snf "${theme}" "themes/${themeName}"
             '';
             buildPhase = ''
-              zola build 
+              zola build -f
             '';
             installPhase = ''
               mkdir -p $out
