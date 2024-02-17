@@ -197,7 +197,7 @@ copyright = "© $CURRENT_YEAR $AUTHOR $SEPARATOR Unless otherwise noted, the con
 allowed_domains = [
     { directive = "font-src", domains = ["'self'", "data:"] },
     { directive = "img-src", domains = ["'self'", "https://*", "data:"] },
-    { directive = "script-src", domains = ["'self'", "https://comments.softinio.com/js/embed.min.js"] },
+    { directive = "script-src", domains = ["'self'", "https://comments.softinio.com/js/embed.min.js", "https://static.cloudflareinsights.com"] },
     { directive = "style-src", domains = ["'self'"] },
     { directive = "frame-src", domains = ["player.vimeo.com", "https://www.youtube-nocookie.com", "https://watch.softinio.com", "https://notes.softinio.com/embed"] },
 ]
