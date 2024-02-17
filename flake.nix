@@ -1,5 +1,5 @@
 {
-  description = "Softinio's Zola website";
+  description = "Softinio's Zola website: www.softinio.com";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs?ref=nixos-unstable";
