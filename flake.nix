@@ -4,7 +4,7 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs?ref=nixos-unstable";
     theme = { 
-      url = "github:welpo/tabi/7fa208a2a5dffbc83dd2b71de1e804c2f2eaad01";
+      url = "github:welpo/tabi/7e428c899b1bf595100e1448578f9cfc84ad3355";
       flake = false;
     };
   };

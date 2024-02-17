@@ -25,17 +25,17 @@
     "theme": {
       "flake": false,
       "locked": {
-        "lastModified": 1704495088,
-        "narHash": "sha256-ZfN0qTw2yO+/zU5hkWlB/lOXSJPdcFfVduYUOoSor3A=",
+        "lastModified": 1707564545,
+        "narHash": "sha256-m0XIxf3yKBKJwbSonAPDjw7DPHDi0BgRMhhD3FArWA4=",
         "owner": "welpo",
         "repo": "tabi",
-        "rev": "7fa208a2a5dffbc83dd2b71de1e804c2f2eaad01",
+        "rev": "7e428c899b1bf595100e1448578f9cfc84ad3355",
         "type": "github"
       },
       "original": {
         "owner": "welpo",
         "repo": "tabi",
-        "rev": "7fa208a2a5dffbc83dd2b71de1e804c2f2eaad01",
+        "rev": "7e428c899b1bf595100e1448578f9cfc84ad3355",
         "type": "github"
       }
     }
