@@ -1,12 +1,15 @@
 +++
 title = "Using pyenv for Python projects"
-date = "2015-04-13T09:06:03-05:00"
-draft = false
-toc = true
 description = "Using pyenv to manage your virtual environments makes working on multiple projects, each using a different version of python a breeze."
-keywords = ["python", "pyenv", "centos", "macos"]
-tags = ["python", "pyenv", "centos", "macos"]
-categories = ["development"]
+date = "2015-04-13T09:06:03-05:00"
+
+[taxonomies]
+tags = ["python"]
+categories = ["Developer Tools"]
+
+[extra]
+toc = true
+keywords = ["python", "pyenv"]
 +++
 
 Using [pyenv][3] to manage your virtual environments makes working on multiple projects, each using a different version of python a breeze.
@@ -19,13 +22,13 @@ Here some simple notes on how I setup and use [pyenv][3] :
 
 **Install using [homebrew][5]**
 
-```
-$ brew install pyenv pyenv-virtualenv
+```bash
+brew install pyenv pyenv-virtualenv
 ```
 
 **Update your shell profile (.bashrc or .zshrc) adding the following to it (and restart your terminal)**
 
-```
+```bash
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
 ```
@@ -35,47 +38,47 @@ if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -
 
 **Checkout from github**
 
-```
-$ git clone https://github.com/yyuu/pyenv.git ~/.pyenv
-$ git clone https://github.com/yyuu/pyenv-virtualenv.git ~/.pyenv/plugins/pyenv-virtualenv
+```bash
+git clone https://github.com/yyuu/pyenv.git ~/.pyenv
+git clone https://github.com/yyuu/pyenv-virtualenv.git ~/.pyenv/plugins/pyenv-virtualenv
 ```
 
 **Update your shell profile (.bashrc or .zshrc) adding the following to it (and restart your terminal)**
 
-```
-$ echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bash_profile
-$ echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bash_profile
-$ echo 'eval "$(pyenv init -)"' >> ~/.bash_profile
-$ echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.bash_profile
+```bash
+echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bash_profile
+echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bash_profile
+echo 'eval "$(pyenv init -)"' >> ~/.bash_profile
+echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.bash_profile
 ```
 
 ## Using pyenv ##
 
 **To install a new version of [Python][6]**
 
-```
-$ pyenv install <version>
-$ pyenv rehash
+```bash
+pyenv install <version>
+pyenv rehash
 ```
 
 **To get a list of [Python][6] versions available**
 
-```
-$ pyenv install -l
+```bash
+pyenv install -l
 ```
 
 **To create a new virtual environment**
 
-```
-$ pyenv virtualenv [pyenv-version] [virtualenv-name]
+```bash
+pyenv virtualenv [pyenv-version] [virtualenv-name]
 ```
 
 **To use your new virtual environment within your project**
 
 1. Change to your projects root directory
 1. Run:
-```
-$ pyenv local [virtualenv-name]
+```bash
+pyenv local [virtualenv-name]
 ```
 Note that this is done only the first time you go to your project directory. The wonderful thing about [pyenv][3] is in future when you change directory to your project directory, it will be automatically activated your virtualenv for you.
 

@@ -1,0 +1,29 @@
+
+{% extends "base.html" %}
+
+{%- block main_content %}
+
+{{ macros_page_header::page_header(title=page.title) }}
+
+<div id="page-content">
+    <main>
+        {{ page.content | replace(from="<!-- toc -->", to=macros_toc::toc(page=page, header=false, language_strings=language_strings)) | safe }}
+      <div>
+	<p>You can subscribe to my blog via my email <a href="https://notes.softinio.com">newsletter</a> on Substack and receive notifications when I publish new blogs or have other announcements to make. </p>
+	<p>Your email will only be used for this purpose and nothing else, so no spam or advertising or anything just content.</p>
+      </div>
+      <div>
+	<p align="center">
+	  <iframe src="https://notes.softinio.com/embed" width="480" height="150" style="border:1px solid #EEE; background:white;" frameborder="0" scrolling="no"></iframe>
+	</p>
+      </div>
+      <div>
+	<p>You can also subscribe to my <a href="/atom.xml">atom / rss feed</a> or follow me on <a href="https://social.softinio.com/@softinio">Mastodon</a> or <a href="https://x.com/SalarRahmanian">X (formerly known as Twitter)</a> too.</p>
+      </div>
+    </main>
+</div>
+
+{%- include "partials/extra_features.html" -%}
+
+{%- endblock main_content %}
+

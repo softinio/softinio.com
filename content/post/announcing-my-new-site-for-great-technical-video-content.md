@@ -1,19 +1,15 @@
 +++
 title = "Announcing My New Site for Great Technical Video Content"
-date = 2021-11-22T18:07:52-08:00
 description = "I am thrilled to announce my new video website watch.softinio.com, a place for great technical talk content ad free and free from commnercial sponsorship."
-featured = true
-draft = false
-toc = false
-featureImage = "/img/SF1.jpg"
-thumbnail = ""
-shareImage = ""
-codeMaxLines = 30
-codeLineNumbers = false
-figurePositionShow = false
+date = 2021-11-22T18:07:52-08:00
+
+[taxonomies]
+tags = ["video", "meetup", "conference", "talks"]
+categories = ["Talks", "Announcements"]
+
+[extra]
+toc = true
 keywords = ["youtube", "PeerTube", "technical talks", "events", "conference", "meetup", "video", "virtual talks", "scala", "neovim", "kafka", "nifi", "spark", "java", "python", "Swift"]
-tags = ["video", "meetup", "conference", "technical talks"]
-categories = ["video", "meetup", "conference", "technical talks"]
 +++
 
 #### Announcing [watch.softinio.com](https://watch.softinio.com)
@@ -30,7 +26,7 @@ This site is powered by [PeerTube](https://joinpeertube.org/) a decentralized al
 
 I will be producing a lot of new content of my own here, including doing some live streams. Some of this of course, will also be made available on my [YouTube channel](https://softin.io/youtube).
 
-{{< peertube id="e7548279-6a4c-46ae-80ed-5d434bb86f53" title="0"  >}}
+{{ peertube(id="e7548279-6a4c-46ae-80ed-5d434bb86f53") }}
 
 #### Can I post my content on your site?
 

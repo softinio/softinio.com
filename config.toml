@@ -1,0 +1,244 @@
+base_url = "https://www.softinio.com"
+theme = "tabi"
+title = "Salar Rahmanian"
+description = "Software Engineer based in San Francisco Bay Area"
+author = "Salar Rahmanian"
+generate_feed = true
+compile_sass = true
+minify_html = true
+
+# To translate the entire theme, there must be a file with the same ISO 639-1
+# (or IETF BCP 47) Code in the `i18n` folder of your site or the tabi theme
+# For example, "i18n/fr.toml" for French or "i18n/zh-Hans.toml" for Simplified Chinese.
+# Otherwise the theme will be in English.
+# See https://welpo.github.io/tabi/blog/faq-languages/ for more details.
+default_language = "en"
+
+taxonomies = [
+   {name = "categories", feed = true},
+   {name = "tags", feed = true},
+]
+
+[markdown]
+highlight_code = true
+highlight_theme = "css"
+smart_punctuation = true
+
+[link_checker]
+internal_level = "warn"
+
+[extra]
+peertube = "https://watch.softinio.com/c/softinio/videos"
+twitter_meta = "SalarRahmanian" # for SEO: twitter:site and twitter:creator
+# google = "Your Google Site verification code."
+# bing = "Your Bing Site verification code."
+
+# Check out the documentation (or the comments below) to learn how to customise tabi:
+# https://welpo.github.io/tabi/blog/mastering-tabi-settings/
+
+# Enable JavaScript theme toggler to allow users to switch between dark/light mode.
+# If disabled, your site will only use the theme specified in the `default_theme` variable.
+theme_switcher = true
+
+# This setting determines the default theme on load ("light" or "dark").
+# To default to the user's OS-level theme, leave it empty or unset.
+default_theme = ""
+
+# Choose the colourscheme (skin) for the theme. Default is "teal".
+# Skin available: blue, lavender, mint, red, sakura, teal, monochrome, lowcontrast_orange, lowcontrast_peach, lowcontrast_pink, indigo_ingot, evangelion
+# See them live and learn how to create your own: https://welpo.github.io/tabi/blog/customise-tabi/#skins
+# WARNING! "lowcontrast" skins, while aesthetically pleasing, may not provide optimal
+# contrast (in light theme) for readability and might not be suitable for all users.
+# Furthermore, low contrasting elements will affect your Google Lighthouse rating.
+# All other skins have optimal contrast.
+skin = "lowcontrast_orange"
+
+# Set browser theme colour. Can be a single colour or [light, dark].
+# Note: Bright colors may be ignored in dark mode.
+# More details: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta/name/theme-color
+browser_theme_color = "#f56a00"
+# browser_theme_color = ["#ffffff", "#000000"]  # Example of light/dark colours.
+
+# List additional stylesheets to load site-wide.
+# These stylesheets should be located in your site's `static` directory.
+# Example: stylesheets = ["extra1.css", "path/extra2.css"]
+# You can load a stylesheet for a single post by adding it to the [extra] section of the post's front matter, following this same format.
+stylesheets = []
+
+# Sets the default canonical URL for all pages.
+# Individual pages can override this in the [extra] section using canonical_url.
+# Example: "$base_url/blog/post1" will get the canonical URL "https://example.com/blog/post1".
+# Note: To ensure accuracy in terms of matching content, consider setting 'canonical_url' individually per page.
+# base_canonical_url = "https://example.com"
+
+# Add a "copy" button to codeblocks (loads ~700 bytes of JavaScript).
+# Can be set at page or section levels, following the hierarchy: page > section > config. See: https://welpo.github.io/tabi/blog/mastering-tabi-settings/#settings-hierarchy
+copy_button = true
+
+# Show the reading time of a page.
+# Can be set at page or section levels, following the hierarchy: page > section > config. See: https://welpo.github.io/tabi/blog/mastering-tabi-settings/#settings-hierarchy
+show_reading_time = true
+
+# Adds backlinks to footnotes (loads ~500 bytes of JavaScripts).
+# Can be set at page or section levels, following the hierarchy: page > section > config. See: https://welpo.github.io/tabi/blog/mastering-tabi-settings/#settings-hierarchy
+footnote_backlinks = false
+
+# Enable KaTeX for all posts.
+# Can be set at page or section levels, following the hierarchy: page > section > config. See: https://welpo.github.io/tabi/blog/mastering-tabi-settings/#settings-hierarchy
+katex = false
+
+# Show links to previous and next articles at the bottom of posts.
+# Can be set at page or section levels, following the hierarchy: page > section > config. See: https://welpo.github.io/tabi/blog/mastering-tabi-settings/#settings-hierarchy
+show_previous_next_article_links = false
+
+# Whether the navigation for previous/next article should match the full width of the site (same as the navigation bar at the top) or the article width.
+# To match the navigation bar at the top, set it to true.
+previous_next_article_links_full_width = true
+
+# Quick navigation buttons.
+# Adds "go up" and "go to comments" buttons on the bottom right (hidden for mobile).
+# Can be set at page or section levels, following the hierarchy: page > section > config. See: https://welpo.github.io/tabi/blog/mastering-tabi-settings/#settings-hierarchy
+quick_navigation_buttons = true
+
+# Add a Table of Contents to posts, right below the title and metadata.
+# Can be set at page or section levels, following the hierarchy: page > section > config. See: https://welpo.github.io/tabi/blog/mastering-tabi-settings/#settings-hierarchy
+toc = false
+
+# Date format used when listing posts (main page, /blog section, tag posts list…)
+# Default is "6th July 2049" in English and "%d %B %Y" in other languages.
+long_date_format = "%d %B %Y"
+
+# Date format used for blog posts.
+# Default is "6th July 2049" in English and "%-d %B %Y" in other languages.
+short_date_format = ""
+
+# Custom separator used in title tag and posts metadata (between date, time to read, and tags).
+separator = "•"
+
+# Use a shorter layout for All tags listing.
+# Default: tag_name – n post[s]
+# Compact: tag_name^n (superscript number)
+compact_tags = false
+
+# Invert the order of the site title and page title in the browser tab.
+# Example: true => "Blog • ~/tabi", false => "~/tabi • Blog"
+invert_title_order = false
+
+# Full path after the base URL required. So if you were to place it in "static" it would be "/favicon.png"
+favicon = "favicon.png"
+favicon16 = "favicon-16_16.png"
+favicon32 = "favicon-32_32.png"
+favicon180 = "softinio-apple-touch-icon.png" # apple-touch-icon.png
+
+# Add an emoji here to use it as favicon.
+# Compatibility: https://caniuse.com/link-icon-svg
+favicon_emoji = "favicon.svg"
+
+# Path to the fallback image for social media cards (the preview image shown when sharing a link on WhatsApp, LinkedIn…).
+# Can be set at page or section levels, following the hierarchy: page > section > config. See: https://welpo.github.io/tabi/blog/mastering-tabi-settings/#settings-hierarchy
+# Learn how to create these images in batch and automatically:
+# https://osc.garden/blog/automating-social-media-cards-zola/
+# social_media_card = "social_cards/index.jpg"
+
+menu = [
+    { name = "articles", url = "post", trailing_slash = true },
+    { name = "til", url = "til", trailing_slash = true },
+    { name = "projects", url = "projects", trailing_slash = true },
+    { name = "talks", url = "talks", trailing_slash = true },
+    { name = "subscribe", url = "subscribe", trailing_slash = true },
+]
+
+# The RSS icon will be shown if (1) it's enabled and (2) the following variable is set to true.
+feed_icon = true
+
+# Show the full post content in the Atom feed.
+# If it's set to false, only the description or summary will be shown.
+full_content_in_feed = true
+
+# The icons available can be found in "social_icons" in the "static" folder.
+socials = [
+    { name = "xmpp", url = "https://join.jabber.network/#salar@softinio.dev", icon = "xmpp" },
+    { name = "matrix", url = "https://matrix.to/#/@softinio:matrix.org", icon = "matrix" },
+    { name = "discord", url = "https://discord.com/users/softinio", icon = "discord" },
+    { name = "mastodon", url = "https://social.softinio.com/@softinio", icon = "mastodon" },
+    { name = "x", url = "https://x.com/SalarRahmanian", icon = "x" },
+    { name = "linkedin", url = "https://www.linkedin.com/in/salarrahmanian/", icon = "linkedin" },
+    { name = "git", url = "https://code.softinio.com/softinio", icon = "git" },
+    { name = "github", url = "https://github.com/softinio/", icon = "github" },
+    { name = "codeberg", url = "https://codeberg.org/softinio", icon = "codeberg" },
+    { name = "twitch", url = "https://www.twitch.tv/softinio", icon = "twitch" },
+    { name = "peertube", url = "https://watch.softinio.com/c/softinio/videos", icon = "peertube" },
+    { name = "youtube", url = "https://www.youtube.com/@Salar_Rahmanian", icon = "youtube" },
+]
+
+# Extra menu to show on the footer, below socials section.
+footer_menu = [
+    {url = "about", name = "about", trailing_slash = true},
+    {url = "resume", name = "resume", trailing_slash = true},
+    {url = "categories", name = "categories", trailing_slash = true},
+    {url = "tags", name = "tags", trailing_slash = true},
+    {url = "sitemap.xml", name = "sitemap", trailing_slash = false},
+]
+
+# Enable a copyright notice for the footer, shown between socials and the "Powered by" text.
+# $TITLE will be replaced by the website's title.
+# $CURRENT_YEAR will be replaced by the current year.
+# $AUTHOR will be replaced by the `author` variable.
+# $SEPARATOR will be replaced by the `separator` variable.
+# Markdown is supported (links, emphasis, etc).
+copyright = "© $CURRENT_YEAR $AUTHOR $SEPARATOR Unless otherwise noted, the content in this website is available under the [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) license. Please attribute properly and link back."
+
+# Custom security headers. What urls should your website be able to connect to?
+# You need to specify the CSP and the URLs associated with the directive.
+# Useful if you want to load remote content safely (embed YouTube videos, which needs frame-src, for example).
+# Default directive is self.
+# Default config, allows for https remote images and embedding YouTube and Vimeo content.
+# This configuration (along with the right webserver settings) gets an A+ in Mozilla's Observatory: https://observatory.mozilla.org
+allowed_domains = [
+    { directive = "font-src", domains = ["'self'", "data:"] },
+    { directive = "img-src", domains = ["'self'", "https://*", "data:"] },
+    { directive = "script-src", domains = ["'self'", "https://comments.softinio.com/js/embed.min.js"] },
+    { directive = "style-src", domains = ["'self'"] },
+    { directive = "frame-src", domains = ["player.vimeo.com", "https://www.youtube-nocookie.com", "https://watch.softinio.com", "https://notes.softinio.com/embed"] },
+]
+
+# Custom subset of characters for the header.
+# If set to true, the `static/custom_subset.css` file will be loaded first.
+# This avoids a flashing text issue in Firefox.
+# Please see https://welpo.github.io/tabi/blog/custom-font-subset/ to learn how to create this file.
+custom_subset = true
+
+[extra.analytics]
+# Specify which analytics service you want to use.
+# Supported options: ["goatcounter", "umami", "plausible"]
+# service = "goatcounter"
+
+# Unique identifier for tracking.
+# For GoatCounter, this is the code you choose during signup.
+# For Umami, this is the website ID.
+# For Plausible, this is the domain name (e.g. "example.com").
+# Note: Leave this field empty if you're self-hosting.
+# id = "yourID"
+
+# Optional: Specify the URL for self-hosted analytics instances.
+# For GoatCounter: Base URL like "https://stats.example.com"
+# For Umami: Base URL like "https://umami.example.com"
+# For Plausible: Base URL like "https://plausible.example.com"
+# Leave this field empty if you're using the service's default hosting.
+# self_hosted_url = "https://tabi-stats.osc.garden"
+
+# Isso support for comments. https://isso-comments.de/
+# You need to self-host the backend first: https://blog.phusion.nl/2018/08/16/isso-simple-self-hosted-commenting-system/
+# More info on some settings: https://isso-comments.de/docs/reference/client-config/
+[extra.isso]
+enabled_for_all_posts = true  # Enables Isso on all posts. It can be enabled on individual posts by setting `isso = true` in the [extra] section of a post's front matter.
+automatic_loading = true  # If set to false, a "Load comments" button will be shown.
+endpoint_url = "https://comments.softinio.com/"  # Accepts relative paths like "/comments/" or "/isso/", as well as full urls like "https://example.com/comments/". Include the trailing slash.
+page_id_is_slug = true  # If true, it will use the relative path for the default language as id; this is the only way to share comments between languages. If false, it will use the entire url as id.
+lang = ""  # Leave blank to match the page's language.
+max_comments_top = "inf"  # Number of top level comments to show by default. If some comments are not shown, an “X Hidden” link is shown.
+max_comments_nested = "5"  # Number of nested comments to show by default. If some comments are not shown, an “X Hidden” link is shown.
+avatar = true
+voting = true
+page_author_hashes = ""  # hash (or list of hashes) of the author.
+lazy_loading = true  # Loads when the comments are in the viewport (using the Intersection Observer API).

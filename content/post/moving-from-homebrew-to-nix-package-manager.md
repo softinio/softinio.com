@@ -1,14 +1,15 @@
 +++
 title = "Moving from Homebrew to Nix Package Manager"
-date = 2019-02-16T18:30:40-07:00
 description = "Moving from Homebrew to Nix Package manager on my macbook pro"
-featured = true
-draft = false
-toc = true
-featureImage = "/img/via/Screen-Shot-2019-02-17-13-04-16.png"
-keywords = ["nix", "nixos", "macos", "macbook", "package manager", "functional programming"]
+date = 2019-02-16T18:30:40-07:00
+
+[taxonomies]
 tags = ["nix", "nixos", "macos", "functional programming"]
-categories = ["nix", "nixos", "macos"]
+categories = ["Developer Tools"]
+
+[extra]
+toc = true
+keywords = ["nix", "nixos", "macos", "macbook", "package manager", "functional programming"]
 +++
 
 As all my friends, colleagues and followers know I am very big on functional programming, so when I heard about nixOS and the nix package manager (A Purely Functional package manager) I really wanted to find out more about it.

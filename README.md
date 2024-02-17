@@ -1,9 +1,5 @@
-![Build and Deploy](https://github.com/softinio/softinio.com/workflows/Build%20and%20Deploy/badge.svg)
+[![status-badge](https://ci.softinio.com/api/badges/1/status.svg)](https://ci.softinio.com/repos/1)
 
 # softinio.com
 Personal Blog of Salar Rahmanian, https://www.softinio.com
-
-# Powered by the fabulous
-
-https://gohugo.io/
 

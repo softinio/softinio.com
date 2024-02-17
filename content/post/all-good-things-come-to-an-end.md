@@ -1,24 +1,18 @@
 +++
 title = "All Good Things Come to an End"
-date = 2021-04-14T12:03:44-07:00
 description = "After having spent the last seven years organizing technical talks at several meetups I have decided to step down and move on."
-featured = false
-draft = false
-toc = false
-featureImage = ""
-thumbnail = ""
-shareImage = ""
-codeMaxLines = 30
-codeLineNumbers = false
-figurePositionShow = false
+date = 2021-04-14T12:03:44-07:00
+
+[taxonomies]
+tags = ["meetup", "conference", "talks"]
+categories = ["Announcements"]
+
+[extra]
+toc = true
 keywords = ["meetup", "conference", "technical talks", "events", "organizer"]
-tags = ["meetup", "conference", "technical talks"]
-categories = ["meetup", "conference", "technical talks"]
 +++
 
-**Update:** Since writing this blog I have re-started arranging some meetups again. **For details visit: [Current Meetups I am organizer for]({{< ref "resume.md#current-meetups" >}})**
-
-{{< youtube 1CU5UPi7STk >}}
+{{ youtube(id="1CU5UPi7STk") }}
 
 After having spent the last seven years organizing technical talks at several meetups I have decided to step down and move on. It is an end of an era for me, but I am excited about what's next.
 
@@ -56,6 +50,4 @@ I have a passion to learn, share my knowledge and to code, so I will be spending
 Keep in touch all, lets get together sometime for a happy hour (be it virtual or in person (post covid)) and maybe even lets do some pair/mob programming together.
 
 Thank you 🙏🍷 All !
-
-### [Subscribe to my newsletter](https://notes.softinio.com)
 
