@@ -227,7 +227,7 @@ custom_subset = true
 
 [extra.analytics]
 service = "plausible"
-id = "www.softinio.com"
+id = "softinio.com"
 self_hosted_url = "https://analytics.softinio.net"
 # Specify which analytics service you want to use.
 # Supported options: ["goatcounter", "umami", "plausible"]
