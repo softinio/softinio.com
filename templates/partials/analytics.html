@@ -20,9 +20,6 @@ self_hosted_url != "https://tabi-stats.osc.garden" %}
 
 {% elif analytics_service == "plausible" %}
 <script defer data-domain="{{ analytics_id }}"
-	<!--src="{% if self_hosted_url %}{{ self_hosted_url ~ '/js/plausible.js' }}{% else %}https://plausible.io/js/script.js{% endif %}"
-	-->
-		src = "{{ self_hosted_url ~ 'f40-1589-48c0-820b-9643ad0080b2.js' }}"
-			></script>
+	src="{{ self_hosted_url ~ '/f40-1589-48c0-820b-9643ad0080b2.js' }}"></script>
 
 {% endif %}
