@@ -1,34 +1,48 @@
+<!-- Matomo -->
+<script>
+	var _paq = window._paq = window._paq || [];
+	/* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+	_paq.push(['trackPageView']);
+	_paq.push(['enableLinkTracking']);
+	(function () {
+		var u = "//wisdom.softinio.com/";
+		_paq.push(['setTrackerUrl', u + 'matomo.php']);
+		_paq.push(['setSiteId', '1']);
+		var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+		g.async = true; g.src = u + 'matomo.js'; s.parentNode.insertBefore(g, s);
+	})();
+</script>
+<!-- End Matomo Code -->
+
 {% if config.extra.favicon180 %}
-    <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="{{ get_url(path=config.extra.favicon180) }}"/>
+<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="{{ get_url(path=config.extra.favicon180) }}" />
 {% endif %}
 {% if config.extra.favicon32 %}
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ get_url(path=config.extra.favicon32) }}"/>
+<link rel="icon" type="image/png" sizes="32x32" href="{{ get_url(path=config.extra.favicon32) }}" />
 {% endif %}
 {% if config.extra.favicon16 %}
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ get_url(path=config.extra.favicon16) }}"/>
+<link rel="icon" type="image/png" sizes="16x16" href="{{ get_url(path=config.extra.favicon16) }}" />
 {% endif %}
 {%- if config.author %}
-  <meta name="author" content="{{ config.author }}" />
+<meta name="author" content="{{ config.author }}" />
 {%- endif %}
-  <meta name="copyright" content="{{ config.author }}" />
+<meta name="copyright" content="{{ config.author }}" />
 {%- if page.extra.keywords and config.extra.keywords %}
-  <meta name="keywords" content="{{ page.extra.keywords }}, {{ config.extra.keywords }}" />
+<meta name="keywords" content="{{ page.extra.keywords }}, {{ config.extra.keywords }}" />
 {%- elif page.extra.keywords %}
-  <meta name="keywords" content="{{ page.extra.keywords }}" />
+<meta name="keywords" content="{{ page.extra.keywords }}" />
 {%- elif config.extra.keywords %}
-  <meta name="keywords" content="{{ config.extra.keywords }}" />
+<meta name="keywords" content="{{ config.extra.keywords }}" />
 {%- endif %}
 {%- if config.extra.google %}
-  <meta name="google-site-verification" content="{{ config.extra.google | safe }}" />
+<meta name="google-site-verification" content="{{ config.extra.google | safe }}" />
 {%- endif %}
 
 {%- if config.extra.bing %}
-  <meta name="msvalidate.01" content="{{ config.extra.bing | safe}}" />
+<meta name="msvalidate.01" content="{{ config.extra.bing | safe}}" />
 {%- endif %}
 <meta property="twitter:title" content="{{ page.title | default(value=config.title) | safe }}" />
 {%- if config.extra.twitter_meta %}
-  <meta name="twitter:site" content="@{{ config.extra.twitter_meta }}" />
-  <meta name="twitter:creator" content="@{{ config.extra.twitter_meta }}" />
+<meta name="twitter:site" content="@{{ config.extra.twitter_meta }}" />
+<meta name="twitter:creator" content="@{{ config.extra.twitter_meta }}" />
 {%- endif %}
-
-
