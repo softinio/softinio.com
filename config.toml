@@ -212,10 +212,10 @@ copyright = "© $CURRENT_YEAR $AUTHOR $SEPARATOR Unless otherwise noted, the con
 # Default config, allows for https remote images and embedding YouTube and Vimeo content.
 # This configuration (along with the right webserver settings) gets an A+ in Mozilla's Observatory: https://observatory.mozilla.org
 allowed_domains = [
-    { directive = "connect-src", domains = ["'self'", "https://wisdom.softinio.com" ] },
+    { directive = "connect-src", domains = ["'self'"] },
     { directive = "font-src", domains = ["'self'", "data:"] },
     { directive = "img-src", domains = ["'self'", "https://*", "data:"] },
-    { directive = "script-src", domains = ["'self'", "https://comments.softinio.com/js/embed.min.js", "https://static.cloudflareinsights.com", "https://wisdom.softinio.com" ] },
+    { directive = "script-src", domains = ["'self'", "https://comments.softinio.com/js/embed.min.js", "https://static.cloudflareinsights.com" ] },
     { directive = "style-src", domains = ["'self'"] },
     { directive = "frame-src", domains = ["player.vimeo.com", "https://www.youtube-nocookie.com", "https://watch.softinio.com", "https://notes.softinio.com/embed"] },
 ]
@@ -227,6 +227,8 @@ allowed_domains = [
 custom_subset = true
 
 [extra.analytics]
+service = "matomo"
+self_hosted_url = "https://wisdom.softinio.com"
 # Specify which analytics service you want to use.
 # Supported options: ["goatcounter", "umami", "plausible"]
 # service = "goatcounter"
