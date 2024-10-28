@@ -1,24 +1,15 @@
-{% set analytics_service = config.extra.analytics.service %}
-{% set analytics_id = config.extra.analytics.id | default(value="") %}
-{% set self_hosted_url = config.extra.analytics.self_hosted_url | default(value="") %}
-
-{% if analytics_service == "goatcounter" %}
-{# Prevent non-demo sites from using the demo analytics account #}
-{% if self_hosted_url == "https://tabi-stats.osc.garden" and config.base_url == "https://welpo.github.io/tabi" or
-self_hosted_url != "https://tabi-stats.osc.garden" %}
-<script async {% if self_hosted_url %} data-goatcounter="{{ self_hosted_url ~ '/count' }}"
-	src="{{ self_hosted_url ~ '/count.js' }}" {% else %}
-	data-goatcounter="https://{{ analytics_id }}.goatcounter.com/count" src="https://gc.zgo.at/count.js" {% endif
-	%}></script>
-{% endif %}
-
-{% elif analytics_service == "umami" %}
-<script async defer {% if self_hosted_url %} data-website-id="{{ analytics_id }}"
-	src="{{ self_hosted_url ~ '/script.js' }}" {% else %} data-website-id="{{ analytics_id }}"
-	src="https://analytics.eu.umami.is/script.js" {% endif %} data-do-not-track="true">
-	</script>
-
-{% elif analytics_service == "plausible" %}
-<script defer data-domain="{{ analytics_id }}" src="{{ self_hosted_url ~ '/js/script.js' }}"></script>
-
-{% endif %}
+<!-- Matomo -->
+<script>
+	var _paq = window._paq = window._paq || [];
+	/* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+	_paq.push(['trackPageView']);
+	_paq.push(['enableLinkTracking']);
+	(function () {
+		var u = "//wisdom.softinio.com/";
+		_paq.push(['setTrackerUrl', u + 'matomo.php']);
+		_paq.push(['setSiteId', '1']);
+		var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+		g.async = true; g.src = u + 'matomo.js'; s.parentNode.insertBefore(g, s);
+	})();
+</script>
+<!-- End Matomo Code -->
