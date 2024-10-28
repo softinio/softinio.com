@@ -226,9 +226,6 @@ allowed_domains = [
 custom_subset = true
 
 [extra.analytics]
-service = "plausible"
-id = "softinio.com"
-self_hosted_url = "https://wisdom.softinio.com"
 # Specify which analytics service you want to use.
 # Supported options: ["goatcounter", "umami", "plausible"]
 # service = "goatcounter"
