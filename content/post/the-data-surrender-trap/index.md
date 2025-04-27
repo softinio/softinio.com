@@ -10,7 +10,7 @@ categories = ["Data Engineering", "Artificial Intelligence", "Data Governance"]
 [extra]
 social_media_card = "TheDataSurrenderTrap.svg"
 toc = true
-keywords = ["AI", "Databricks", "Data Governance", "Data Engineering", "Artificial Intelligence", "Data Surrender Trap", "Data Sharing", "Data Security", "Data Privacy", "Open Standards", "Zero-Copy Sharing", "Google Cloud", "AWS", "Microsoft Azure", "Snowflake", "Data Residency", "Data Compliance", "Data Strategy", "Iceberg", "Delta Lake", "Apache Ranger", "Open Policy Agent", "Unity Catalog", "Data Lineage", "Data Sharing Protocols", "MosaicML", "Model Serving", "Data Architecture", "DuckDB"]
+keywords = ["AI", "Databricks", "Data Governance", "Data Engineering", "Artificial Intelligence", "Data Surrender Trap", "Data Sharing", "Data Security", "Data Privacy", "Open Standards", "Zero-Copy Sharing", "Google Cloud", "AWS", "Microsoft Azure", "Snowflake", "Data Residency", "Data Compliance", "Data Strategy", "Iceberg", "Delta Lake", "Apache Ranger", "Open Policy Agent", "Unity Catalog", "Data Lineage", "Data Sharing Protocols", "MosaicML", "Model Serving", "Data Architecture", "DuckDB", "Lakekeeper"]
 +++
 
 ![The Data Surrender Trap](TheDataSurrenderTrap.svg)
@@ -21,6 +21,7 @@ Handing raw customer data to a third party introduces two long-term headaches:
 
 1. Governance and compliance risk – once data leaves your perimeter, you lose direct control over how long it’s stored, where it resides, and who can see it. A single mis-configuration or model-training clause could violate GDPR, HIPAA, or internal policy.
 2. Technical debt – the day you need to swap providers, migrate regions, or delete a customer record, you discover tight coupling in schemas, pipelines, and security controls that were never designed for portability.
+3. Technical debt - having to synchronize data between multiple vendors and your own systems, which can lead to data inconsistencies and increased complexity.
 
 ## Best practices: bring the AI to the data, not the data to the AI
 
@@ -45,7 +46,7 @@ Before we look at any vendor implementation, it helps to know the building-block
 | Layer | Open standard | Why it matters |
 | --- | --- | --- |
 | Table formats | Apache Iceberg, Delta Lake, Apache Hudi, Parquet | Column-oriented, ACID-capable tables that sit in ordinary cloud storage and are readable by engines like Spark, Trino, Flink, etc. Iceberg’s spec is fully open, so any vendor can implement it—preventing lock-in and enabling multi-cloud lakes. |
-| Governance / access control | Apache Ranger, Open Policy Agent, Unity Catalog | Centralize table/row/column policies, data masking, and audit logs across dozens of engines and clouds—without embedding rules in every service. Ranger policies even support dynamic row-level filters. |
+| Governance / access control | Apache Ranger, Open Policy Agent, Unity Catalog, Lakekeeper | Centralize table/row/column policies, data masking, and audit logs across dozens of engines and clouds—without embedding rules in every service. Ranger policies even support dynamic row-level filters. |
 | Data lineage | OpenLineage | A vendor-neutral API for emitting and collecting lineage events from Spark, Airflow, dbt, BigQuery, and more. Lets you trace every model back to the exact inputs that produced it. |
 | Zero-copy data sharing | Delta Sharing (REST), Iceberg REST Catalog, Arrow Flight SQL | Instead of emailing CSVs, expose live tables through open protocols. Recipients query directly—Spark, Pandas, BI tools—while you keep full revocation and audit control. Delta Sharing is the first open REST protocol for this purpose; Iceberg’s REST catalog spec and Arrow Flight do the same for metadata and high-speed transport. |
 
@@ -109,7 +110,7 @@ Each step below tightens control, reduces copies, and shows how to give an exter
 | --- | --- | --- |
 | Inventory & classify | <ul><li>Tag PII, payment data, trade secrets, regulated logs.</li><li>Record legal basis (GDPR, HIPAA, SOC-2 scope, etc.).</li></ul> | You can’t apply least-privilege sharing if you don’t know what’s sensitive. |
 | Land everything in open, governed tables | <ul><li>Convert CSV/Parquet to Delta / Iceberg with schema enforcement & time-travel.</li><li>Store in your S3 buckets / Google Cloud Storage; enable server-side encryption and object-lock.</li></ul> | Open formats + immutable history make later audits and deletions possible. |
-| Switch on a unified catalog | <ul><li>Unity Catalog / Lake Formation / Purview / Dataplex.</li><li>Import IAM groups, apply column masks, row filters, dynamic data tags (“pii = true”).</li></ul> | One policy engine ≫ dozens of per-tool ACLs. |
+| Switch on a unified catalog | <ul><li>Unity Catalog / Lake Formation / Purview / Dataplex / Lakekeeper.</li><li>Import IAM groups, apply column masks, row filters, dynamic data tags (“pii = true”).</li></ul> | One policy engine ≫ dozens of per-tool ACLs. |
 | Harden the perimeter | <ul><li>Private subnets, VPC peering, and storage firewall rules so only approved compute can touch raw data.</li><li>Disable public buckets & open egress unless justified.</li></ul> | Keeps “shadow ETL” from copying data out the side door. |
 | Safely share with an external AI vendor (zero-copy) | <ol><li>Minimise first – aggregate, pseudonymise, or drop columns the vendor doesn’t need.</li><li>Create a Share (Delta Sharing / Iceberg REST / Arrow Flight):  <ul><li>Grant only the filtered table or view.</li><li>Attach row-level filters & column masks.</li><li>Issue a time-boxed bearer token (7-, 30-, or 90-day TTL) and pin it to the vendor’s IP range. Databricks DocumentationDatabricks</li></ul><li>Contract & controls – DPA, usage policy, no onward sharing.</li><li>Monitor – streaming audit of every query; set alerts for unusually large scans.</li><li>Revoke or rotate the token the moment the engagement ends (one CLI/API call).</li></ol> | Zero-copy protocols let the vendor query live tables without replicating them. Instant revocation closes the door the second you’re done. |
 | Move internal ML pipelines onto the platform | <ul><li>Use Spark + MosaicML (or SageMaker/Vertex/Azure ML) inside the governed workspace.</li><li>Log models to a central registry; tag each with source-data lineage.</li></ul> | No more exporting giant CSVs to Jupyter on someone’s laptop. |
