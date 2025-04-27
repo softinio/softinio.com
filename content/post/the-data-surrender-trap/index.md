@@ -4,7 +4,7 @@ description = "Avoid the data-surrender trap: keep data in-place with open stand
 date = 2025-04-26T18:07:52-08:00
 
 [taxonomies]
-tags = ["AI", "Data Governance", "Data Engineering", "Artificial Intelligence", "AI"]
+tags = ["AI", "Data Governance", "Data Engineering", "Artificial Intelligence"]
 categories = ["Data Engineering", "Artificial Intelligence", "Data Governance"]
 
 [extra]
