@@ -93,7 +93,7 @@ Key take-aways:
 ## Architecture snapshot for engineers and data scientists
 
 
-![architecture diagram](the_data_surrender_trap_architecture.svg)
+![architecture diagram](the_data_surrender_trap_architecture.png)
 
 
 - External AI vendors have two strictly-controlled entry points
