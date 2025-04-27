@@ -8,6 +8,7 @@ tags = ["AI", "Data Governance", "Data Engineering", "Artificial Intelligence"]
 categories = ["Data Engineering", "Artificial Intelligence", "Data Governance"]
 
 [extra]
+social_media_card = "TheDataSurrenderTrap.svg"
 toc = true
 keywords = ["AI", "Databricks", "Data Governance", "Data Engineering", "Artificial Intelligence", "Data Surrender Trap", "Data Sharing", "Data Security", "Data Privacy", "Open Standards", "Zero-Copy Sharing", "Google Cloud", "AWS", "Microsoft Azure", "Snowflake", "Data Residency", "Data Compliance", "Data Strategy", "Iceberg", "Delta Lake", "Apache Ranger", "Open Policy Agent", "Unity Catalog", "Data Lineage", "Data Sharing Protocols", "MosaicML", "Model Serving", "Data Architecture", "DuckDB"]
 +++
