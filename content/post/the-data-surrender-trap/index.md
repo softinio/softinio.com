@@ -19,8 +19,8 @@ Generative AI has lit a fire under every product road-map. Faced with “ship it
 
 Handing raw customer data to a third party introduces two long-term headaches:
 
-1. Governance and compliance risk – once data leaves your perimeter, you lose direct control over how long it's stored, where it resides, and who can see it. A single mis-configuration or model-training clause could violate GDPR, HIPAA, or internal policy.
-2. Technical debt – the day you need to swap providers, migrate regions, or delete a customer record, you discover tight coupling in schemas, pipelines, and security controls that were never designed for portability.
+1. Governance and compliance risk - once data leaves your perimeter, you lose direct control over how long it's stored, where it resides, and who can see it. A single mis-configuration or model-training clause could violate GDPR, HIPAA, or internal policy.
+2. Technical debt - the day you need to swap providers, migrate regions, or delete a customer record, you discover tight coupling in schemas, pipelines, and security controls that were never designed for portability.
 3. Technical debt - having to synchronize data between multiple vendors and your own systems, which can lead to data inconsistencies and increased complexity.
 
 ## Best practices: bring the AI to the data, not the data to the AI
@@ -62,10 +62,10 @@ With these open standards in place, any platform that respects them can satisfy 
 
 Databricks' Lakehouse architecture assembles the pieces in one stack:
 
-- **Delta Lake** – Open-source ACID tables on cloud object storage. You keep data in your S3/ADLS/GCS buckets; Databricks adds versioning, upserts, and time-travel without changing file formats.
-- **Unity Catalog** – A multicloud metastore that applies table/row/column permissions, tags, and audit logs across SQL, Python, BI dashboards, and ML pipelines. Governance once, enforced everywhere.
-- **Delta Sharing** – The first open protocol for zero-copy sharing. Providers grant token-based access to live tables; recipients query in Spark, Pandas, Power BI, or even Snowflake without relocating data. Access is revocable in seconds.
-- **MosaicML + Databricks Model Serving** – High-efficiency training and hosting of LLMs inside the Lakehouse. You fine-tune open-source or foundation models on proprietary data that never leaves your cloud account, then expose a governed HTTPS endpoint. All lineage (data → model → endpoint) is captured in Unity Catalog.
+- **Delta Lake** - Open-source ACID tables on cloud object storage. You keep data in your S3/ADLS/GCS buckets; Databricks adds versioning, upserts, and time-travel without changing file formats.
+- **Unity Catalog** - A multicloud metastore that applies table/row/column permissions, tags, and audit logs across SQL, Python, BI dashboards, and ML pipelines. Governance once, enforced everywhere.
+- **Delta Sharing** - The first open protocol for zero-copy sharing. Providers grant token-based access to live tables; recipients query in Spark, Pandas, Power BI, or even Snowflake without relocating data. Access is revocable in seconds.
+- **MosaicML + Databricks Model Serving** - High-efficiency training and hosting of LLMs inside the Lakehouse. You fine-tune open-source or foundation models on proprietary data that never leaves your cloud account, then expose a governed HTTPS endpoint. All lineage (data → model → endpoint) is captured in Unity Catalog.
 
 Because compute clusters run inside your VPC, and storage stays in your buckets, data residency and encryption standards remain under your control. The Lakehouse “brings compute to data,” satisfying the four guard-rails by design.
 
@@ -102,7 +102,7 @@ Key take-aways:
 
 All other layers—compute, governance, storage—live inside your VPC / cloud account, so raw data never leaves your perimeter unless you explicitly share it through the Delta Sharing gateway.
 
-## Putting It into Practice – an Up-to-Date Migration & Safe-Sharing Playbook
+## Putting It into Practice - an Up-to-Date Migration & Safe-Sharing Playbook
 
 Each step below tightens control, reduces copies, and shows how to give an external AI vendor only the data they truly need—without falling into the data-surrender trap.
 
@@ -112,16 +112,16 @@ Each step below tightens control, reduces copies, and shows how to give an exter
 | Land everything in open, governed tables | <ul><li>Convert CSV/Parquet to Delta / Iceberg with schema enforcement & time-travel.</li><li>Store in your S3 buckets / Google Cloud Storage; enable server-side encryption and object-lock.</li></ul> | Open formats + immutable history make later audits and deletions possible. |
 | Switch on a unified catalog | <ul><li>Unity Catalog / Lake Formation / Purview / Dataplex / Lakekeeper.</li><li>Import IAM groups, apply column masks, row filters, dynamic data tags (“pii = true”).</li></ul> | One policy engine ≫ dozens of per-tool ACLs. |
 | Harden the perimeter | <ul><li>Private subnets, VPC peering, and storage firewall rules so only approved compute can touch raw data.</li><li>Disable public buckets & open egress unless justified.</li></ul> | Keeps “shadow ETL” from copying data out the side door. |
-| Safely share with an external AI vendor (zero-copy) | <ol><li>Minimise first – aggregate, pseudonymise, or drop columns the vendor doesn't need.</li><li>Create a Share (Delta Sharing / Iceberg REST / Arrow Flight):  <ul><li>Grant only the filtered table or view.</li><li>Attach row-level filters & column masks.</li><li>Issue a time-boxed bearer token (7-, 30-, or 90-day TTL) and pin it to the vendor's IP range. Databricks DocumentationDatabricks</li></ul><li>Contract & controls – DPA, usage policy, no onward sharing.</li><li>Monitor – streaming audit of every query; set alerts for unusually large scans.</li><li>Revoke or rotate the token the moment the engagement ends (one CLI/API call).</li></ol> | Zero-copy protocols let the vendor query live tables without replicating them. Instant revocation closes the door the second you're done. |
+| Safely share with an external AI vendor (zero-copy) | <ol><li>Minimise first - aggregate, pseudonymise, or drop columns the vendor doesn't need.</li><li>Create a Share (Delta Sharing / Iceberg REST / Arrow Flight):  <ul><li>Grant only the filtered table or view.</li><li>Attach row-level filters & column masks.</li><li>Issue a time-boxed bearer token (7-, 30-, or 90-day TTL) and pin it to the vendor's IP range. Databricks DocumentationDatabricks</li></ul><li>Contract & controls - DPA, usage policy, no onward sharing.</li><li>Monitor - streaming audit of every query; set alerts for unusually large scans.</li><li>Revoke or rotate the token the moment the engagement ends (one CLI/API call).</li></ol> | Zero-copy protocols let the vendor query live tables without replicating them. Instant revocation closes the door the second you're done. |
 | Move internal ML pipelines onto the platform | <ul><li>Use Spark + MosaicML (or SageMaker/Vertex/Azure ML) inside the governed workspace.</li><li>Log models to a central registry; tag each with source-data lineage.</li></ul> | No more exporting giant CSVs to Jupyter on someone's laptop. |
 | Expose governed model endpoints | <ul><li>Deploy behind Model Serving (or cloud equivalent).</li><li>Protect with catalog-level ACLs, network policies, and request logging.</li></ul> | External apps can call for predictions without direct data access. |
-| Automate audits & drift detection | <ul><li>Scheduled jobs that flag:  – Tables without tags / owners  – Shares approaching token expiry  – Models trained on untagged data</li><li>Pipe findings to Slack / JIRA for triage.</li></ul> | Governance-as-code keeps guard-rails from eroding over time. |
+| Automate audits & drift detection | <ul><li>Scheduled jobs that flag:  - Tables without tags / owners  - Shares approaching token expiry  - Models trained on untagged data</li><li>Pipe findings to Slack / JIRA for triage.</li></ul> | Governance-as-code keeps guard-rails from eroding over time. |
 
 
 **Result**: engineers still use the notebooks, SQL editors, and BI dashboards they love—but every byte of sensitive data stays in your buckets, under traceable, revocable control. External AI vendors get exactly the slice you permit, for exactly as long as you permit, with a full audit trail to keep everyone honest.
 
 
-## Conclusion – Bring AI to Your Data and Future-Proof the Business
+## Conclusion - Bring AI to Your Data and Future-Proof the Business
 
 The AI race rewards the companies that can move fast without surrendering their crown-jewel data. The way to do that is simple—but non-negotiable:
 
