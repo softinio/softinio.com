@@ -97,7 +97,7 @@ Key take-aways:
 
 
 - External AI vendors have two strictly-controlled entry points
-- Model-Serving API - They can request predictions from your governed endpoint—no direct data access required.
+- Model-Serving API - They can request predictions from your governed endpoint—no direct data access required.
 - Delta Sharing - If a vendor truly needs training or feature data, you grant a scoped, revocable token that exposes only the tables/columns you approve.
 
 All other layers—compute, governance, storage—live inside your VPC / cloud account, so raw data never leaves your perimeter unless you explicitly share it through the Delta Sharing gateway.
