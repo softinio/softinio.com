@@ -4,7 +4,7 @@ description = "Fishee is a command-line interface (CLI) tool designed specifical
 weight = 4
 
 [taxonomies]
-tags = ["Fish Shell", "Swift", "Terminal Tools"]
+tags = ["Fish Shell", "Swift", "Terminal Tools", "Project"]
 categories = ["Project"]
 
 [extra]

@@ -14,26 +14,19 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
 
-    - name: Install Nix
-      uses: cachix/install-nix-action@v31
+    - uses: cachix/install-nix-action@v31
       with:
-        nix_path: nixpkgs=channel:nixos-unstable
+        github_access_token: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Setup Nix store cache
       uses: actions/cache@v4
       with:
-        path: /nix/store
-        key: ${{ runner.os }}-nix-store-${{ hashFiles('**/flake.lock') }}
+        path: |
+          ~/.cache/nix
+          ~/nix-store-cache
+        key: ${{ runner.os }}-nix-${{ hashFiles('flake.lock') }}
         restore-keys: |
-          ${{ runner.os }}-nix-store-
-
-    - name: Cache flake inputs
-      uses: actions/cache@v4
-      with:
-        path: ~/.cache/nix
-        key: ${{ runner.os }}-nix-flake-${{ hashFiles('**/flake.lock') }}
-        restore-keys: |
-          ${{ runner.os }}-nix-flake-
+          ${{ runner.os }}-nix-
 
     - name: Build site (pull request)
       if: github.event_name == 'pull_request'
