@@ -1,0 +1,67 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Install Nix
+      uses: cachix/install-nix-action@v31
+      with:
+        nix_path: nixpkgs=channel:nixos-unstable
+
+    - name: Setup Nix store cache
+      uses: actions/cache@v4
+      with:
+        path: /nix/store
+        key: ${{ runner.os }}-nix-store-${{ hashFiles('**/flake.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-nix-store-
+
+    - name: Cache flake inputs
+      uses: actions/cache@v4
+      with:
+        path: ~/.cache/nix
+        key: ${{ runner.os }}-nix-flake-${{ hashFiles('**/flake.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-nix-flake-
+
+    - name: Build site (pull request)
+      if: github.event_name == 'pull_request'
+      run: |
+        # Update base URL for PR preview
+        sed -i "s|base_url = \"https://www.softinio.com\"|base_url = \"https://${{ github.head_ref }}.softinio.pages.dev\"|" ./config.toml
+        nix build
+        nix flake show
+        ls result
+        echo "Preview URL: https://${{ github.head_ref }}.softinio.pages.dev"
+
+    - name: Deploy to Cloudflare Pages (pull request)
+      if: github.event_name == 'pull_request'
+      run: |
+        nix develop --command wrangler pages deploy result --branch=${{ github.head_ref }} --project-name=softinio --commit-dirty=true
+      env:
+        CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+
+    - name: Build site (main branch)
+      if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+      run: |
+        nix build
+
+    - name: Deploy to Cloudflare Pages (main branch)
+      if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+      run: |
+        nix develop --command wrangler pages deploy result --project-name=softinio --commit-dirty=true
+      env:
+        CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
