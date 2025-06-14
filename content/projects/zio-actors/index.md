@@ -1,7 +1,7 @@
 +++
 title = "ZIO Actors"
 description = "A High performance, purely functional library for building, composing, and supervising typed actors based on ZIO using Scala."
-weight = 4
+weight = 5
 
 [taxonomies]
 tags = ["actor model", "concurrency", "distributed systems", "scala", "functional programming", "zio"]
