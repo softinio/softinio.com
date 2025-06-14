@@ -43,6 +43,7 @@ jobs:
         nix build
         nix flake show
         ls result
+        echo "Preview URL: https://${{ github.head_ref }}.softinio.pages.dev"
 
     - name: Deploy to Cloudflare Pages (pull request)
       if: github.event_name == 'pull_request'
