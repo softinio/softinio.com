@@ -261,12 +261,13 @@ socials = [
     { name = "mastodon", url = "https://social.softinio.com/@softinio", icon = "mastodon" },
     { name = "x", url = "https://x.com/SalarRahmanian", icon = "x" },
     { name = "linkedin", url = "https://www.linkedin.com/in/salarrahmanian/", icon = "linkedin" },
-    { name = "git", url = "https://code.softinio.com/softinio", icon = "git" },
+    { name = "forgejo", url = "https://code.softinio.com/softinio", icon = "forgejo" },
     { name = "github", url = "https://github.com/softinio/", icon = "github" },
     { name = "codeberg", url = "https://codeberg.org/softinio", icon = "codeberg" },
     { name = "twitch", url = "https://www.twitch.tv/softinio", icon = "twitch" },
     { name = "peertube", url = "https://watch.softinio.com/c/softinio/videos", icon = "peertube" },
     { name = "youtube", url = "https://www.youtube.com/@Salar_Rahmanian", icon = "youtube" },
+    { name = "bluesky", url = "https://bsky.app/profile/salarrahmanian.bsky.social", icon = "bluesky" },
 ]
 
 # Extra menu to show on the footer, below socials section.
