@@ -17,11 +17,15 @@ jobs:
     - name: Install Nix
       uses: DeterminateSystems/determinate-nix-action@v3
 
-    - name: Setup FlakeHub Cache
-      uses: DeterminateSystems/flakehub-cache-action@main
-
-    - name: Check Nix flake
-      uses: DeterminateSystems/flake-checker-action@main
+    - name: Setup Nix store cache
+      uses: actions/cache@v4
+      with:
+        path: |
+          ~/.cache/nix
+          ~/nix-store-cache
+        key: ${{ runner.os }}-nix-${{ hashFiles('flake.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-nix-
 
     - name: Build site (pull request)
       if: github.event_name == 'pull_request'
