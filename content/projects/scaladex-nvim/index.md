@@ -4,7 +4,7 @@ description = "Lua Library and Neovim Plugin to search scaladex for scala packag
 weight = 2
 
 [taxonomies]
-tags = ["Scala", "lua", "neovim"]
+tags = ["Scala", "lua", "neovim", "Project"]
 categories = ["Project"]
 
 [extra]
@@ -30,4 +30,3 @@ I then used it to create a [Neovim](https://neovim.io) plugin and [telescope.nvi
 
 - Repository: <https://github.com/softinio/scaladex.nvim>
   - README: <https://github.com/softinio/scaladex.nvim/blob/main/README.md>
-

@@ -1,6 +1,5 @@
 +++
 paginate_by = 4
-path = "/post"
 title = "Articles"
 sort_by = "date"
 template = "section.html"

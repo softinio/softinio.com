@@ -4,7 +4,7 @@ description = "A High performance, purely functional library for building, compo
 weight = 5
 
 [taxonomies]
-tags = ["actor model", "concurrency", "distributed systems", "scala", "functional programming", "zio"]
+tags = ["actor model", "concurrency", "distributed systems", "scala", "functional programming", "zio", "Project"]
 categories = ["Project"]
 
 [extra]

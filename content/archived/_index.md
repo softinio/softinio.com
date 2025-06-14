@@ -1,6 +1,5 @@
 +++
 paginate_by = 4
-path = "/archived"
 title = "Archived"
 sort_by = "date"
 template = "section.html"

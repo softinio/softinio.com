@@ -4,7 +4,7 @@ description = "Scala bloggers directory and news feed using RSS"
 weight = 1
 
 [taxonomies]
-tags = ["Scala", "Typelevel"]
+tags = ["Scala", "Typelevel", "Project"]
 categories = ["Project"]
 
 [extra]

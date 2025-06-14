@@ -2,11 +2,11 @@
   "nodes": {
     "nixpkgs": {
       "locked": {
-        "lastModified": 1707956935,
-        "narHash": "sha256-ZL2TrjVsiFNKOYwYQozpbvQSwvtV/3Me7Zwhmdsfyu4=",
+        "lastModified": 1749285348,
+        "narHash": "sha256-frdhQvPbmDYaScPFiCnfdh3B/Vh81Uuoo0w5TkWmmjU=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "a4d4fe8c5002202493e87ec8dbc91335ff55552c",
+        "rev": "3e3afe5174c561dee0df6f2c2b2236990146329f",
         "type": "github"
       },
       "original": {
@@ -25,17 +25,17 @@
     "theme": {
       "flake": false,
       "locked": {
-        "lastModified": 1707564545,
-        "narHash": "sha256-m0XIxf3yKBKJwbSonAPDjw7DPHDi0BgRMhhD3FArWA4=",
+        "lastModified": 1749415357,
+        "narHash": "sha256-RAugqePumSe6nQZa7luSNNb1VGAyNjs/m9M6swWZBW0=",
         "owner": "welpo",
         "repo": "tabi",
-        "rev": "7e428c899b1bf595100e1448578f9cfc84ad3355",
+        "rev": "2e29782279d8154cb9c6f1df9a2401612ec77948",
         "type": "github"
       },
       "original": {
         "owner": "welpo",
         "repo": "tabi",
-        "rev": "7e428c899b1bf595100e1448578f9cfc84ad3355",
+        "rev": "2e29782279d8154cb9c6f1df9a2401612ec77948",
         "type": "github"
       }
     }

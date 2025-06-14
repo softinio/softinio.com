@@ -4,7 +4,7 @@ description = "A modern, type-safe Scala 3 wrapper library for DuckDB."
 weight = 3
 
 [taxonomies]
-tags = ["Scala", "DuckDB", "Database"]
+tags = ["Scala", "DuckDB", "Database", "Project"]
 categories = ["Project"]
 
 [extra]
