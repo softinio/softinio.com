@@ -39,7 +39,7 @@ jobs:
       if: github.event_name == 'pull_request'
       run: |
         # Update base URL for PR preview
-        sed -i "s|base_url = \"https://www.softinio.com\"|base_url = \"https://${{ github.head_ref }}.softinio.com\"|" ./config.toml
+        sed -i "s|base_url = \"https://www.softinio.com\"|base_url = \"https://${{ github.head_ref }}.softinio.pages.dev\"|" ./config.toml
         nix build
         nix flake show
         ls result
