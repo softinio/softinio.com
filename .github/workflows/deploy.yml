@@ -14,8 +14,9 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
 
-    - name: Install Nix
-      uses: DeterminateSystems/determinate-nix-action@v3
+    - uses: cachix/install-nix-action@v31
+      with:
+        github_access_token: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Setup Nix store cache
       uses: actions/cache@v4
