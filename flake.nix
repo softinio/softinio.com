@@ -64,6 +64,7 @@
         {
           default = pkgs.mkShell {
             buildInputs = with pkgs; [
+              git
               nodePackages_latest.wrangler
               zola
             ];
