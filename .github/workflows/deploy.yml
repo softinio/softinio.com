@@ -18,15 +18,8 @@ jobs:
       with:
         github_access_token: ${{ secrets.GITHUB_TOKEN }}
 
-    - name: Setup Nix store cache
-      uses: actions/cache@v4
-      with:
-        path: |
-          ~/.cache/nix
-          ~/nix-store-cache
-        key: ${{ runner.os }}-nix-${{ hashFiles('flake.lock') }}
-        restore-keys: |
-          ${{ runner.os }}-nix-
+    - name: Setup Magic Nix Cache
+      uses: DeterminateSystems/magic-nix-cache-action@v8
 
     - name: Build site (pull request)
       if: github.event_name == 'pull_request'
