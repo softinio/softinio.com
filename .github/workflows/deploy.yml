@@ -26,7 +26,7 @@ jobs:
           BASE_URL: https://${{ github.head_ref }}.softinio.pages.dev
         run: |
           echo "Building with base URL: $BASE_URL"
-          nix build --impure
+          nix build --impure -L
           echo "Preview URL will be: $BASE_URL"
 
       - name: Deploy to Cloudflare Pages (pull request)
@@ -40,7 +40,7 @@ jobs:
       - name: Build site (main branch)
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'
         run: |
-          nix build
+          nix build -L
 
       - name: Deploy to Cloudflare Pages (main branch)
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'

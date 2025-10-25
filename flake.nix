@@ -50,7 +50,7 @@
             buildPhase = ''
               if [ -n "$BASE_URL" ]; then
                 echo "Flake: Building with base URL: $BASE_URL"
-                zola build --base-url "$BASE_URL"
+                zola build --base-url "$BASE_URL" -f
               else
                 echo "Flake: Building with default base URL from config.toml"
                 zola build -f
