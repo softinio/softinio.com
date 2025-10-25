@@ -31,12 +31,14 @@
         system:
         let
           pkgs = nixpkgsFor.${system};
+          base_url = builtins.getEnv "BASE_URL";
         in
         {
           default = pkgs.stdenv.mkDerivation rec {
             name = "softinio-${system}";
             version = "0.1";
             src = ./.;
+            BASE_URL = base_url;
             nativeBuildInputs = with pkgs; [
               nodePackages_latest.wrangler
               zola
@@ -47,10 +49,10 @@
             '';
             buildPhase = ''
               if [ -n "$BASE_URL" ]; then
-                echo "Building with base URL: $BASE_URL"
+                echo "Flake: Building with base URL: $BASE_URL"
                 zola build --base-url "$BASE_URL"
               else
-                echo "Building with default base URL from config.toml"
+                echo "Flake: Building with default base URL from config.toml"
                 zola build -f
               fi
             '';
