@@ -46,7 +46,13 @@
               ln -snf "${theme}" "themes/${themeName}"
             '';
             buildPhase = ''
-              zola build -f
+              if [ -n "$BASE_URL" ]; then
+                echo "Building with base URL: $BASE_URL"
+                zola build --base-url "$BASE_URL"
+              else
+                echo "Building with default base URL from config.toml"
+                zola build -f
+              fi
             '';
             installPhase = ''
               mkdir -p $out
