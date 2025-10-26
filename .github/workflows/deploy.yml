@@ -25,9 +25,7 @@ jobs:
         env:
           BASE_URL: /
         run: |
-          echo "Building with base URL: $BASE_URL"
           nix build --impure -L
-          echo "Preview URL will be: $BASE_URL"
 
       - name: Deploy to Cloudflare Pages (pull request)
         if: github.event_name == 'pull_request'
