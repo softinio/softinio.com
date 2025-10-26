@@ -23,7 +23,7 @@ jobs:
       - name: Build site (pull request)
         if: github.event_name == 'pull_request'
         env:
-          BASE_URL: https://${{ github.head_ref }}.softinio.pages.dev
+          BASE_URL: /
         run: |
           echo "Building with base URL: $BASE_URL"
           nix build --impure -L
