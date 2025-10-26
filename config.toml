@@ -294,11 +294,11 @@ copyright = "© $CURRENT_YEAR $AUTHOR $SEPARATOR Unless otherwise noted, the con
 # Default config, allows for https remote images and embedding YouTube and Vimeo content.
 # This configuration (along with the right webserver settings) gets an A+ in Mozilla's Observatory: https://observatory.mozilla.org
 allowed_domains = [
-    { directive = "connect-src", domains = ["'self'", "http://wisdom.softinio.com/matomo.php"] },
+    { directive = "connect-src", domains = ["'self'", "http://wisdom.softinio.com/matomo.php", "*.softinio.pages.dev"] },
     { directive = "font-src", domains = ["'self'", "data:"] },
     { directive = "img-src", domains = ["'self'", "https://*", "data:"] },
-    { directive = "script-src", domains = ["'self'", "https://comments.softinio.com/js/embed.min.js", "https://static.cloudflareinsights.com", "http://wisdom.softinio.com/matomo.js","'sha256-f5+1KXLs1mZ8y68NQwBoE7PzEG3F0whGW7NzS9tC4rg='"] },
-    { directive = "style-src", domains = ["'self'"] },
+    { directive = "script-src", domains = ["'self'", "https://comments.softinio.com/js/embed.min.js", "https://static.cloudflareinsights.com", "http://wisdom.softinio.com/matomo.js", "*.softinio.pages.dev"] },
+    { directive = "style-src", domains = ["'self'", "*.softinio.pages.dev"] },
     { directive = "frame-src", domains = ["player.vimeo.com", "https://www.youtube-nocookie.com", "https://watch.softinio.com", "https://notes.softinio.com/embed"] },
 ]
 
