@@ -7,7 +7,6 @@
     {%- if config.extra.menu %}
     <div class="nav-navs">
       <ul>
-        {%- if config.extra.menu %}
         {% for menu in config.extra.menu %}
         <li>
           {% set trailing_slash = menu.trailing_slash | default(value=true) %}
@@ -25,7 +24,6 @@
               </a>
         </li>
         {% endfor %}
-        {%- endif -%}
 
         {#- Wrap the icons to keep them all together -#}
         <li class="menu-icons-container">

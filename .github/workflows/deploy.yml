@@ -25,6 +25,7 @@ jobs:
         env:
           BASE_URL: /
         run: |
+          # The --impure flag is required to allow access to the BASE_URL environment variable during build evaluation.
           nix build --impure -L
 
       - name: Deploy to Cloudflare Pages (pull request)
