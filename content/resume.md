@@ -1,7 +1,7 @@
 +++
 title = "Resume"
 description = "Salar Rahmanian Resume"
-date = "2018-04-16T09:16:07-05:00"
+date = "2026-02-08T09:20:00-08:00"
 
 [extra]
 isso = false
@@ -29,18 +29,20 @@ I have extensive experience:
 - Extensive domain knowledge of the job posting and matching and shift scheduling
 
 ## Experience ##
-### Staff Software Engineer, Collective Health: 2020-present ###
+### Founding Software Engineer, Annex Risk: 2026-present
 
-So far my work has involved:
+Heads down building great things with great people using my favorite programming language, Scala 😎
 
-- Building AI features using:
-    - OpenAI
-    - Langchain
-    - Google Cloud (Vertex AI, Document AI, Dialogflow, Vertex AI Search, Gemini)
-    - Databricks Model Serving and experimentation using MLflow
-    - Created internal framework and tools to be used by other engineers to build AI features
-- Building Data pipelines using Databricks, Apache Spark, Airflow and Python
-- Building Microservices and REST API's using Java, Spring, Dropwizard
+### Staff Software Engineer, Collective Health: 2020-2026 ###
+
+My Achievements at Collective Health:
+
+- I was Collective Health first full time AI Engineer, serving as technical SME and architect for AI/ML initiatives
+- Led Google Cloud Platform adoption for AI solutions, creating the initial foundational framework and standards for production AI development
+- Built production AI systems delivering measurable impact reducing our cost to serve, which included: automated invoice processing, AI-powered call summarization, RAG-based knowledge search, and conversational AI assistant
+- Leveraged Vertex AI (AI Application, Agent Assist, Document AI, Dialogflow, CCAIP), OpenAI, LangChain, Databricks, and MLFlow to deliver enterprise AI solutions
+- Developed ETL pipelines on Databricks using Python and PySpark
+- Built REST services using Java/Spring Framework and Python/FastAPI
 - Kubernetes, AWS, PostgreSQL, Terraform
 - Design and Architecture of new features
 
