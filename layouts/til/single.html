@@ -1,5 +1,9 @@
 {{ define "main" }}
   <div class="article-header">
+    {{- if not .Date.IsZero }}
+    <div class="post-date">{{ .Date.Format "2 January 2006" }}</div>
+    {{- end }}
+    <h1>{{ .Title }}</h1>
     {{- with .Params.til_category }}
     <div class="til-label">{{ . }}</div>
     {{- else }}
@@ -7,10 +11,6 @@
       <div class="til-label">{{ index . 0 }}</div>
       {{- end }}
     {{- end }}
-    {{- if not .Date.IsZero }}
-    <div class="post-date">{{ .Date.Format "2 January 2006" }}</div>
-    {{- end }}
-    <h1>{{ .Title }}</h1>
   </div>
 
   <div class="article-body">
