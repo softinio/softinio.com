@@ -1,8 +1,27 @@
 <div class="hero">
   {{- with site.Params.avatar }}
+  {{- $img := resources.Get . }}
+  {{- if $img }}
+    {{- $size   := "140x140" }}
+    {{- $size2x := "280x280" }}
+    {{- $webp   := $img.Resize (printf "%s webp" $size) }}
+    {{- $webp2x := $img.Resize (printf "%s webp" $size2x) }}
+    {{- $png    := $img.Resize (printf "%s png"  $size) }}
+  <picture>
+    <source
+      srcset="{{ $webp.RelPermalink }} 1x, {{ $webp2x.RelPermalink }} 2x"
+      type="image/webp" />
+    <img class="hero-avatar"
+         src="{{ $png.RelPermalink }}"
+         alt="{{ site.Params.author | default site.Title }}"
+         width="140" height="140"
+         loading="eager" />
+  </picture>
+  {{- else }}
   <img class="hero-avatar"
        src="{{ . | absURL }}"
        alt="{{ site.Params.author | default site.Title }}" />
+  {{- end }}
   {{- end }}
   <div class="hero-text">
     <div class="hero-name">{{ site.Params.author | default site.Title }}</div>

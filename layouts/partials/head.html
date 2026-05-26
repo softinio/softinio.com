@@ -11,18 +11,27 @@
   <meta name="author" content="{{ . }}" />
   {{- end }}
 
-  {{/* Google Fonts */}}
+  {{/* Google Fonts — loaded asynchronously to avoid render-blocking */}}
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet" />
+  <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" />
+  </noscript>
 
-  {{/* CSS via Hugo Pipes */}}
-  {{- $css        := resources.Get "css/style.css"        | fingerprint }}
+  {{/* CSS via Hugo Pipes — all minified and fingerprinted */}}
+  {{- $css        := resources.Get "css/style.css"        | minify | fingerprint }}
   {{- $syntaxLight := resources.Get "css/syntax-light.css" | minify | fingerprint }}
   {{- $syntaxDark  := resources.Get "css/syntax-dark.css"  | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $css.RelPermalink }}"         integrity="{{ $css.Data.Integrity }}" />
+  {{/* Syntax-highlight CSS only on pages that contain code blocks */}}
+  {{- if (findRE `<pre` .Content 1) }}
   <link rel="stylesheet" href="{{ $syntaxLight.RelPermalink }}" integrity="{{ $syntaxLight.Data.Integrity }}" />
   <link rel="stylesheet" href="{{ $syntaxDark.RelPermalink }}"  integrity="{{ $syntaxDark.Data.Integrity }}" />
+  {{- end }}
 
   {{/* Favicon */}}
   <link rel="apple-touch-icon" sizes="180x180" href="{{ "softinio-apple-touch-icon.png" | absURL }}" />
@@ -52,6 +61,6 @@
   {{/* Analytics */}}
   {{- if hugo.IsProduction }}
   {{- $matomo := resources.Get "js/matomo.init.js" | minify | fingerprint }}
-  <script src="{{ $matomo.RelPermalink }}" integrity="{{ $matomo.Data.Integrity }}"></script>
+  <script src="{{ $matomo.RelPermalink }}" integrity="{{ $matomo.Data.Integrity }}" async></script>
   {{- end }}
 </head>
