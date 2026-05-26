@@ -811,13 +811,12 @@ mark,
 .til-label {
   display: inline-block;
   font-family: var(--font-mono);
-  font-size: 0.65rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  background: var(--text);
-  color: var(--bg);
-  padding: 0.1rem 0.4rem;
+  font-size: 0.75rem;
+  background: var(--tag-bg);
+  color: var(--tag-text);
+  padding: 0.15rem 0.5rem;
   border-radius: 3px;
+  border: 1px solid var(--border-light);
   margin-bottom: 0.5rem;
 }
 .til-title {
