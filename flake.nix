@@ -55,6 +55,7 @@
               pkgs.git
               pkgs.hugo
               pkgs.pagefind
+              pkgs.wrangler
             ];
           };
         }
