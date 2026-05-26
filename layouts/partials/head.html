@@ -18,8 +18,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet" />
 
   {{/* CSS via Hugo Pipes */}}
-  {{- $css := resources.Get "css/style.css" | fingerprint }}
-  <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}" />
+  {{- $css        := resources.Get "css/style.css"        | fingerprint }}
+  {{- $syntaxLight := resources.Get "css/syntax-light.css" | minify | fingerprint }}
+  {{- $syntaxDark  := resources.Get "css/syntax-dark.css"  | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $css.RelPermalink }}"         integrity="{{ $css.Data.Integrity }}" />
+  <link rel="stylesheet" href="{{ $syntaxLight.RelPermalink }}" integrity="{{ $syntaxLight.Data.Integrity }}" />
+  <link rel="stylesheet" href="{{ $syntaxDark.RelPermalink }}"  integrity="{{ $syntaxDark.Data.Integrity }}" />
 
   {{/* Favicon */}}
   <link rel="apple-touch-icon" sizes="180x180" href="{{ "softinio-apple-touch-icon.png" | absURL }}" />

@@ -189,7 +189,7 @@ paginate = 10
 
 [markup]
   [markup.highlight]
-    style = "monokailight"
+    noClasses = false
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
