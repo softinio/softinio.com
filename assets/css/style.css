@@ -1139,16 +1139,17 @@ mark {
 #isso-thread .isso-postbox section.preview.active { display: block; }
 
 /* Auth section — name / email / website fields
-   Uses CSS Grid: Name + Email side by side, Website full-width */
+   flex-wrap layout: Name + Email side by side, Website full-width,
+   direct-child buttons flow in a row (Isso injects them without a wrapper) */
 #isso-thread .isso-postbox .auth-section,
 #isso-thread .isso-postbox .form-wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-wrap: wrap;
   gap: 0.75rem 1rem;
-  align-items: start;
+  align-items: flex-start;
 }
 
-/* Field rows: each <p> is a flex column (label above input) */
+/* Field rows: label above input, sized for two-column layout */
 #isso-thread .isso-postbox .auth-section > p,
 #isso-thread .isso-postbox .input-wrapper,
 #isso-thread .isso-postbox .form-wrapper > p {
@@ -1156,12 +1157,14 @@ mark {
   flex-direction: column;
   gap: 0.35rem;
   margin: 0;
+  flex: 1 1 calc(50% - 0.5rem);
+  min-width: 120px;
 }
 
-/* Website field spans both columns */
+/* Website field: full width */
 #isso-thread .isso-postbox .auth-section > p:has(input[type="url"]),
 #isso-thread .isso-postbox .form-wrapper > p:has(input[type="url"]) {
-  grid-column: 1 / -1;
+  flex: 0 0 100%;
 }
 
 /* Labels */
@@ -1172,7 +1175,7 @@ mark {
   color: var(--text-muted);
 }
 
-/* Text / email / url inputs — full column width (no 340px cap) */
+/* Text / email / url inputs — fill their flex column */
 #isso-thread .isso-postbox input[type="text"],
 #isso-thread .isso-postbox input[type="email"],
 #isso-thread .isso-postbox input[type="url"] {
@@ -1196,14 +1199,26 @@ mark {
 #isso-thread .isso-postbox input[type="email"]::placeholder,
 #isso-thread .isso-postbox input[type="url"]::placeholder { color: var(--text-faint); }
 
-/* Button row — spans both columns, right-aligned */
+/* Button row via .post-action wrapper (some Isso versions) */
 #isso-thread .isso-postbox .post-action,
 #isso-thread .isso-postbox .auth-section > div:last-child {
-  grid-column: 1 / -1;
+  flex: 0 0 100%;
   display: flex;
   gap: 0.5rem;
   justify-content: flex-end;
-  margin-top: 0.25rem;
+  margin-top: 0.5rem;
+}
+
+/* Direct-child buttons (Isso injects submit + button inputs without a wrapper).
+   They become flex items — make them flow in a row, right-aligned.
+   margin-left: auto on the submit button pushes the whole group to the right. */
+#isso-thread .isso-postbox .auth-section > input[type="submit"],
+#isso-thread .isso-postbox .auth-section > input[type="button"] {
+  flex: 0 0 auto;
+  margin-top: 1rem;
+}
+#isso-thread .isso-postbox .auth-section > input[type="submit"] {
+  margin-left: auto;
 }
 
 /* All submit / button inputs — broad selectors to survive Isso version differences */
@@ -1248,18 +1263,24 @@ mark {
 @media (max-width: 600px) {
   #isso-thread .isso-follow-up { padding-left: 0.75rem; }
 
-  /* Collapse to single column on small screens */
-  #isso-thread .isso-postbox .auth-section,
-  #isso-thread .isso-postbox .form-wrapper {
-    grid-template-columns: 1fr;
-  }
-  #isso-thread .isso-postbox .auth-section > p:has(input[type="url"]),
-  #isso-thread .isso-postbox .form-wrapper > p:has(input[type="url"]) {
-    grid-column: 1;
+  /* Fields go full-width on small screens */
+  #isso-thread .isso-postbox .auth-section > p,
+  #isso-thread .isso-postbox .input-wrapper,
+  #isso-thread .isso-postbox .form-wrapper > p {
+    flex: 0 0 100%;
   }
 
   #isso-thread .isso-postbox .post-action,
   #isso-thread .isso-postbox .auth-section > div:last-child { justify-content: stretch; }
+
+  /* Direct-child buttons: full width, no auto-margin */
+  #isso-thread .isso-postbox .auth-section > input[type="submit"] {
+    margin-left: 0;
+    flex: 1;
+  }
+  #isso-thread .isso-postbox .auth-section > input[type="button"] {
+    flex: 1;
+  }
   #isso-thread .isso-postbox input[type="submit"],
   #isso-thread .isso-postbox input[type="button"] { flex: 1; }
 }
