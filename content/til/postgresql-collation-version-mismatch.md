@@ -30,7 +30,7 @@ psql -h localhost -d postgres -U postgres
 
 - connected to my `peertube` database:
 
-```
+```bash
 \c peertube
 ```
 
@@ -42,7 +42,7 @@ REINDEX DATABASE peertube; ALTER DATABASE peertube REFRESH COLLATION VERSION;
 
 - Logged out of psql:
 
-```
+```bash
 \q
 ```
 
