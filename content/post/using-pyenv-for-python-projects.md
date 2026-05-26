@@ -3,11 +3,10 @@ title = "Using pyenv for Python projects"
 description = "Using pyenv to manage your virtual environments makes working on multiple projects, each using a different version of python a breeze."
 date = "2015-04-13T09:06:03-05:00"
 
-[taxonomies]
 tags = ["python"]
 categories = ["Developer Tools"]
 
-[extra]
+[params]
 toc = true
 keywords = ["python", "pyenv"]
 +++

@@ -1,0 +1,19 @@
+<li class="post-item">
+  {{- if not .Date.IsZero }}
+  <div class="post-date">{{ .Date.Format "2 January 2006" }} · {{ .ReadingTime }} min read</div>
+  {{- end }}
+  <h2 class="post-title">
+    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+  </h2>
+  {{- with .Params.tags }}
+  <div class="post-tags">
+    {{- range . }}
+    <a href="{{ "tags/" | relURL }}{{ . | urlize }}/" class="tag">{{ . }}</a>
+    {{- end }}
+  </div>
+  {{- end }}
+  {{- with .Summary }}
+  <p class="post-summary">{{ . | plainify | truncate 200 }}</p>
+  {{- end }}
+  <a href="{{ .RelPermalink }}" class="post-readmore">Read more &rarr;</a>
+</li>

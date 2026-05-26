@@ -1,0 +1,53 @@
+{{ define "main" }}
+  <div class="article-header">
+    {{- if not .Date.IsZero }}
+    <div class="post-date">{{ .Date.Format "2 January 2006" }} · {{ .ReadingTime }} min read</div>
+    {{- end }}
+    <h1>{{ .Title }}</h1>
+    {{- with .Params.tags }}
+    <div class="post-tags">
+      {{- range . }}
+      <a href="{{ "tags/" | relURL }}{{ . | urlize }}/" class="tag">{{ . }}</a>
+      {{- end }}
+    </div>
+    {{- end }}
+  </div>
+
+  {{- if .Params.toc }}
+  <nav class="toc" aria-label="Table of Contents">
+    <details open>
+      <summary>Table of Contents</summary>
+      {{ .TableOfContents }}
+    </details>
+  </nav>
+  {{- end }}
+
+  <div class="article-body">
+    {{ .Content }}
+  </div>
+
+  {{- $prev := .PrevInSection }}
+  {{- $next := .NextInSection }}
+  {{- if or $prev $next }}
+  <nav class="prev-next" aria-label="Previous and next articles">
+    <div class="prev-next-item prev-next-prev">
+      {{- with $prev }}
+      <a href="{{ .RelPermalink }}">
+        <span class="prev-next-label">&larr; Previous</span>
+        <span class="prev-next-title">{{ .Title }}</span>
+      </a>
+      {{- end }}
+    </div>
+    <div class="prev-next-item prev-next-next">
+      {{- with $next }}
+      <a href="{{ .RelPermalink }}">
+        <span class="prev-next-label">Next &rarr;</span>
+        <span class="prev-next-title">{{ .Title }}</span>
+      </a>
+      {{- end }}
+    </div>
+  </nav>
+  {{- end }}
+
+  {{ partial "comments.html" . }}
+{{ end }}

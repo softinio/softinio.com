@@ -2,12 +2,11 @@
 title =  "Migrating my markdown notes from Obsidian to Apple Notes"
 date =  2024-03-03
 
-[taxonomies]
 tags = ["markdown", "obsidian", "apple", "pandoc", "bash"]
 categories = [ "TIL" ]
 
-[extra]
-toc = true
+[params]
+til_category = "markdown"
 keywords = ["markdown", "html", "pandoc", "obsidian", "apple notes", "bash", "migrate"]
 +++
 

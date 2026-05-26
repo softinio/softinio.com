@@ -3,11 +3,10 @@ title = "Scala News"
 description = "Scala bloggers directory and news feed using RSS"
 weight = 1
 
-[taxonomies]
 tags = ["Scala", "Typelevel", "Project"]
 categories = ["Project"]
 
-[extra]
+[params]
 local_image = "projects/scalanews/scalanews.png"
 social_media_card = "scalanews.png"
 toc = true

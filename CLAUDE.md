@@ -4,80 +4,76 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Overview
 
-This is a personal blog and portfolio website for Salar Rahmanian (softinio.com) built with Zola static site generator, managed with Nix Flakes, and deployed to Cloudflare Pages.
+This is the personal blog and portfolio website for Salar Rahmanian at softinio.com, built with Hugo. The theme is embedded directly in the project (flat layout, no separate theme repo or module import).
 
 ## Commands
 
-### Development
 ```bash
-# Enter development shell with all dependencies
-nix develop
-
-# Start local development server
-zola serve
+# Start local dev server
+hugo server
 
 # Build the site
-zola build
+hugo build
+
+# Create a new blog post
+hugo new post/my-new-post/index.md
+
+# Create a new TIL entry
+hugo new til/my-til-entry.md
 ```
-
-### Building with Nix
-```bash
-# Build the site using Nix
-nix build
-
-# The output will be in result/
-
-# Update flake inputs to latest versions
-nix flake update
-```
-
-### Deployment
-```bash
-# Deploy to Cloudflare Pages
-wrangler pages deploy public/
-```
-
-### Testing
-```bash
-# Check for broken links and validate build
-zola check
-```
-
-### CI/CD
-
-This project uses GitHub Actions for continuous integration and deployment:
-
-- **Main branch pushes**: Deploys directly to production (https://www.softinio.com)
-- **Pull requests**: Deploys to preview URLs (https://[branch-name].softinio.com)
-- **Other branch pushes**: No deployment (only builds on PR creation)
-
-Required secrets in GitHub repository settings:
-- `CLOUDFLARE_ACCOUNT_ID`: Your Cloudflare account ID
-- `CLOUDFLARE_API_TOKEN`: Cloudflare API token with Pages:Edit permissions
 
 ## Architecture
 
 ### Technology Stack
-- **Static Site Generator**: Zola (Rust-based) - NOT Hugo
-- **Theme**: Tabi theme (pinned to specific commit in flake.nix)
-- **Package Management**: Nix Flakes
-- **Hosting**: Cloudflare Pages
-- **Comments**: Isso (self-hosted at comments.softinio.com)
-- **Analytics**: Matomo (self-hosted at wisdom.softinio.com)
+- **Static Site Generator**: Hugo
+- **CSS**: Plain CSS via Hugo Pipes (assets/css/style.css), fingerprinted at build time
+- **Fonts**: Google Fonts (Inter)
+- **Deployment**: Cloudflare Pages
+
+### Directory Structure
+- `layouts/_default/baseof.html`: Master template (head, topbar, sidebar+main layout, footer)
+- `layouts/partials/`: Reusable components (head, topbar, sidebar, footer, hero, post-item, til-item)
+- `layouts/index.html`: Home page (hero + recent posts)
+- `layouts/post/`: Blog article list and single templates
+- `layouts/til/`: TIL list and single templates (uses til_category param for labels)
+- `layouts/projects/`: Project list (sorted by weight, no dates) and single templates
+- `layouts/talks/`: Talks list (sorted by weight, year-only dates) and single templates
+- `layouts/page/single.html`: Standalone pages (about, subscribe, resume) — triggered by `type = "page"` in front matter
+- `layouts/shortcodes/`: Custom shortcodes (peertube, full_width_image, rawhtml)
+- `layouts/_default/`: Fallback list/single + taxonomy terms/taxonomy pages
+- `assets/css/style.css`: All theme CSS with CSS custom properties
+- `static/js/copy-code.js`: Copy-to-clipboard button for code blocks
+- `static/js/theme-toggle.js`: Light/dark theme switcher
+- `static/js/scroll-top.js`: Scroll-to-top button
+- `static/js/matomo.init.js`: Matomo analytics initialisation (loaded in production only)
+- `archetypes/`: Content scaffolding templates (default, post, til)
 
 ### Content Structure
-- `content/post/`: Main blog articles with full metadata
-- `content/projects/`: Project showcase pages
-- `content/talks/`: Conference presentations
-- `content/til/`: "Today I Learned" short posts
-- `content/archived/`: Archived posts
+- `content/post/`: Blog articles (page bundles with colocated images)
+- `content/til/`: "Today I Learned" short entries (flat .md files with `til_category` param)
+- `content/projects/`: Project showcase (page bundles, sorted by weight)
+- `content/talks/`: Conference talks (page bundles, sorted by weight)
+- `content/archived/`: Archived older posts
+- `content/about/`: About page (`type = "page"`)
+- `content/subscribe/`: Subscribe page with Substack embed (`type = "page"`)
+- `content/resume/`: Resume page (`type = "page"`)
 
-### Key Configuration Files
-- `config.toml`: Zola site configuration with theme settings, CSP headers, and integrations
-- `flake.nix`: Nix development environment and build configuration
-- `wrangler.toml`: Cloudflare deployment configuration
+### Configuration
+- Navigation is menu-driven: `main` (topbar), `sidebar_pages`, `sidebar_about`, `footer`
+- Social links: `params.social` array of `{name, url}` — used in sidebar and footer
+- Hero links: `params.heroLinks` array — shown on home page hero section
+- Sidebar "Recent Posts" is dynamically queried from the `post` section (not menu-driven)
+- Active nav state is detected by comparing current page's `.Section` against menu item `.Identifier`
+- No `theme` directive or module import — all layouts/assets live at the project root
 
-### Template Customizations
-- `templates/partials/custom_header.html`: Matomo analytics integration
-- `templates/shortcodes/`: YouTube and PeerTube video embedding
-- `templates/subscribe.html`: Newsletter subscription page
+### Shortcodes
+- `{{< youtube "VIDEO_ID" >}}` — Hugo built-in YouTube embed
+- `{{< peertube id="VIDEO_ID" >}}` — PeerTube embed (watch.softinio.com)
+- `{{< full_width_image src="image.jpg" alt="description" >}}` — Full-width image
+- `{{< rawhtml >}}...{{< /rawhtml >}}` — Raw HTML passthrough
+
+### Front Matter Conventions
+- Blog posts: `title`, `date`, `description`, `tags`, `categories`, optional `[params]` with `toc`, `keywords`, `social_media_card`
+- TIL entries: `title`, `date`, `tags`, `categories`, `[params]` with `til_category`
+- Projects/Talks: `title`, `weight` (for sort order), `tags`, `categories`, optional `[params]` with `projectUrl`
+- Standalone pages: `title`, `type = "page"`

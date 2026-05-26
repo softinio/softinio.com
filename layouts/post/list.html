@@ -1,0 +1,17 @@
+{{ define "main" }}
+  <div class="page-header">
+    <h1>{{ .Title | default "Articles" }}</h1>
+    {{- with .Description }}
+    <div class="page-meta">{{ . }}</div>
+    {{- end }}
+  </div>
+
+  {{- $paginator := .Paginate .Pages }}
+  <ul class="post-list">
+    {{- range $paginator.Pages }}
+    {{ partial "post-item.html" . }}
+    {{- end }}
+  </ul>
+
+  {{- template "_internal/pagination.html" . }}
+{{ end }}

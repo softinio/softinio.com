@@ -3,11 +3,10 @@ title = "Introduction to the Actor Model"
 description = "In this post I am going do a quick introduction to the actor model and the problems it is trying to solve."
 date = 2020-10-04T11:23:12-07:00
 
-[taxonomies]
 tags = ["actor model", "concurrency", "distributed systems"]
 categories = ["Software Engineering"]
 
-[extra]
+[params]
 social_media_card = "introduction_to_the_actor_model.png"
 toc = true
 keywords = ["concurrent", "concurrency", "actor model", "actor", "actors", "threads", "petri net", "coroutines", "distributed", "akka", "erlang", "elixir", "akka.net", "microsoft orleans", "orleans", "zio", "zio-actors", "swift language actors"]

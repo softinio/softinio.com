@@ -2,9 +2,9 @@
 title = "Resume"
 description = "Salar Rahmanian Resume"
 date = "2026-02-08T09:20:00-08:00"
+type = "page"
 
-[extra]
-isso = false
+[params]
 keywords = ["Salar", "Rahmanian", "Salar Rahmanian", "Resume", "CV", "softinio"]
 +++
 # Salar Rahmanian #

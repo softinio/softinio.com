@@ -1,0 +1,31 @@
+{{ define "main" }}
+  <div class="page-header">
+    <h1>{{ .Title | default "Talks" }}</h1>
+    {{- with .Description }}
+    <div class="page-meta">{{ . }}</div>
+    {{- end }}
+  </div>
+
+  <ul class="post-list">
+    {{- range .Pages.ByWeight }}
+    <li class="post-item">
+      {{- if not .Date.IsZero }}
+      <div class="post-date">{{ .Date.Format "2006" }}</div>
+      {{- end }}
+      <h2 class="post-title">
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      </h2>
+      {{- with .Params.tags }}
+      <div class="post-tags">
+        {{- range . }}
+        <a href="{{ "tags/" | relURL }}{{ . | urlize }}/" class="tag">{{ . }}</a>
+        {{- end }}
+      </div>
+      {{- end }}
+      {{- with .Description }}
+      <p class="post-summary">{{ . }}</p>
+      {{- end }}
+    </li>
+    {{- end }}
+  </ul>
+{{ end }}

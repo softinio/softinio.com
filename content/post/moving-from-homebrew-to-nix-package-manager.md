@@ -3,11 +3,10 @@ title = "Moving from Homebrew to Nix Package Manager"
 description = "Moving from Homebrew to Nix Package manager on my macbook pro"
 date = 2019-02-16T18:30:40-07:00
 
-[taxonomies]
 tags = ["nix", "nixos", "macos", "functional programming"]
 categories = ["Developer Tools"]
 
-[extra]
+[params]
 toc = true
 keywords = ["nix", "nixos", "macos", "macbook", "package manager", "functional programming"]
 +++

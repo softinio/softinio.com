@@ -3,10 +3,9 @@ title = "PyBay 2018 San Francisco"
 description = "Highlights of PyBay 2018 conference a Python event based in the San Francisco Bay Area California"
 date = 2018-10-25T18:30:40-07:00
 
-[taxonomies]
 tags = ["python", "conference"]
 
-[extra]
+[params]
 social_media_card = "PyBay_2018_Start.png"
 toc = true
 keywords = ["python", "pybay", "sfpython", "pycon", "san francisco", "bay area", "california", "conference"]
@@ -96,7 +95,7 @@ In this keynote we were taken through the journey of what has made Python such a
 # Lightening talks at PyBay 2018
 One of the more fun aspects of PyBay was the lightening talks. Everyday of the conference there was a slot for doing a 5 minute lightening talk. One of the speakers that was planned for the third day of the conference dropped out so the organizers turned that hour into an extra lightening talk hour. They were looking for volunteers to do a lightening talk unplanned on short notice and for better or worse I volunteered and did a super fast lightening talk on using [pyenv](https://www.softinio.com/post/using-pyenv-for-python-projects/) fast forward to 5:22 to see my lightening talk:
 
-{{ youtube(id="KqqMSB0eyhk") }}
+{{< youtube "KqqMSB0eyhk" >}}
 
 # Thank you PyBay 2018
 What made the event even more fun for me was that [Mya](https://hiremya.com/) was one of the sponsors so got the chance to enjoy the conference with my esteemed colleagues and found it incredibly fun to talk to everyone at the conference on the problems we are solving at Mya using Python.

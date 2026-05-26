@@ -3,16 +3,15 @@ title = "All Good Things Come to an End"
 description = "After having spent the last seven years organizing technical talks at several meetups I have decided to step down and move on."
 date = 2021-04-14T12:03:44-07:00
 
-[taxonomies]
 tags = ["meetup", "conference", "talks"]
 categories = ["Announcements"]
 
-[extra]
+[params]
 toc = true
 keywords = ["meetup", "conference", "technical talks", "events", "organizer"]
 +++
 
-{{ youtube(id="1CU5UPi7STk") }}
+{{< youtube "1CU5UPi7STk" >}}
 
 After having spent the last seven years organizing technical talks at several meetups I have decided to step down and move on. It is an end of an era for me, but I am excited about what's next.
 

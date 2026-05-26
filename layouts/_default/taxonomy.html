@@ -1,0 +1,12 @@
+{{ define "main" }}
+  <div class="page-header">
+    <h1>{{ .Title }}</h1>
+    <div class="page-meta">{{ len .Pages }} {{ if eq (len .Pages) 1 }}post{{ else }}posts{{ end }} tagged &ldquo;{{ .Title }}&rdquo;</div>
+  </div>
+
+  <ul class="post-list">
+    {{- range .Pages }}
+    {{ partial "post-item.html" . }}
+    {{- end }}
+  </ul>
+{{ end }}

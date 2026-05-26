@@ -4,11 +4,10 @@ description = "Salar Rahmanian's talk with John A De Goes at Scale By The Bay 20
 date = 2019-11-13
 weight = 4
 
-[taxonomies]
 tags = ["concurrency", "distributed systems", "scala", "functional programming", "conference", "talks", "ZIO"]
 categories = ["Talks"]
 
-[extra]
+[params]
 local_image = "talks/next-level-diagnostics-for-async-and-concurrent-errors-with-zio/sbtb2019.png"
 social_media_card = "sbtb2019.png"
 toc = true
@@ -21,7 +20,7 @@ In November 2019 I had the great privilege to do a [Talk at Scale By The Bay Con
 
 ### Recording of my talk
 
-{{ youtube(id="MdYKEwuWR4U") }}
+{{< youtube "MdYKEwuWR4U" >}}
 
 ### Slides
 

@@ -2,12 +2,11 @@
 title =  "Using Stable And Unstable Nix/NixOS Channels Together"
 date =  2025-05-03
 
-[taxonomies]
 tags = ["Nix", "NixOS"]
 categories = [ "TIL" ]
 
-[extra]
-toc = true
+[params]
+til_category = "Nix"
 keywords = ["Nix", "NixOS"]
 +++
 

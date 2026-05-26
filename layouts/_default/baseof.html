@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="{{ site.LanguageCode | default "en" }}">
+  {{- partial "head.html" . -}}
+<body>
+  {{- partial "topbar.html" . -}}
+  <main class="main">
+    <div class="content-inner">
+      {{- block "main" . }}{{ end -}}
+    </div>
+  </main>
+  {{- partial "footer.html" . -}}
+  <button class="scroll-top" aria-label="Scroll to top" title="Scroll to top">
+    <svg viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+  <script src="{{ "js/copy-code.js" | absURL }}"></script>
+  <script src="{{ "js/theme-toggle.js" | absURL }}"></script>
+  <script src="{{ "js/scroll-top.js" | absURL }}"></script>
+</body>
+</html>

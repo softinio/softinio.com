@@ -1,0 +1,13 @@
+<div class="hero">
+  {{- with site.Params.avatar }}
+  <img class="hero-avatar"
+       src="{{ . | absURL }}"
+       alt="{{ site.Params.author | default site.Title }}" />
+  {{- end }}
+  <div class="hero-text">
+    <div class="hero-name">{{ site.Params.author | default site.Title }}</div>
+    {{- with site.Params.tagline }}
+    <div class="hero-tagline">{{ . }}</div>
+    {{- end }}
+  </div>
+</div>

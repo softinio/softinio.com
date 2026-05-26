@@ -3,11 +3,10 @@ title = "The Data Surrender Trap: How Enterprises Are Losing Control in the AI G
 description = "Avoid the data-surrender trap: keep data in-place with open standards and governance, share securely, and bring AI to your data—not the other way around. "
 date = 2025-04-26T18:07:52-08:00
 
-[taxonomies]
 tags = ["AI", "Data Governance", "Data Engineering", "Artificial Intelligence"]
 categories = ["Data Engineering", "Artificial Intelligence", "Data Governance"]
 
-[extra]
+[params]
 social_media_card = "TheDataSurrenderTrap.png"
 toc = true
 keywords = ["AI", "Databricks", "Data Governance", "Data Engineering", "Artificial Intelligence", "Data Surrender Trap", "Data Sharing", "Data Security", "Data Privacy", "Open Standards", "Zero-Copy Sharing", "Google Cloud", "AWS", "Microsoft Azure", "Snowflake", "Data Residency", "Data Compliance", "Data Strategy", "Iceberg", "Delta Lake", "Apache Ranger", "Open Policy Agent", "Unity Catalog", "Data Lineage", "Data Sharing Protocols", "MosaicML", "Model Serving", "Data Architecture", "DuckDB", "Lakekeeper"]

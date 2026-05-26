@@ -1,0 +1,32 @@
+{{ define "main" }}
+  <div class="page-header">
+    <h1>{{ .Title | default "Projects" }}</h1>
+    {{- with .Description }}
+    <div class="page-meta">{{ . }}</div>
+    {{- end }}
+  </div>
+
+  <ul class="post-list">
+    {{- range .Pages.ByWeight }}
+    <li class="post-item">
+      <h2 class="post-title">
+        {{- with .Params.projectUrl }}
+        <a href="{{ . }}" target="_blank" rel="noopener">{{ $.Title }}</a>
+        {{- else }}
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        {{- end }}
+      </h2>
+      {{- with .Params.tags }}
+      <div class="post-tags">
+        {{- range . }}
+        <a href="{{ "tags/" | relURL }}{{ . | urlize }}/" class="tag">{{ . }}</a>
+        {{- end }}
+      </div>
+      {{- end }}
+      {{- with .Description }}
+      <p class="post-summary">{{ . }}</p>
+      {{- end }}
+    </li>
+    {{- end }}
+  </ul>
+{{ end }}

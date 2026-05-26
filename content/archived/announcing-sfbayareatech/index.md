@@ -3,11 +3,10 @@ title = "Life changes and announcing SFBayAreaTech"
 description = "Me and family moved, I changed jobs and announcing SFBayAreaTech a slack community for anyone working in tech who are based in the San Francisco Bay Area California"
 date = 2018-08-10T07:29:10-07:00
 
-[taxonomies]
 tags = ["sfbayareatechies"]
 categories = ["announcements"]
 
-[extra]
+[params]
 toc = true
 keywords = ["sfbayareatech", "san francisco", "bay area", "california"]
 +++
