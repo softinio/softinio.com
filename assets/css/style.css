@@ -1101,6 +1101,29 @@ mark {
   margin-bottom: 2rem;
 }
 
+/* isso-form-wrapper is the master flex container.
+   .isso-auth-section uses display:contents so its children
+   (the 3 field <p>s + the submit <p>) bubble up as direct flex
+   siblings alongside the preview/edit <p>s that are already
+   direct children — letting all three buttons share one row. */
+#isso-thread .isso-postbox .isso-form-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1rem;
+  align-items: flex-start;
+}
+
+/* Textarea wrapper + notification: always full width */
+#isso-thread .isso-postbox .isso-textarea-wrapper,
+#isso-thread .isso-postbox .isso-notification-section {
+  flex: 0 0 100%;
+}
+
+/* Remove isso-auth-section's box — its children flow into isso-form-wrapper */
+#isso-thread .isso-postbox .isso-auth-section {
+  display: contents;
+}
+
 /* Textarea */
 #isso-thread .isso-textarea {
   display: block;
@@ -1117,14 +1140,12 @@ mark {
   resize: vertical;
   outline: none;
   transition: border-color 0.15s;
-  margin-bottom: 0.75rem;
 }
 #isso-thread .isso-textarea:focus { border-color: var(--text-muted); }
 #isso-thread .isso-textarea::placeholder { color: var(--text-faint); }
 
-/* Preview pane */
-#isso-thread .isso-postbox section.preview,
-#isso-thread .isso-postbox .preview-wrapper {
+/* Preview pane (shown after clicking Preview) */
+#isso-thread .isso-postbox .isso-preview {
   background: var(--bg-sidebar);
   border: 1px solid var(--border);
   border-radius: 5px;
@@ -1133,26 +1154,12 @@ mark {
   font-size: 0.88rem;
   line-height: 1.7;
   color: var(--text);
-  margin-bottom: 0.75rem;
   display: none;
 }
-#isso-thread .isso-postbox section.preview.active { display: block; }
+#isso-thread .isso-postbox .isso-preview.active { display: block; }
 
-/* Auth section — name / email / website fields
-   flex-wrap layout: Name + Email side by side, Website full-width,
-   direct-child buttons flow in a row (Isso injects them without a wrapper) */
-#isso-thread .isso-postbox .auth-section,
-#isso-thread .isso-postbox .form-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem 1rem;
-  align-items: flex-start;
-}
-
-/* Field rows: label above input, sized for two-column layout */
-#isso-thread .isso-postbox .auth-section > p,
-#isso-thread .isso-postbox .input-wrapper,
-#isso-thread .isso-postbox .form-wrapper > p {
+/* Field <p> elements: two-column layout (Name + Email side by side) */
+#isso-thread .isso-postbox .isso-input-wrapper {
   display: flex;
   flex-direction: column;
   gap: 0.35rem;
@@ -1161,9 +1168,8 @@ mark {
   min-width: 120px;
 }
 
-/* Website field: full width */
-#isso-thread .isso-postbox .auth-section > p:has(input[type="url"]),
-#isso-thread .isso-postbox .form-wrapper > p:has(input[type="url"]) {
+/* Website field: full width (Isso uses type="text" name="website") */
+#isso-thread .isso-postbox .isso-input-wrapper:has(input[name="website"]) {
   flex: 0 0 100%;
 }
 
@@ -1175,10 +1181,9 @@ mark {
   color: var(--text-muted);
 }
 
-/* Text / email / url inputs — fill their flex column */
+/* Text / email inputs — fill their flex column (website is type="text") */
 #isso-thread .isso-postbox input[type="text"],
-#isso-thread .isso-postbox input[type="email"],
-#isso-thread .isso-postbox input[type="url"] {
+#isso-thread .isso-postbox input[type="email"] {
   font-family: var(--font-mono);
   font-size: 0.85rem;
   background: var(--bg-sidebar);
@@ -1193,35 +1198,24 @@ mark {
   -webkit-appearance: none;
 }
 #isso-thread .isso-postbox input[type="text"]:focus,
-#isso-thread .isso-postbox input[type="email"]:focus,
-#isso-thread .isso-postbox input[type="url"]:focus { border-color: var(--text-muted); }
+#isso-thread .isso-postbox input[type="email"]:focus { border-color: var(--text-muted); }
 #isso-thread .isso-postbox input[type="text"]::placeholder,
-#isso-thread .isso-postbox input[type="email"]::placeholder,
-#isso-thread .isso-postbox input[type="url"]::placeholder { color: var(--text-faint); }
+#isso-thread .isso-postbox input[type="email"]::placeholder { color: var(--text-faint); }
 
-/* Button row via .post-action wrapper (some Isso versions) */
-#isso-thread .isso-postbox .post-action,
-#isso-thread .isso-postbox .auth-section > div:last-child {
-  flex: 0 0 100%;
-  display: flex;
-  gap: 0.5rem;
-  justify-content: flex-end;
+/* Button row — all .isso-post-action <p>s are flex items.
+   Submit's <p> gets margin-left:auto to push the group right;
+   Preview and Edit follow on the same row.
+   margin-top creates the gap between the last field and buttons. */
+#isso-thread .isso-postbox .isso-post-action {
+  flex: 0 0 auto;
+  margin: 0;
   margin-top: 0.5rem;
 }
-
-/* Direct-child buttons (Isso injects submit + button inputs without a wrapper).
-   They become flex items — make them flow in a row, right-aligned.
-   margin-left: auto on the submit button pushes the whole group to the right. */
-#isso-thread .isso-postbox .auth-section > input[type="submit"],
-#isso-thread .isso-postbox .auth-section > input[type="button"] {
-  flex: 0 0 auto;
-  margin-top: 1rem;
-}
-#isso-thread .isso-postbox .auth-section > input[type="submit"] {
+#isso-thread .isso-postbox .isso-post-action:has(input[type="submit"]) {
   margin-left: auto;
 }
 
-/* All submit / button inputs — broad selectors to survive Isso version differences */
+/* Button styles */
 #isso-thread .isso-postbox input[type="submit"],
 #isso-thread .isso-postbox input[type="button"] {
   appearance: none;
@@ -1252,7 +1246,7 @@ mark {
 }
 
 /* Notification / error messages */
-#isso-thread .notification-section {
+#isso-thread .isso-notification-section {
   font-family: var(--font-mono);
   font-size: 0.82rem;
   color: var(--text-muted);
@@ -1263,24 +1257,16 @@ mark {
 @media (max-width: 600px) {
   #isso-thread .isso-follow-up { padding-left: 0.75rem; }
 
-  /* Fields go full-width on small screens */
-  #isso-thread .isso-postbox .auth-section > p,
-  #isso-thread .isso-postbox .input-wrapper,
-  #isso-thread .isso-postbox .form-wrapper > p {
+  /* Fields collapse to single column */
+  #isso-thread .isso-postbox .isso-input-wrapper {
     flex: 0 0 100%;
   }
 
-  #isso-thread .isso-postbox .post-action,
-  #isso-thread .isso-postbox .auth-section > div:last-child { justify-content: stretch; }
-
-  /* Direct-child buttons: full width, no auto-margin */
-  #isso-thread .isso-postbox .auth-section > input[type="submit"] {
-    margin-left: 0;
+  /* Buttons: stretch to fill the row, remove the auto-margin nudge */
+  #isso-thread .isso-postbox .isso-post-action {
     flex: 1;
-  }
-  #isso-thread .isso-postbox .auth-section > input[type="button"] {
-    flex: 1;
+    margin-left: 0 !important;
   }
   #isso-thread .isso-postbox input[type="submit"],
-  #isso-thread .isso-postbox input[type="button"] { flex: 1; }
+  #isso-thread .isso-postbox input[type="button"] { width: 100%; }
 }
