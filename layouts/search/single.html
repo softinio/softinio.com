@@ -3,18 +3,10 @@
     <h1>{{ .Title }}</h1>
   </div>
 
-  <link href="/pagefind/pagefind-ui.css" rel="stylesheet" />
-  <script src="/pagefind/pagefind-ui.js"></script>
+  <link href="/pagefind/pagefind-component-ui.css" rel="stylesheet" />
+  <script src="/pagefind/pagefind-component-ui.js" type="module"></script>
 
-  <div id="search"></div>
-
-  <script>
-    window.addEventListener('DOMContentLoaded', function () {
-      new PagefindUI({
-        element: '#search',
-        showSubResults: true,
-        showImages: false
-      });
-    });
-  </script>
+  <pagefind-input placeholder="Search..."></pagefind-input>
+  <pagefind-summary></pagefind-summary>
+  <pagefind-results></pagefind-results>
 {{ end }}
