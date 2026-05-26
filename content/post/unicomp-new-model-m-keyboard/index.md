@@ -3,11 +3,10 @@ title = "Unicomp New Model M Keyboard"
 description = "Unicomp new Model M keyboard is the latest version of the classic and fabulous IBM Model M keyboard that came out earlier this year. This blog post is my unboxing and review of this timeless keyboard."
 date = 2020-12-18T20:08:42-08:00
 
-[taxonomies]
 tags = ["keyboards"]
 categories = ["Hardware"]
 
-[extra]
+[params]
 social_media_card = "unicomp_new_model_m.png"
 toc = true
 keywords = ["keyboard", "keyboards", "mechanical keyboards", "buckling spring", "buckling spring keyboard", "ibm model m", "ibm keyboard", "unicomp", "unicomp model m", "unicomp new model m", "unicomp new model m keyboard", "model m"]

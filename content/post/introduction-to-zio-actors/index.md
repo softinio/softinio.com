@@ -3,11 +3,10 @@ title = "Introduction to Zio Actors"
 description = "Introduction to ZIO Actors"
 date = 2020-11-01T14:14:21-08:00
 
-[taxonomies]
 tags = ["actor model", "concurrency", "distributed systems", "scala", "functional programming", "zio"]
 categories = ["Software Engineering"]
 
-[extra]
+[params]
 toc = true
 social_media_card = "ZIO.png"
 keywords = ["concurrent", "concurrency", "actor model", "actor", "actors", "threads", "petri net", "coroutines", "distributed", "akka", "erlang", "elixir", "akka.net", "microsoft orleans", "orleans", "zio", "zio-actors", "zio actors","swift language actors", "functional programming", "fp"]

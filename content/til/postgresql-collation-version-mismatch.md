@@ -2,12 +2,11 @@
 title =  "PostgreSQL: collation version mismatch"
 date =  2024-07-28
 
-[taxonomies]
 tags = ["PostgreSQL", "Databases"]
 categories = [ "TIL" ]
 
-[extra]
-toc = true
+[params]
+til_category = "PostgreSQL"
 keywords = ["PostgreSQL", "Database", "Collation", "Mismatch"]
 +++
 
@@ -31,7 +30,7 @@ psql -h localhost -d postgres -U postgres
 
 - connected to my `peertube` database:
 
-```
+```bash
 \c peertube
 ```
 
@@ -43,7 +42,7 @@ REINDEX DATABASE peertube; ALTER DATABASE peertube REFRESH COLLATION VERSION;
 
 - Logged out of psql:
 
-```
+```bash
 \q
 ```
 

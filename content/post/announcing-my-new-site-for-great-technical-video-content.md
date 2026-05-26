@@ -3,16 +3,15 @@ title = "Announcing My New Site for Great Technical Video Content"
 description = "I am thrilled to announce my new video website watch.softinio.com, a place for great technical talk content ad free and free from commnercial sponsorship."
 date = 2021-11-22T18:07:52-08:00
 
-[taxonomies]
 tags = ["video", "meetup", "conference", "talks"]
 categories = ["Talks", "Announcements"]
 
-[extra]
+[params]
 toc = true
 keywords = ["youtube", "PeerTube", "technical talks", "events", "conference", "meetup", "video", "virtual talks", "scala", "neovim", "kafka", "nifi", "spark", "java", "python", "Swift"]
 +++
 
-#### Announcing [watch.softinio.com](https://watch.softinio.com)
+## Announcing [watch.softinio.com](https://watch.softinio.com)
 
 I am thrilled to announce my new video website [watch.softinio.com](https://watch.softinio.com), a place for great technical talk content ad free and free from commercial sponsorship.
 
@@ -26,19 +25,19 @@ This site is powered by [PeerTube](https://joinpeertube.org/) a decentralized al
 
 I will be producing a lot of new content of my own here, including doing some live streams. Some of this of course, will also be made available on my [YouTube channel](https://softin.io/youtube).
 
-{{ peertube(id="e7548279-6a4c-46ae-80ed-5d434bb86f53") }}
+{{< peertube id="e7548279-6a4c-46ae-80ed-5d434bb86f53" >}}
 
-#### Can I post my content on your site?
+## Can I post my content on your site?
 
 I would love to have more content from friends that share the same interests. Get in touch with me to discuss. Of course creating your own PeerTube instance and federating with my instance is always welcome if we share the same interests too.
 
-#### How do I register for your site or subscribe to channels or comment on videos? 
+## How do I register for your site or subscribe to channels or comment on videos? 
 
 Peertube is powered using [Activitypub](https://w3c.github.io/activitypub/), which means you can use your activitypub account from any other service that supports this protocol to comment on a video or subscribe to a channel.
 
 If you need an account, I highly recommend joining [fosstodon](https://fosstodon.org/about). If you do join, you can [follow me](https://fosstodon.org/@softinio) there too.
 
-#### But I love YouTube
+## But I love YouTube
 
 Then subscribe to my [YouTube channel](https://softin.io/youtube) for my content and yes all the meetup content are still on YouTube too where they were originally posted after the event (mostly on [functional.tv](http://functional.tv) and [SFBayAreaTechies](https://www.youtube.com/channel/UCx317LNd-AlbTcE_0FkdJcg)).
 

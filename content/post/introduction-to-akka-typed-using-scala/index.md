@@ -3,11 +3,10 @@ title = "Introduction to Akka Typed Using Scala"
 description = "An Introduction to AKKA Typed using Scala with an example"
 date = 2020-10-24T20:32:41-07:00
 
-[taxonomies]
 tags = ["actor model", "concurrency", "distributed systems", "scala", "akka"]
 categories = ["Software Engineering"]
 
-[extra]
+[params]
 social_media_card = "akka_logo.svg"
 toc = true
 keywords = ["concurrent", "concurrency", "actor model", "actor", "actors", "threads", "petri net", "coroutines", "distributed", "akka", "erlang", "elixir", "akka.net", "microsoft orleans", "orleans", "zio", "zio-actors", "ZIO Actors","swift language actors"]

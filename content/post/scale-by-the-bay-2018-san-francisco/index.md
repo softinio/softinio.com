@@ -3,10 +3,9 @@ title = "Scale By The Bay 2018 San Francisco"
 description = "Highlights of Scale By The Bay 2018 San Francisco conference an event based in the San Francisco Bay Area California with major focus on Functional Programming, Reactive programming and Data Science"
 date = 2019-05-02T18:30:40-07:00
 
-[taxonomies]
 tags = ["scala", "conference", "functional programming"]
 
-[extra]
+[params]
 toc = true
 keywords = ["scala", "bythebay", "sfscala", "functional programming", "san francisco", "bay area", "california", "conference"]
 +++
@@ -28,7 +27,7 @@ The first keynote was by the creator of Scala Programming language. He took us t
 
 I personally am excited about the new features coming out and am optimistic about the success of the new version. In addition there will be new tooling the scala center is working on that will help with migrating to the new version. Let's not forget Scala is strongly typed which will help a lot with the migration unlike languages like Python.
 
-{{ youtube(id="6P06YHc8faw") }}
+{{< youtube "6P06YHc8faw" >}}
 
 ### Kafka and the Rise of the event driven Microservices by Neha Narkhede (Co-creator of Apache Kafka)
 This keynote started off by asking the audience who uses Kafka in Production today. It was fascinating to see that 95% of the audience were which is a huge endorsement of Kafka.
@@ -37,22 +36,22 @@ One of the initial and primary use cases for using Kafka has been to build data 
 
 This new paradigm will allow us to take data from your applications and data from your data systems like databases and do stream processing on them to produce.
 
-{{ youtube(id="DOoJzaXOGxs") }}
+{{< youtube "DOoJzaXOGxs" >}}
 
 ## Concurrency and more concurrency
 There was a common theme at this years conference, multiple talks about libraries and patterns to make concurrency and parallel processing easier and over coming the pain points associated with it. 
 
 Jakob Odesky talk summarized the concurrency options available to you  within Scala Language and the JVM such as threads, Futures and Promises. He then went on to talk about Scala Center 's [scala-async](https://github.com/scala/scala-async) library which has lead him to his new open source project  [escale](https://github.com/jodersky/escale) which is built on top of scala-async.  This new library, escale, introduces the same concept as channels and green threads that was introduced by the go programming language for scala. I look forward to seeing how this evolves.
 
-{{ youtube(id="EuNEZW8ljeY") }}
+{{< youtube "EuNEZW8ljeY" >}}
 
 Michael Pilquist gave us a nice update on `cats-effect` took us through an overview of some of the features it has to solve concurrency problems. There was lot of content in his talk for me to summarize in this post so I urge you to watch the video of his talk.
 
-{{ youtube(id="Gig-f_HXvLI") }}
+{{< youtube "Gig-f_HXvLI" >}}
 
 My favorite talk of the conference was a talk by Sergei Winitzki on Declarative distributed concurrency in Scala where he talk about his open source project  [Chymyst](https://github.com/Chymyst/chymyst-core) which implements the chemical machine (based on joint calculus). The philosophy and end goal  of the chemical machine is to be able to process what ever problem you are trying to solve in 15 lines or less of code. Containers holding values are known as `molecules`. Molecules  float around the site until they combine to form a chemical reaction the output of which can be used again. In his implementation partial functions where used  to implement the reactions. I loved the analogy to chemistry and Sergei's presentation really explained the concept well to spark my interest in this. Since his talk I have researched the topic of chemical machines and I could only find research papers on the topic and none of them do as good a job in explaining what it is as the talk did so I urge you to watch the video. 
 
-{{ youtube(id="23O32DMm69E") }}
+{{< youtube "23O32DMm69E" >}}
 
 ## Hero’s welcome
 Over the years in my career I have followed many of the people I met at this years conference. Their work and teachings have helped me progress my knowledge and ability and have motivated me and others to be part of a great community. 
@@ -79,5 +78,5 @@ I am humbled that I got a chance to meet so many great people at this conference
 
 I want to thank all speakers and attendees at this event, especially I want to thank [Alexy Khrabrov](https://twitter.com/ChiefScientist) for putting together such a great event, welcoming me to the bay area and helping me be part of the great community we have in the bay area and this conference.
 
-{{ youtube(id="iTeh-wnvweQ") }}
+{{< youtube "iTeh-wnvweQ" >}}
 

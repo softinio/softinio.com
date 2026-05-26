@@ -1,10 +1,6 @@
 +++
 title = "About"
-template = "info-page.html"
-
-[extra]
-isso = false
-quick_navigation_buttons = true
+type = "page"
 +++
 
 I, [Salar Rahmanian](https://www.softinio.com), am a software engineer based in San Francisco Bay Area, California.
@@ -19,4 +15,4 @@ At work, I am currently working as a Data Engineer using spark and Databricks al
 
 As a long term Vim user and Neovim fan I also have started contributing plugins written in Lua for Neovim.
 
-{{ full_width_image(src="SalarRahmanianFamily.jpg" alt="Salar Rahmanian's family photo") }}
+{{< full_width_image src="SalarRahmanianFamily.jpg" alt="Salar Rahmanian's family photo" >}}

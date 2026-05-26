@@ -1,0 +1,20 @@
+{{- if and site.Params.comments (not (eq .Params.comments false)) }}
+<hr class="sidebar-divider" style="margin: 2.5rem 0;" />
+<section class="comments">
+  <h2 class="comments-title">Comments</h2>
+  <script data-isso="https://comments.softinio.com/"
+          src="https://comments.softinio.com/js/embed.min.js"
+          data-isso-css="false"
+          data-isso-lang="{{ site.LanguageCode | default "en" }}"
+          data-isso-reply-to-self="false"
+          data-isso-require-author="true"
+          data-isso-require-email="false"
+          data-isso-max-comments-top="10"
+          data-isso-max-comments-nested="5"
+          data-isso-avatar="false"
+          data-isso-vote="true"></script>
+  <section id="isso-thread">
+    <noscript>Javascript needs to be activated to view comments.</noscript>
+  </section>
+</section>
+{{- end }}

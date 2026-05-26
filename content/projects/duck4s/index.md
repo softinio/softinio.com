@@ -3,11 +3,10 @@ title = "duck4s"
 description = "A modern, type-safe Scala 3 wrapper library for DuckDB."
 weight = 3
 
-[taxonomies]
 tags = ["Scala", "DuckDB", "Database", "Project"]
 categories = ["Project"]
 
-[extra]
+[params]
 local_image = "projects/duck4s/duck4s_logo.jpeg"
 social_media_card = "duck4s_logo.jpeg"
 toc = true

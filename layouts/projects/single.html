@@ -1,0 +1,16 @@
+{{ define "main" }}
+  <div class="article-header">
+    <h1>{{ .Title }}</h1>
+    {{- with .Params.tags }}
+    <div class="post-tags">
+      {{- range . }}
+      <a href="{{ "tags/" | relURL }}{{ . | urlize }}/" class="tag">{{ . }}</a>
+      {{- end }}
+    </div>
+    {{- end }}
+  </div>
+
+  <div class="article-body">
+    {{ .Content }}
+  </div>
+{{ end }}

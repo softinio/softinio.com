@@ -3,11 +3,10 @@ title = "ZIO Actors"
 description = "A High performance, purely functional library for building, composing, and supervising typed actors based on ZIO using Scala."
 weight = 5
 
-[taxonomies]
 tags = ["actor model", "concurrency", "distributed systems", "scala", "functional programming", "zio", "Project"]
 categories = ["Project"]
 
-[extra]
+[params]
 local_image = "projects/zio-actors/ZIO.png"
 social_media_card = "ZIO.png"
 toc = true

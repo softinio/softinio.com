@@ -1,0 +1,22 @@
+<footer class="site-footer">
+  <div class="footer-links">
+    {{- range site.Menus.footer }}
+    <a href="{{ .URL | relURL }}">{{ .Name }}</a>
+    {{- end }}
+  </div>
+  <div class="footer-social-icons">
+    {{- with site.Home.OutputFormats.Get "rss" }}
+    <a href="{{ .Permalink }}" aria-label="RSS Feed" data-tooltip="RSS Feed">
+      {{- partial "social-icon.html" (dict "name" "rss") -}}
+    </a>
+    {{- end }}
+    {{- range site.Params.social }}
+    <a href="{{ .url }}" target="_blank" rel="noopener" aria-label="{{ .name }}" data-tooltip="{{ .name }}">
+      {{- partial "social-icon.html" . -}}
+    </a>
+    {{- end }}
+  </div>
+  <div class="footer-copyright">
+    &copy; {{ now.Year }} {{ site.Params.author | default site.Title }} · Content under <a href="https://creativecommons.org/licenses/by-sa/4.0/" style="color:inherit">CC BY-SA 4.0</a>
+  </div>
+</footer>

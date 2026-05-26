@@ -3,11 +3,10 @@ title = "Fishee"
 description = "Fishee is a command-line interface (CLI) tool designed specifically for users of the Fish Shell. It provides a convenient way to manage and manipulate your Fish Shell history files."
 weight = 4
 
-[taxonomies]
 tags = ["Fish Shell", "Swift", "Terminal Tools", "Project"]
 categories = ["Project"]
 
-[extra]
+[params]
 local_image = "projects/fishee/FisheeLogo.jpeg"
 social_media_card = "FisheeLogo.jpeg"
 toc = true

@@ -2,12 +2,11 @@
 title =  "Converting HTML to Markdown using Markdownify"
 date =  2023-12-26
 
-[taxonomies]
 tags = ["markdown"]
 categories = [ "TIL" ]
 
-[extra]
-toc = true
+[params]
+til_category = "markdown"
 keywords = ["markdown", "html", "convert", "python", "nix"]
 +++
 

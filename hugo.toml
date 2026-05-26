@@ -1,0 +1,205 @@
+baseURL = "https://www.softinio.com"
+languageCode = "en"
+title = "Salar Rahmanian"
+paginate = 10
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+
+[params]
+  description = "Software Engineer based in San Francisco Bay Area"
+  author = "Salar Rahmanian"
+  tagline = "That's what I do. I drink 🍷and I know technical things."
+  avatar = "/SalarRahmanian_400.png"
+  domain = "softinio.com"
+  brandIcon = "SR"
+  brandName = "softinio.com"
+  maxHomePosts = 5
+  favicon = "/favicon.png"
+  comments = true
+
+  [[params.social]]
+    name = "xmpp"
+    url = "https://join.jabber.network/#salar@softinio.dev"
+  [[params.social]]
+    name = "matrix"
+    url = "https://matrix.to/#/@softinio:matrix.org"
+  [[params.social]]
+    name = "discord"
+    url = "https://discord.com/users/softinio"
+  [[params.social]]
+    name = "mastodon"
+    url = "https://social.softinio.com/@softinio"
+  [[params.social]]
+    name = "x / twitter"
+    url = "https://x.com/SalarRahmanian"
+  [[params.social]]
+    name = "linkedin"
+    url = "https://www.linkedin.com/in/salarrahmanian/"
+  [[params.social]]
+    name = "forgejo"
+    url = "https://code.softinio.com/softinio"
+  [[params.social]]
+    name = "github"
+    url = "https://github.com/softinio/"
+  [[params.social]]
+    name = "codeberg"
+    url = "https://codeberg.org/softinio"
+  [[params.social]]
+    name = "twitch"
+    url = "https://www.twitch.tv/softinio"
+  [[params.social]]
+    name = "peertube"
+    url = "https://watch.softinio.com/c/softinio/videos"
+  [[params.social]]
+    name = "youtube"
+    url = "https://www.youtube.com/@Salar_Rahmanian"
+  [[params.social]]
+    name = "bluesky"
+    url = "https://bsky.app/profile/salarrahmanian.bsky.social"
+
+  [[params.heroLinks]]
+    name = "homepage"
+    url = "/"
+  [[params.heroLinks]]
+    name = "mastodon"
+    url = "https://social.softinio.com/@softinio"
+  [[params.heroLinks]]
+    name = "github"
+    url = "https://github.com/softinio/"
+  [[params.heroLinks]]
+    name = "x"
+    url = "https://x.com/SalarRahmanian"
+  [[params.heroLinks]]
+    name = "linkedin"
+    url = "https://www.linkedin.com/in/salarrahmanian/"
+  [[params.heroLinks]]
+    name = "codeberg"
+    url = "https://codeberg.org/softinio"
+  [[params.heroLinks]]
+    name = "bluesky"
+    url = "https://bsky.app/profile/salarrahmanian.bsky.social"
+  [[params.heroLinks]]
+    name = "youtube"
+    url = "https://www.youtube.com/@Salar_Rahmanian"
+
+  # Footer social links (subset shown in footer)
+  [[params.footerSocial]]
+    name = "github"
+    url = "https://github.com/softinio/"
+  [[params.footerSocial]]
+    name = "mastodon"
+    url = "https://social.softinio.com/@softinio"
+
+# ─── MENUS ───────────────────────────────────────────────
+
+[menus]
+  [[menus.main]]
+    name = "articles"
+    url = "/post/"
+    weight = 1
+    identifier = "post"
+  [[menus.main]]
+    name = "til"
+    url = "/til/"
+    weight = 2
+    identifier = "til"
+  [[menus.main]]
+    name = "projects"
+    url = "/projects/"
+    weight = 3
+    identifier = "projects"
+  [[menus.main]]
+    name = "talks"
+    url = "/talks/"
+    weight = 4
+    identifier = "talks"
+  [[menus.main]]
+    name = "subscribe"
+    url = "/subscribe/"
+    weight = 5
+    identifier = "subscribe"
+
+  [[menus.sidebar_pages]]
+    name = "Home"
+    url = "/"
+    weight = 1
+    identifier = "home"
+  [[menus.sidebar_pages]]
+    name = "TIL"
+    url = "/til/"
+    weight = 2
+    identifier = "til"
+  [[menus.sidebar_pages]]
+    name = "Projects"
+    url = "/projects/"
+    weight = 3
+    identifier = "projects"
+  [[menus.sidebar_pages]]
+    name = "Talks"
+    url = "/talks/"
+    weight = 4
+    identifier = "talks"
+  [[menus.sidebar_pages]]
+    name = "Subscribe"
+    url = "/subscribe/"
+    weight = 5
+    identifier = "subscribe"
+
+  [[menus.sidebar_about]]
+    name = "About"
+    url = "/about/"
+    weight = 1
+  [[menus.sidebar_about]]
+    name = "Resume"
+    url = "/resume/"
+    weight = 2
+  [[menus.sidebar_about]]
+    name = "Categories"
+    url = "/categories/"
+    weight = 3
+  [[menus.sidebar_about]]
+    name = "Tags"
+    url = "/tags/"
+    weight = 4
+
+  [[menus.footer]]
+    name = "about"
+    url = "/about/"
+    weight = 1
+  [[menus.footer]]
+    name = "resume"
+    url = "/resume/"
+    weight = 2
+  [[menus.footer]]
+    name = "categories"
+    url = "/categories/"
+    weight = 3
+  [[menus.footer]]
+    name = "tags"
+    url = "/tags/"
+    weight = 4
+  [[menus.footer]]
+    name = "sitemap"
+    url = "/sitemap.xml"
+    weight = 5
+
+# ─── MARKUP ──────────────────────────────────────────────
+
+[markup]
+  [markup.highlight]
+    noClasses = false
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 3
+    ordered = false
+
+# ─── OUTPUTS ─────────────────────────────────────────────
+
+[outputs]
+  home = ["HTML", "RSS"]
+  section = ["HTML", "RSS"]

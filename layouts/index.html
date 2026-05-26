@@ -1,0 +1,14 @@
+{{ define "main" }}
+  {{- partial "hero.html" . }}
+
+  {{ $maxPosts := site.Params.maxHomePosts | default 5 }}
+  {{ $posts := where site.RegularPages "Section" "post" | first $maxPosts }}
+  {{- with $posts }}
+  <ul class="post-list">
+    {{- range . }}
+    {{ partial "post-item.html" . }}
+    {{- end }}
+  </ul>
+  <a href="{{ "post/" | relURL }}" class="all-posts-link">All posts &#10230;</a>
+  {{- end }}
+{{ end }}

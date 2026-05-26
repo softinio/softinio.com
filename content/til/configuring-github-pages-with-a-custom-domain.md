@@ -2,11 +2,11 @@
 title =  "Configuring Github Pages With a Custom Domain"
 date =  2023-01-14T16:45:33-08:00
 
-[taxonomies]
 tags = ["github"]
 categories = [ "TIL" ]
 
-[extra]
+[params]
+til_category = "github"
 toc = true
 keywords = ["github pages"]
 +++

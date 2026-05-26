@@ -4,11 +4,10 @@ description = "Salar Rahmanian's talk at Scale By The Bay 2023"
 date = 2023-10-14
 weight = 1
 
-[taxonomies]
 tags = ["Nix", "NixOS", "Python", "functional programming", "conference", "talks"]
 categories = ["Talks"]
 
-[extra]
+[params]
 local_image = "talks/streamline-your-development-workflow/sbtb2023.png"
 social_media_card = "sbtb2023.png"
 toc = true
@@ -21,15 +20,15 @@ In November 2023 I had the great privilege to do a talk at [Scale By The Bay 202
 
 ### Recording of my talk
 
-{{ youtube(id="Qv3Y23RjJa0") }}
+{{< youtube "Qv3Y23RjJa0" >}}
 
 ### Pre-Conference Introduction to talk
 
-{{ youtube(id="LVadoYGDvI8") }}
+{{< youtube "LVadoYGDvI8" >}}
 
 ### Post Conference Interview
 
-{{ youtube(id="B9wpkWdE368") }}
+{{< youtube "B9wpkWdE368" >}}
 
 ### Slides
 

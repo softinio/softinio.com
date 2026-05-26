@@ -1,0 +1,58 @@
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>
+    (function(){var t=localStorage.getItem('theme');if(!t){t=window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'}document.documentElement.setAttribute('data-theme',t)})();
+  </script>
+  <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} · {{ site.Title }}{{ end }}</title>
+  {{- with site.Params.description }}
+  <meta name="description" content="{{ . }}" />
+  {{- end }}
+  {{- with site.Params.author }}
+  <meta name="author" content="{{ . }}" />
+  {{- end }}
+
+  {{/* Google Fonts */}}
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet" />
+
+  {{/* CSS via Hugo Pipes */}}
+  {{- $css        := resources.Get "css/style.css"        | fingerprint }}
+  {{- $syntaxLight := resources.Get "css/syntax-light.css" | minify | fingerprint }}
+  {{- $syntaxDark  := resources.Get "css/syntax-dark.css"  | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $css.RelPermalink }}"         integrity="{{ $css.Data.Integrity }}" />
+  <link rel="stylesheet" href="{{ $syntaxLight.RelPermalink }}" integrity="{{ $syntaxLight.Data.Integrity }}" />
+  <link rel="stylesheet" href="{{ $syntaxDark.RelPermalink }}"  integrity="{{ $syntaxDark.Data.Integrity }}" />
+
+  {{/* Favicon */}}
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ "softinio-apple-touch-icon.png" | absURL }}" />
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ "favicon-32_32.png" | absURL }}" />
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ "favicon-16_16.png" | absURL }}" />
+  <link rel="icon" type="image/svg+xml" href="{{ "favicon.svg" | absURL }}" />
+  {{- with site.Params.favicon }}
+  <link rel="icon" href="{{ . | absURL }}" />
+  {{- end }}
+
+  {{/* RSS */}}
+  {{- range .AlternativeOutputFormats }}
+  <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink | safeURL }}" title="{{ site.Title }}" />
+  {{- end }}
+
+  {{/* Browser theme colour — matches topbar --bg in assets/css/style.css */}}
+  <meta name="theme-color" content="#f8f7f4" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#1a1a1a" media="(prefers-color-scheme: dark)" />
+
+  {{/* Fediverse */}}
+  <meta name="fediverse:creator" content="@softinio@social.softinio.com" />
+
+  {{/* Open Graph */}}
+  {{ template "_internal/opengraph.html" . }}
+  {{ template "_internal/twitter_cards.html" . }}
+
+  {{/* Analytics */}}
+  {{- if hugo.IsProduction }}
+  {{- $matomo := resources.Get "js/matomo.init.js" | minify | fingerprint }}
+  <script src="{{ $matomo.RelPermalink }}" integrity="{{ $matomo.Data.Integrity }}"></script>
+  {{- end }}
+</head>

@@ -4,11 +4,10 @@ description = "Salar Rahmanian's talk at Scale By the Bay conference 2020 on Akk
 date = 2021-04-10T10:20:09-07:00
 weight = 3
 
-[taxonomies]
 tags = ["actor model", "concurrency", "distributed systems", "scala", "functional programming", "conference", "talks"]
 categories = ["Talks"]
 
-[extra]
+[params]
 local_image = "talks/acting-lessons-for-scala-engineers-with-akka-and-zio/sbtb2020.webp"
 social_media_card = "sbtb2020.jpg"
 toc = true
@@ -21,7 +20,7 @@ In November 2020 I had the great privilege to do a [Talk at Scale By The Bay Con
 
 ### Recording of my talk
 
-{{ youtube(id="AQXBlbkf9wc") }}
+{{< youtube "AQXBlbkf9wc" >}}
 
 ### Slides
 
