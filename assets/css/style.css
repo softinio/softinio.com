@@ -1018,7 +1018,11 @@ mark,
   color: var(--text);
 }
 
-/* Count heading */
+/* Hide atom feed link */
+#isso-thread .isso-feedlink { display: none; }
+
+/* Count heading — "No Comments Yet" / "N Comments" */
+#isso-thread h4,
 #isso-thread #isso-root > h4 {
   font-family: var(--font-mono);
   font-size: 0.75rem;
@@ -1043,7 +1047,7 @@ mark,
   padding-top: 0;
 }
 
-/* Avatar — hidden (data-isso-avatar="false" but belt-and-braces) */
+/* Avatar — hidden */
 #isso-thread .isso-avatar { display: none; }
 
 /* Text wrapper */
@@ -1111,11 +1115,7 @@ mark,
   line-height: 1.6;
   margin: 0.65rem 0;
 }
-#isso-thread .isso-text pre code {
-  background: none;
-  border: none;
-  padding: 0;
-}
+#isso-thread .isso-text pre code { background: none; border: none; padding: 0; }
 #isso-thread .isso-text blockquote {
   border-left: 3px solid var(--border);
   margin: 0.65rem 0;
@@ -1161,14 +1161,75 @@ mark,
 #isso-thread .isso-postbox {
   margin-bottom: 2rem;
 }
-#isso-thread .isso-postbox .input-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.6rem;
-  margin-bottom: 0.6rem;
+
+/* Textarea */
+#isso-thread .isso-textarea {
+  display: block;
+  width: 100%;
+  min-height: 110px;
+  font-family: var(--font-mono);
+  font-size: 0.88rem;
+  line-height: 1.7;
+  background: var(--bg-sidebar);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  padding: 0.65rem 0.75rem;
+  color: var(--text);
+  resize: vertical;
+  outline: none;
+  transition: border-color 0.15s;
+  margin-bottom: 0.75rem;
 }
-#isso-thread .isso-postbox .input-wrapper input {
-  flex: 1 1 160px;
+#isso-thread .isso-textarea:focus { border-color: var(--text-muted); }
+#isso-thread .isso-textarea::placeholder { color: var(--text-faint); }
+
+/* Preview pane */
+#isso-thread .isso-postbox section.preview,
+#isso-thread .isso-postbox .preview-wrapper {
+  background: var(--bg-sidebar);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  padding: 0.65rem 0.75rem;
+  font-family: var(--font-mono);
+  font-size: 0.88rem;
+  line-height: 1.7;
+  color: var(--text);
+  margin-bottom: 0.75rem;
+  display: none;
+}
+#isso-thread .isso-postbox section.preview.active { display: block; }
+
+/* Auth section — name / email / website fields
+   Isso wraps each field in a <p> inside .auth-section or .form-wrapper */
+#isso-thread .isso-postbox .auth-section,
+#isso-thread .isso-postbox .form-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Field rows: <p class="input-wrapper"> or bare <p> in auth-section */
+#isso-thread .isso-postbox .auth-section > p,
+#isso-thread .isso-postbox .input-wrapper,
+#isso-thread .isso-postbox .form-wrapper > p {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin: 0;
+}
+
+/* Labels */
+#isso-thread .isso-postbox label {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+/* Text / email / url inputs */
+#isso-thread .isso-postbox input[type="text"],
+#isso-thread .isso-postbox input[type="email"],
+#isso-thread .isso-postbox input[type="url"] {
   font-family: var(--font-mono);
   font-size: 0.85rem;
   background: var(--bg-sidebar);
@@ -1178,73 +1239,52 @@ mark,
   color: var(--text);
   outline: none;
   transition: border-color 0.15s;
-}
-#isso-thread .isso-postbox .input-wrapper input:focus {
-  border-color: var(--text-muted);
-}
-#isso-thread .isso-postbox .input-wrapper input::placeholder {
-  color: var(--text-faint);
-}
-#isso-thread .isso-postbox .textarea-wrapper { margin-bottom: 0.6rem; }
-#isso-thread .isso-textarea {
-  font-family: var(--font-mono);
-  font-size: 0.88rem;
-  line-height: 1.7;
-  background: var(--bg-sidebar);
-  border: 1px solid var(--border);
-  border-radius: 5px;
-  padding: 0.65rem 0.75rem;
-  color: var(--text);
+  max-width: 340px;
   width: 100%;
-  min-height: 110px;
-  resize: vertical;
-  outline: none;
-  transition: border-color 0.15s;
+  appearance: none;
+  -webkit-appearance: none;
 }
-#isso-thread .isso-textarea:focus { border-color: var(--text-muted); }
-#isso-thread .isso-textarea::placeholder { color: var(--text-faint); }
+#isso-thread .isso-postbox input[type="text"]:focus,
+#isso-thread .isso-postbox input[type="email"]:focus,
+#isso-thread .isso-postbox input[type="url"]:focus { border-color: var(--text-muted); }
+#isso-thread .isso-postbox input[type="text"]::placeholder,
+#isso-thread .isso-postbox input[type="email"]::placeholder,
+#isso-thread .isso-postbox input[type="url"]::placeholder { color: var(--text-faint); }
 
-/* Preview pane */
-#isso-thread .isso-postbox section.preview {
-  background: var(--bg-sidebar);
-  border: 1px solid var(--border);
-  border-radius: 5px;
-  padding: 0.65rem 0.75rem;
-  font-family: var(--font-mono);
-  font-size: 0.88rem;
-  line-height: 1.7;
-  color: var(--text);
-  margin-bottom: 0.6rem;
-  display: none;
-}
-#isso-thread .isso-postbox section.preview.active { display: block; }
-
-/* Submit / Preview buttons */
-#isso-thread .isso-postbox .post-action {
+/* Button row — .post-action or direct children of .auth-section */
+#isso-thread .isso-postbox .post-action,
+#isso-thread .isso-postbox .auth-section > div:last-child {
   display: flex;
   gap: 0.5rem;
   justify-content: flex-end;
+  margin-top: 0.25rem;
 }
-#isso-thread .isso-postbox .post-action input {
+
+/* All submit / button inputs — broad selectors to survive Isso version differences */
+#isso-thread .isso-postbox input[type="submit"],
+#isso-thread .isso-postbox input[type="button"] {
+  appearance: none;
+  -webkit-appearance: none;
   font-family: var(--font-mono);
   font-size: 0.82rem;
   padding: 0.4rem 0.9rem;
   border-radius: 5px;
   cursor: pointer;
   transition: all 0.15s;
+  outline: none;
 }
-#isso-thread .isso-postbox .post-action input[type="submit"] {
+#isso-thread .isso-postbox input[type="submit"] {
   background: var(--text);
   color: var(--bg);
   border: 1px solid var(--text);
 }
-#isso-thread .isso-postbox .post-action input[type="submit"]:hover { opacity: 0.8; }
-#isso-thread .isso-postbox .post-action input[type="button"] {
+#isso-thread .isso-postbox input[type="submit"]:hover { opacity: 0.8; }
+#isso-thread .isso-postbox input[type="button"] {
   background: transparent;
   color: var(--text-muted);
   border: 1px solid var(--border);
 }
-#isso-thread .isso-postbox .post-action input[type="button"]:hover {
+#isso-thread .isso-postbox input[type="button"]:hover {
   color: var(--text);
   border-color: var(--text-muted);
   background: var(--bg-sidebar);
@@ -1261,6 +1301,8 @@ mark,
 /* ── Mobile ── */
 @media (max-width: 600px) {
   #isso-thread .isso-follow-up { padding-left: 0.75rem; }
-  #isso-thread .isso-postbox .post-action { justify-content: stretch; }
-  #isso-thread .isso-postbox .post-action input { flex: 1; }
+  #isso-thread .isso-postbox .post-action,
+  #isso-thread .isso-postbox .auth-section > div:last-child { justify-content: stretch; }
+  #isso-thread .isso-postbox input[type="submit"],
+  #isso-thread .isso-postbox input[type="button"] { flex: 1; }
 }
