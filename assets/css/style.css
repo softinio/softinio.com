@@ -1200,22 +1200,29 @@ mark,
 #isso-thread .isso-postbox section.preview.active { display: block; }
 
 /* Auth section — name / email / website fields
-   Isso wraps each field in a <p> inside .auth-section or .form-wrapper */
+   Uses CSS Grid: Name + Email side by side, Website full-width */
 #isso-thread .isso-postbox .auth-section,
 #isso-thread .isso-postbox .form-wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem 1rem;
+  align-items: start;
 }
 
-/* Field rows: <p class="input-wrapper"> or bare <p> in auth-section */
+/* Field rows: each <p> is a flex column (label above input) */
 #isso-thread .isso-postbox .auth-section > p,
 #isso-thread .isso-postbox .input-wrapper,
 #isso-thread .isso-postbox .form-wrapper > p {
   display: flex;
   flex-direction: column;
-  gap: 0.25rem;
+  gap: 0.35rem;
   margin: 0;
+}
+
+/* Website field spans both columns */
+#isso-thread .isso-postbox .auth-section > p:has(input[type="url"]),
+#isso-thread .isso-postbox .form-wrapper > p:has(input[type="url"]) {
+  grid-column: 1 / -1;
 }
 
 /* Labels */
@@ -1226,7 +1233,7 @@ mark,
   color: var(--text-muted);
 }
 
-/* Text / email / url inputs */
+/* Text / email / url inputs — full column width (no 340px cap) */
 #isso-thread .isso-postbox input[type="text"],
 #isso-thread .isso-postbox input[type="email"],
 #isso-thread .isso-postbox input[type="url"] {
@@ -1239,7 +1246,6 @@ mark,
   color: var(--text);
   outline: none;
   transition: border-color 0.15s;
-  max-width: 340px;
   width: 100%;
   appearance: none;
   -webkit-appearance: none;
@@ -1251,9 +1257,10 @@ mark,
 #isso-thread .isso-postbox input[type="email"]::placeholder,
 #isso-thread .isso-postbox input[type="url"]::placeholder { color: var(--text-faint); }
 
-/* Button row — .post-action or direct children of .auth-section */
+/* Button row — spans both columns, right-aligned */
 #isso-thread .isso-postbox .post-action,
 #isso-thread .isso-postbox .auth-section > div:last-child {
+  grid-column: 1 / -1;
   display: flex;
   gap: 0.5rem;
   justify-content: flex-end;
@@ -1301,6 +1308,17 @@ mark,
 /* ── Mobile ── */
 @media (max-width: 600px) {
   #isso-thread .isso-follow-up { padding-left: 0.75rem; }
+
+  /* Collapse to single column on small screens */
+  #isso-thread .isso-postbox .auth-section,
+  #isso-thread .isso-postbox .form-wrapper {
+    grid-template-columns: 1fr;
+  }
+  #isso-thread .isso-postbox .auth-section > p:has(input[type="url"]),
+  #isso-thread .isso-postbox .form-wrapper > p:has(input[type="url"]) {
+    grid-column: 1;
+  }
+
   #isso-thread .isso-postbox .post-action,
   #isso-thread .isso-postbox .auth-section > div:last-child { justify-content: stretch; }
   #isso-thread .isso-postbox input[type="submit"],
