@@ -48,6 +48,7 @@
 
   {{/* Analytics */}}
   {{- if hugo.IsProduction }}
-  <script src="{{ "js/matomo.init.js" | absURL }}"></script>
+  {{- $matomo := resources.Get "js/matomo.init.js" | minify | fingerprint }}
+  <script src="{{ $matomo.RelPermalink }}" integrity="{{ $matomo.Data.Integrity }}"></script>
   {{- end }}
 </head>

@@ -1,5 +1,31 @@
 /*
   Content-Security-Policy: default-src 'self'; script-src 'self' 'sha256-2Ptcn+7v/Z6/R1jptNUtV5JJH5U06JRNHru62MqQrzs=' https://comments.softinio.com/js/embed.min.js https://wisdom.softinio.com/matomo.js https://static.cloudflareinsights.com; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; connect-src 'self' https://wisdom.softinio.com https://*.cloudflareinsights.com https://comments.softinio.com; img-src 'self' https: data:; frame-src https://www.youtube-nocookie.com https://watch.softinio.com https://open.substack.com https://vimeo.com https://comments.softinio.com; object-src 'none'; base-uri 'self'
 
+# Fingerprinted assets — cache forever (filename changes when content changes)
+/css/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/js/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Static images — cache for 30 days
+/*.png
+  Cache-Control: public, max-age=2592000
+
+/*.svg
+  Cache-Control: public, max-age=2592000
+
+/*.jpg
+  Cache-Control: public, max-age=2592000
+
+/*.jpeg
+  Cache-Control: public, max-age=2592000
+
+/*.gif
+  Cache-Control: public, max-age=2592000
+
+/*.webp
+  Cache-Control: public, max-age=2592000
+
 https://:project.pages.dev/*
     Access-Control-Allow-Origin: https://www.softinio.com https://comments.softinio.com
