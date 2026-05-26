@@ -5,11 +5,18 @@
 /js/*
   Cache-Control: public, max-age=31536000, immutable
 
+# Pagefind search index — regenerated on every build, must not be stale
+/pagefind/*
+  Cache-Control: public, max-age=0, must-revalidate
+
 # Static images — cache for 30 days
-/*.png
+/*.avif
   Cache-Control: public, max-age=2592000
 
-/*.svg
+/*.gif
+  Cache-Control: public, max-age=2592000
+
+/*.ico
   Cache-Control: public, max-age=2592000
 
 /*.jpg
@@ -18,7 +25,10 @@
 /*.jpeg
   Cache-Control: public, max-age=2592000
 
-/*.gif
+/*.png
+  Cache-Control: public, max-age=2592000
+
+/*.svg
   Cache-Control: public, max-age=2592000
 
 /*.webp
