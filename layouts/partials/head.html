@@ -68,7 +68,12 @@
 
   {{/* Analytics — preconnect to tracker + async script, production only */}}
   {{- if hugo.IsProduction }}
-  <link rel="preconnect" href="https://wisdom.softinio.com" />
+  {{- /* dns-prefetch is more appropriate here than preconnect: Matomo's
+       tracker script is injected dynamically by the async matomo.init.js,
+       so the actual request fires long after page load. preconnect times
+       out after ~10s if unused; dns-prefetch persists and resolves the
+       hostname whenever the dynamic injection eventually fires.           */}}
+  <link rel="dns-prefetch" href="https://wisdom.softinio.com" />
   {{- $matomo := resources.Get "js/matomo.init.js" | minify | fingerprint }}
   <script src="{{ $matomo.RelPermalink }}" integrity="{{ $matomo.Data.Integrity }}" async></script>
   {{- end }}
