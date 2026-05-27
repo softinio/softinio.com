@@ -2,6 +2,10 @@
 <hr class="sidebar-divider" style="margin: 2.5rem 0;" />
 <section class="comments">
   <h2 class="comments-title">Comments</h2>
+  {{- /* defer moves embed.min.js off the critical path: the browser fetches
+       it in parallel with rendering and runs it after DOM parse completes.
+       Isso reads its config via document.querySelector("script[data-isso]")
+       which works fine with defer since the full DOM is available by then. */}}
   <script data-isso="https://comments.softinio.com/"
           src="https://comments.softinio.com/js/embed.min.js"
           data-isso-css="false"
@@ -12,7 +16,8 @@
           data-isso-max-comments-top="10"
           data-isso-max-comments-nested="5"
           data-isso-avatar="false"
-          data-isso-vote="true"></script>
+          data-isso-vote="true"
+          defer></script>
   <section id="isso-thread">
     <noscript>Javascript needs to be activated to view comments.</noscript>
   </section>
