@@ -60,6 +60,12 @@
   {{ template "_internal/opengraph.html" . }}
   {{ template "_internal/twitter_cards.html" . }}
 
+  {{/* Preconnect for comments — isso embed is discovered late in the page;
+       pre-warming the connection cuts the critical-chain penalty           */}}
+  {{- if and site.Params.comments hugo.IsProduction }}
+  <link rel="preconnect" href="https://comments.softinio.com" />
+  {{- end }}
+
   {{/* Analytics — preconnect to tracker + async script, production only */}}
   {{- if hugo.IsProduction }}
   <link rel="preconnect" href="https://wisdom.softinio.com" />
