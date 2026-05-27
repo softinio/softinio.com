@@ -2,6 +2,12 @@
 {{- $alt   := .Text }}
 {{- $title := .Title }}
 
+{{- /* Track first image per page — it is likely the LCP element and must
+     not be lazy-loaded. All subsequent images get loading="lazy".       */}}
+{{- $isFirst := not (.Page.Store.Get "firstImgSeen") }}
+{{- if $isFirst }}{{- .Page.Store.Set "firstImgSeen" true }}{{- end }}
+{{- $loading := cond $isFirst "eager" "lazy" }}
+
 {{- /* External images pass through unchanged */}}
 {{- $isExternal := or (hasPrefix $src "http://") (hasPrefix $src "https://") (hasPrefix $src "//") }}
 
@@ -9,12 +15,14 @@
 <img src="{{ $src | safeURL }}"
      alt="{{ $alt }}"
      {{- with $title }} title="{{ . }}"{{ end }}
-     loading="lazy" />
+     loading="{{ $loading }}"
+     {{- if $isFirst }} fetchpriority="high"{{ end }} />
 {{- else }}
 {{- $img := .Page.Resources.GetMatch $src }}
 {{- if and $img (reflect.IsImageResourceProcessable $img) }}
-  {{- /* Raster image in page bundle — resize + convert to WebP */}}
-  {{- /* Max display width matches --content-max in style.css     */}}
+  {{- /* Raster image in page bundle — resize + convert to WebP.
+       --content-max is 780px; main padding is 1.5rem each side (~25px),
+       so the breakpoint where images hit full width is ~830px.          */}}
   {{- $maxW  := 780 }}
   {{- $max2x := mul $maxW 2 }}
 
@@ -28,7 +36,11 @@
   <picture>
     {{- if gt $img.Width $max2x }}
     {{- $webp2x := $img.Resize (printf "%dx webp" $max2x) }}
-    <source srcset="{{ $webp1x.RelPermalink }} 1x, {{ $webp2x.RelPermalink }} 2x" type="image/webp" />
+    {{- /* w-descriptors + sizes let browsers pick the right density variant
+         rather than blindly downloading the 2x file on every HiDPI screen */}}
+    <source srcset="{{ $webp1x.RelPermalink }} {{ $w1x }}w, {{ $webp2x.RelPermalink }} {{ $max2x }}w"
+            sizes="(max-width: 830px) calc(100vw - 3rem), 780px"
+            type="image/webp" />
     {{- else }}
     <source srcset="{{ $webp1x.RelPermalink }}" type="image/webp" />
     {{- end }}
@@ -36,19 +48,22 @@
          alt="{{ $alt }}"
          {{- with $title }} title="{{ . }}"{{ end }}
          width="{{ $fallback.Width }}" height="{{ $fallback.Height }}"
-         loading="lazy" />
+         loading="{{ $loading }}"
+         {{- if $isFirst }} fetchpriority="high"{{ end }} />
   </picture>
 {{- else if $img }}
   {{- /* Non-processable resource (e.g. SVG) — serve directly */}}
   <img src="{{ $img.RelPermalink }}"
        alt="{{ $alt }}"
        {{- with $title }} title="{{ . }}"{{ end }}
-       loading="lazy" />
+       loading="{{ $loading }}"
+       {{- if $isFirst }} fetchpriority="high"{{ end }} />
 {{- else }}
   {{- /* Not a page bundle resource — pass src through as-is */}}
   <img src="{{ $src | safeURL }}"
        alt="{{ $alt }}"
        {{- with $title }} title="{{ . }}"{{ end }}
-       loading="lazy" />
+       loading="{{ $loading }}"
+       {{- if $isFirst }} fetchpriority="high"{{ end }} />
 {{- end }}
 {{- end }}
