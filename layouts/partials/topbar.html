@@ -2,7 +2,21 @@
   <div class="topbar-inner">
   <a href="{{ "/" | relURL }}" class="topbar-brand">
     {{- with site.Params.avatar }}
+    {{- $img := resources.Get . }}
+    {{- if $img }}
+    {{- $webp   := $img.Resize "34x34 webp" }}
+    {{- $webp2x := $img.Resize "68x68 webp" }}
+    {{- $png    := $img.Resize "34x34 png" }}
+    <picture>
+      <source srcset="{{ $webp.RelPermalink }} 1x, {{ $webp2x.RelPermalink }} 2x" type="image/webp" />
+      <img class="topbar-avatar"
+           src="{{ $png.RelPermalink }}"
+           alt="{{ site.Params.author | default site.Title }}"
+           width="34" height="34" />
+    </picture>
+    {{- else }}
     <img class="topbar-avatar" src="{{ . | absURL }}" alt="{{ site.Params.author | default site.Title }}" />
+    {{- end }}
     {{- end }}
     <span class="topbar-identity">
       <span class="topbar-name">{{ site.Params.author | default site.Title }}</span>
