@@ -8,12 +8,6 @@
       // skip if already has a button
       if (block.querySelector('.copy-code-btn')) return;
 
-      // wrap in a relative container
-      var wrapper = document.createElement('div');
-      wrapper.className = 'code-block-wrapper';
-      block.parentNode.insertBefore(wrapper, block);
-      wrapper.appendChild(block);
-
       var btn = document.createElement('button');
       btn.className = 'copy-code-btn';
       btn.setAttribute('aria-label', 'Copy code');
@@ -46,6 +40,15 @@
         });
       });
 
+      // Build the wrapper before touching the live DOM.
+      // replaceWith() atomically swaps block → wrapper (one write).
+      // block is now detached, so appendChild() needs no layout read.
+      // This avoids the forced reflow caused by the old two-step
+      // insertBefore(wrapper) → appendChild(block) pattern.
+      var wrapper = document.createElement('div');
+      wrapper.className = 'code-block-wrapper';
+      block.replaceWith(wrapper);
+      wrapper.appendChild(block);
       wrapper.appendChild(btn);
     });
   }
