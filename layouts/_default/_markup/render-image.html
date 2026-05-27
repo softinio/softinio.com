@@ -12,8 +12,9 @@
      loading="lazy" />
 {{- else }}
 {{- $img := .Page.Resources.GetMatch $src }}
-{{- if $img }}
-  {{- /* Max display width matches --content-max in style.css */}}
+{{- if and $img (reflect.IsImageResourceProcessable $img) }}
+  {{- /* Raster image in page bundle — resize + convert to WebP */}}
+  {{- /* Max display width matches --content-max in style.css     */}}
   {{- $maxW  := 780 }}
   {{- $max2x := mul $maxW 2 }}
 
@@ -37,10 +38,17 @@
          width="{{ $fallback.Width }}" height="{{ $fallback.Height }}"
          loading="lazy" />
   </picture>
+{{- else if $img }}
+  {{- /* Non-processable resource (e.g. SVG) — serve directly */}}
+  <img src="{{ $img.RelPermalink }}"
+       alt="{{ $alt }}"
+       {{- with $title }} title="{{ . }}"{{ end }}
+       loading="lazy" />
 {{- else }}
-<img src="{{ $src | safeURL }}"
-     alt="{{ $alt }}"
-     {{- with $title }} title="{{ . }}"{{ end }}
-     loading="lazy" />
+  {{- /* Not a page bundle resource — pass src through as-is */}}
+  <img src="{{ $src | safeURL }}"
+       alt="{{ $alt }}"
+       {{- with $title }} title="{{ . }}"{{ end }}
+       loading="lazy" />
 {{- end }}
 {{- end }}
