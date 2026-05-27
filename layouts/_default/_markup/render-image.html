@@ -52,10 +52,16 @@
          {{- if $isFirst }} fetchpriority="high"{{ end }} />
   </picture>
 {{- else if $img }}
-  {{- /* Non-processable resource (e.g. SVG) — serve directly */}}
+  {{- /* Non-processable resource (e.g. SVG) — serve directly.
+       Use reflect.IsImageResourceWithMeta to add width/height when Hugo
+       can read them from the SVG's viewBox or explicit attributes;
+       omit them when the SVG has no intrinsic dimensions.               */}}
   <img src="{{ $img.RelPermalink }}"
        alt="{{ $alt }}"
        {{- with $title }} title="{{ . }}"{{ end }}
+       {{- if reflect.IsImageResourceWithMeta $img }}
+       width="{{ $img.Width }}" height="{{ $img.Height }}"
+       {{- end }}
        loading="{{ $loading }}"
        {{- if $isFirst }} fetchpriority="high"{{ end }} />
 {{- else }}
