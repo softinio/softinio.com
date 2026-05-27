@@ -1,8 +1,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  {{- $themeInit := resources.Get "js/theme-init.js" | minify | fingerprint }}
-  <script src="{{ $themeInit.RelPermalink }}" integrity="{{ $themeInit.Data.Integrity }}"></script>
+  {{/* theme-init inlined — must run synchronously before first paint to prevent
+       flash of wrong theme; inlining avoids the extra network round-trip */}}
+  {{- $themeInit := resources.Get "js/theme-init.js" | minify }}
+  <script>{{ $themeInit.Content | safeJS }}</script>
   <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} · {{ site.Title }}{{ end }}</title>
   {{- with site.Params.description }}
   <meta name="description" content="{{ . }}" />
@@ -22,15 +24,15 @@
           href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" />
   </noscript>
 
-  {{/* CSS via Hugo Pipes — all minified and fingerprinted */}}
-  {{- $css        := resources.Get "css/style.css"        | minify | fingerprint }}
-  {{- $syntaxLight := resources.Get "css/syntax-light.css" | minify | fingerprint }}
-  {{- $syntaxDark  := resources.Get "css/syntax-dark.css"  | minify | fingerprint }}
-  <link rel="stylesheet" href="{{ $css.RelPermalink }}"         integrity="{{ $css.Data.Integrity }}" />
-  {{/* Syntax-highlight CSS only on pages that contain code blocks */}}
+  {{/* CSS inlined — eliminates render-blocking external stylesheet requests.
+       style.css minifies to ~22 KB (~5 KB gzipped), well within inline budget. */}}
+  {{- $css := resources.Get "css/style.css" | minify }}
+  <style>{{ $css.Content | safeCSS }}</style>
+  {{/* Syntax-highlight CSS inlined only on pages that contain code blocks */}}
   {{- if (findRE `<pre` .Content 1) }}
-  <link rel="stylesheet" href="{{ $syntaxLight.RelPermalink }}" integrity="{{ $syntaxLight.Data.Integrity }}" />
-  <link rel="stylesheet" href="{{ $syntaxDark.RelPermalink }}"  integrity="{{ $syntaxDark.Data.Integrity }}" />
+  {{- $syntaxLight := resources.Get "css/syntax-light.css" | minify }}
+  {{- $syntaxDark  := resources.Get "css/syntax-dark.css"  | minify }}
+  <style>{{ $syntaxLight.Content | safeCSS }}{{ $syntaxDark.Content | safeCSS }}</style>
   {{- end }}
 
   {{/* Favicon */}}
@@ -58,8 +60,9 @@
   {{ template "_internal/opengraph.html" . }}
   {{ template "_internal/twitter_cards.html" . }}
 
-  {{/* Analytics */}}
+  {{/* Analytics — preconnect to tracker + async script, production only */}}
   {{- if hugo.IsProduction }}
+  <link rel="preconnect" href="https://wisdom.softinio.com" />
   {{- $matomo := resources.Get "js/matomo.init.js" | minify | fingerprint }}
   <script src="{{ $matomo.RelPermalink }}" integrity="{{ $matomo.Data.Integrity }}" async></script>
   {{- end }}
