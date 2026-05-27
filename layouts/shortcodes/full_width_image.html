@@ -1,1 +1,36 @@
-<img src="{{ .Get "src" }}" alt="{{ .Get "alt" | default "" }}" style="width:100%" loading="lazy" />
+{{- $src := .Get "src" }}
+{{- $alt := .Get "alt" | default "" }}
+
+{{- $isExternal := or (hasPrefix $src "http://") (hasPrefix $src "https://") (hasPrefix $src "//") }}
+
+{{- if $isExternal }}
+<img src="{{ $src }}" alt="{{ $alt }}" style="width:100%" loading="lazy" />
+{{- else }}
+{{- $img := .Page.Resources.GetMatch $src }}
+{{- if $img }}
+  {{- $maxW  := 780 }}
+  {{- $max2x := mul $maxW 2 }}
+
+  {{- $w1x := $img.Width }}
+  {{- if gt $img.Width $maxW }}{{ $w1x = $maxW }}{{ end }}
+
+  {{- $webp1x  := $img.Resize (printf "%dx webp" $w1x) }}
+  {{- $fallback := $img.Resize (printf "%dx" $w1x) }}
+
+  <picture>
+    {{- if gt $img.Width $max2x }}
+    {{- $webp2x := $img.Resize (printf "%dx webp" $max2x) }}
+    <source srcset="{{ $webp1x.RelPermalink }} 1x, {{ $webp2x.RelPermalink }} 2x" type="image/webp" />
+    {{- else }}
+    <source srcset="{{ $webp1x.RelPermalink }}" type="image/webp" />
+    {{- end }}
+    <img src="{{ $fallback.RelPermalink }}"
+         alt="{{ $alt }}"
+         width="{{ $fallback.Width }}" height="{{ $fallback.Height }}"
+         style="width:100%"
+         loading="lazy" />
+  </picture>
+{{- else }}
+<img src="{{ $src | absURL }}" alt="{{ $alt }}" style="width:100%" loading="lazy" />
+{{- end }}
+{{- end }}
