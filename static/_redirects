@@ -1,0 +1,4 @@
+# Legacy Zola Atom feeds → Hugo RSS feeds
+/atom.xml                        /index.xml                        301
+/tags/:term/atom.xml             /tags/:term/index.xml             301
+/categories/:term/atom.xml       /categories/:term/index.xml       301
