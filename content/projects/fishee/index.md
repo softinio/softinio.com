@@ -1,7 +1,7 @@
 +++
 title = "Fishee"
 description = "Fishee is a command-line interface (CLI) tool designed specifically for users of the Fish Shell. It provides a convenient way to manage and manipulate your Fish Shell history files."
-weight = 4
+weight = 5
 
 tags = ["Fish Shell", "Swift", "Terminal Tools", "Project"]
 categories = ["Project"]

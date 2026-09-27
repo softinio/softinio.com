@@ -1,7 +1,7 @@
 +++
 title = "scaladex.nvim"
 description = "Lua Library and Neovim Plugin to search scaladex for scala packages."
-weight = 2
+weight = 4
 
 tags = ["Scala", "lua", "neovim", "Project"]
 categories = ["Project"]

@@ -1,7 +1,7 @@
 +++
 title = "Scala News"
 description = "Scala bloggers directory and news feed using RSS"
-weight = 1
+weight = 3
 
 tags = ["Scala", "Typelevel", "Project"]
 categories = ["Project"]
