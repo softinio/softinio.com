@@ -1,7 +1,7 @@
 +++
 title = "ZIO Actors"
 description = "A High performance, purely functional library for building, composing, and supervising typed actors based on ZIO using Scala."
-weight = 5
+weight = 6
 
 tags = ["actor model", "concurrency", "distributed systems", "scala", "functional programming", "zio", "Project"]
 categories = ["Project"]
@@ -13,13 +13,13 @@ toc = true
 keywords = ["concurrent", "concurrency", "actor model", "actor", "actors", "threads", "petri net", "coroutines", "distributed", "akka", "erlang", "elixir", "akka.net", "microsoft orleans", "orleans", "zio", "zio-actors", "zio actors","swift language actors", "functional programming", "fp"]
 +++
 
-![Scala News](ZIO.png)
+![ZIO Actors](ZIO.png)
 
 # Overview
 
 ZIO Actors is a high-performance, purely functional library for building, composing, and supervising typed actors based on ZIO using Scala.
 
-Original creator of this project, though I do not maintain it anymore.
+Original creator of this project, though I do not maintain it anymore. The project has since been archived.
 
 ## My blog post and Talk about ZIO Actors
 
@@ -27,6 +27,5 @@ Original creator of this project, though I do not maintain it anymore.
 
 ## Links
 
-- Repository: <https://github.com/zio/zio-actors>
-  - README: <https://github.com/zio/zio-actors/blob/master/README.md>
-- Documentation: <https://zio.dev/zio-actors/>
+- Repository: <https://github.com/zio-archive/zio-actors>
+  - README: <https://github.com/zio-archive/zio-actors/blob/master/README.md>

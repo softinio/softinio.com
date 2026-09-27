@@ -1,7 +1,7 @@
 +++
 title = "duck4s"
 description = "A modern, type-safe Scala 3 wrapper library for DuckDB."
-weight = 3
+weight = 2
 
 tags = ["Scala", "DuckDB", "Database", "Project"]
 categories = ["Project"]
