@@ -45,7 +45,7 @@ hugo new til/my-til-entry.md
 - `static/js/copy-code.js`: Copy-to-clipboard button for code blocks
 - `static/js/theme-toggle.js`: Light/dark theme switcher
 - `static/js/scroll-top.js`: Scroll-to-top button
-- `static/js/matomo.init.js`: Matomo analytics initialisation (loaded in production only)
+- `assets/js/goatcounter.init.js`: GoatCounter settings (prefixes paths with the hostname so www and watch share one site); loaded with `count.js` from wisdom.softinio.com, production only
 - `archetypes/`: Content scaffolding templates (default, post, til)
 
 ### Content Structure

@@ -66,15 +66,14 @@
   <link rel="preconnect" href="https://comments.softinio.com" />
   {{- end }}
 
-  {{/* Analytics — preconnect to tracker + async script, production only */}}
+  {{/* Analytics — GoatCounter at wisdom.softinio.com, production only.
+       Both scripts are deferred rather than async: deferred scripts run in
+       document order, and goatcounter.init.js must set window.goatcounter
+       before count.js reads it. count.js is in the HTML, so the preload
+       scanner finds it without a dns-prefetch hint.                       */}}
   {{- if hugo.IsProduction }}
-  {{- /* dns-prefetch is more appropriate here than preconnect: Matomo's
-       tracker script is injected dynamically by the async matomo.init.js,
-       so the actual request fires long after page load. preconnect times
-       out after ~10s if unused; dns-prefetch persists and resolves the
-       hostname whenever the dynamic injection eventually fires.           */}}
-  <link rel="dns-prefetch" href="https://wisdom.softinio.com" />
-  {{- $matomo := resources.Get "js/matomo.init.js" | minify | fingerprint }}
-  <script src="{{ $matomo.RelPermalink }}" integrity="{{ $matomo.Data.Integrity }}" async></script>
+  {{- $goatcounter := resources.Get "js/goatcounter.init.js" | minify | fingerprint }}
+  <script src="{{ $goatcounter.RelPermalink }}" integrity="{{ $goatcounter.Data.Integrity }}" defer></script>
+  <script data-goatcounter="https://wisdom.softinio.com/count" src="https://wisdom.softinio.com/count.js" defer></script>
   {{- end }}
 </head>
